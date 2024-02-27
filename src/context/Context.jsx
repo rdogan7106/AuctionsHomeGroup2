@@ -13,9 +13,9 @@ export const AuthProvider = ({ children }) => {
   const [auctionsList, setAuctionsList] = useState(null)
 
   const login = async (username, password) => {
-    const response = await fetch("http://localhost:3001/users");
+    const response = await fetch("http://localhost:3000/users");
     const users = await response.json();
-    const auctionResponse = await fetch("http://localhost:3001/auctions");
+    const auctionResponse = await fetch("http://localhost:3000ns");
     const auctions = await auctionResponse.json();
     setAuctionsList(auctions)
     setUserList([users])
