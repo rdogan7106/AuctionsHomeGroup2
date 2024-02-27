@@ -1,0 +1,194 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "a1",
+      "password": "a1",
+      "type": "admin",
+      "email": "asd@gmail.com",
+      "phone": "123456789",
+      "personalNumber": "12354123",
+      "firstname": "Sven",
+      "lastname": "Svenson"
+    },
+    {
+      "id": 3,
+      "username": "u3",
+      "password": "u3",
+      "type": "user",
+      "email": "asd@gmail.com",
+      "phone": "123456789",
+      "personalNumber": "12354123",
+      "firstname": "Sven",
+      "lastname": "Svenson"
+    },
+    {
+      "id": 4,
+      "username": "u4",
+      "password": "u4",
+      "type": "user",
+      "email": "asd@gmail.com",
+      "phone": "123456789",
+      "personalNumber": "12354123",
+      "firstname": "Sven",
+      "lastname": "Svenson"
+    },
+    {
+      "id": 5,
+      "username": "u5",
+      "password": "u5",
+      "type": "user",
+      "email": "asd@gmail.com",
+      "phone": "123456789",
+      "personalNumber": "12354123",
+      "firstname": "Sven",
+      "lastname": "Svenson"
+    },
+    {
+      "id": "4311a58b-d3f8-44ca-8a1f-f83378f3e654",
+      "username": "a",
+      "password": "sd",
+      "type": "user",
+      "email": "asd1@asd.com",
+      "phone": "0764110990",
+      "personalNumber": "34123",
+      "firstname": "asdsadasd",
+      "lastname": "DOGAN"
+    },
+    {
+      "username": "a",
+      "password": "12",
+      "type": "user",
+      "email": "asd2@gmail.com",
+      "phone": "0764110990",
+      "personalNumber": "123123",
+      "firstname": "RAHMAN",
+      "lastname": "DOGAN",
+      "id": "2a83ba0e-7d08-4da6-b0aa-76e87e8e2215"
+    }
+  ],
+  "auctions": [
+    {
+      "id": 1,
+      "sellerId": "u2",
+      "itemDetails": {
+        "name": "Antika Vazo",
+        "description": "19. yüzyıldan kalma nadir bir vazo.",
+        "image": "https://cdn.pixabay.com/photo/2020/04/29/16/10/vase-5109481_1280.jpg",
+        "price": 100
+      },
+      "bids": [
+        {
+          "bidderId": 3,
+          "bidder": "u3",
+          "amount": 150,
+          "bidTime": "2023-03-01T10:00:00Z"
+        },
+        {
+          "bidderId": 4,
+          "bidder": "u4",
+          "amount": 200,
+          "bidTime": "2023-03-01T11:00:00Z"
+        }
+      ],
+      "startTime": "2023-03-01T09:00:00Z",
+      "endTime": "2023-03-05T09:00:00Z",
+      "status": "finished"
+    },
+    {
+      "id": 2,
+      "sellerId": "u3",
+      "itemDetails": {
+        "name": "Eski Kitap Koleksiyonu",
+        "description": "Çeşitli tarihlerden 20 adet nadir kitap.",
+        "image": "https://cdn.pixabay.com/photo/2020/04/29/16/10/vase-5109481_1280.jpg",
+        "price": 100
+      },
+      "bids": [
+        {
+          "bidderId": 4,
+          "bidder": "u4",
+          "amount": 300,
+          "bidTime": "2023-03-02T12:30:00Z"
+        },
+        {
+          "bidderId": 2,
+          "bidder": "u2",
+          "amount": 350,
+          "bidTime": "2023-03-02T13:45:00Z"
+        }
+      ],
+      "startTime": "2023-03-02T12:00:00Z",
+      "endTime": "2023-03-06T12:00:00Z",
+      "status": "finished"
+    },
+    {
+      "id": 3,
+      "sellerId": "u2",
+      "itemDetails": {
+        "name": "Antika Vazo",
+        "description": "19. yüzyıldan kalma nadir bir vazo.",
+        "image": "https://cdn.pixabay.com/photo/2020/04/29/16/10/vase-5109481_1280.jpg",
+        "price": 100
+      },
+      "bids": [
+        {
+          "bidderId": 3,
+          "bidder": "u3",
+          "amount": 150,
+          "bidTime": "2023-03-01T10:00:00Z"
+        },
+        {
+          "bidderId": 4,
+          "bidder": "u4",
+          "amount": 200,
+          "bidTime": "2023-03-01T11:00:00Z"
+        }
+      ],
+      "startTime": "2023-03-01T09:00:00Z",
+      "endTime": "2023-03-05T09:00:00Z",
+      "status": "finished"
+    },
+    {
+      "id": 4,
+      "sellerId": "u3",
+      "itemDetails": {
+        "name": "Eski Kitap Koleksiyonu",
+        "description": "Çeşitli tarihlerden 20 adet nadir kitap.",
+        "image": "https://cdn.pixabay.com/photo/2020/04/29/16/10/vase-5109481_1280.jpg",
+        "price": 100
+      },
+      "bids": [
+        {
+          "bidderId": 4,
+          "bidder": "u4",
+          "amount": 300,
+          "bidTime": "2023-03-02T12:30:00Z"
+        },
+        {
+          "bidderId": 4,
+          "bidder": "u4",
+          "amount": 350,
+          "bidTime": "2023-03-02T13:45:00Z"
+        }
+      ],
+      "startTime": "2023-03-02T12:00:00Z",
+      "endTime": "2023-03-06T12:00:00Z",
+      "status": "finished"
+    },
+    {
+      "id": "3f5708d0-cf7f-4d0f-bac6-70e948073596",
+      "sellerId": 4,
+      "sellerName": "u4",
+      "itemDetails": {
+        "title": "book is book",
+        "description": "old book",
+        "price": "1000",
+        "image": "https://cdn.pixabay.com/photo/2020/03/05/12/48/spring-4904395_640.jpg"
+      },
+      "startDate": "2024-02-07",
+      "endDate": "2024-02-29",
+      "bids": []
+    }
+  ]
+}
