@@ -17,7 +17,14 @@ function AuctionDetails({ auctionsList }){
                 <p>{auction.itemDetails.title}</p>
                 <p>{auction.itemDetails.description}</p>
                 <p>{auction.startTime}</p>
-                <p>{auction.endTime}</p>
+            <p>{auction.endTime}</p>
+            
+            <p>{auction.id}</p>
+            <p>{auction.sellerId}</p>
+            <p>{auction.itemDetails.title}</p>
+            <p>{auction.itemDetails.description}</p>
+            <p>{auction.startTime}</p>
+            <p>{auction.endTime}</p>
 
             </div>
         </div>
