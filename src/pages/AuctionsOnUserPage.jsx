@@ -23,11 +23,11 @@ function AuctionsOnUserPage() {
             <p className="card-text">
               {auction.itemDetails.description}
               <br />
-              Current Price: {auction.itemDetails.price}
+              Current Price: {localStorage.getItem(`currentPrice_${auction.id}`) || auction.itemDetails.price}
             </p>
             <Link to={`/auctions/${auction.id}`}>
-                <button className="btn btn-danger">View Details</button>
-              </Link>
+              <button className="btn btn-danger">View Details</button>
+            </Link>
           </div>
         </div>
       ))}
