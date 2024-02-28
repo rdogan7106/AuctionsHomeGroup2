@@ -27,12 +27,22 @@ function AuctionDetails({ auctionsList }) {
   };
 
   const handleBidSubmit = () => {
+    const latestBid = bidHistory[bidHistory.length - 1];
+    if (latestBid && latestBid.username === user.username) {
+      alert("You cannot place consecutive bids.");
+      return;
+    }
+    if (auction.sellerId === user.username) {
+      alert("You cannot bid on your own items")
+      return;
+    }
+
     const newPrice = currentPrice + bidAmount;
     setCurrentPrice(newPrice);
-    setBidHistory([...bidHistory, { price: newPrice, username: user.username }]);
+    const currentTime = new Date().toLocaleString();
+    setBidHistory([...bidHistory, { price: newPrice, username: user.username, time: currentTime }]);
     setBidAmount(0);
   };
-
 
   const resetPrice = () => {
     setCurrentPrice(auction.itemDetails.price);
@@ -62,17 +72,19 @@ function AuctionDetails({ auctionsList }) {
           <button type="button" className="btn btn-primary mb-2" onClick={() => handleBidAmountChange(10)}>Bid $10 over current price</button>
           <button type="button" className="btn btn-primary mb-2" onClick={() => handleBidAmountChange(20)}>Bid $20 over current price</button>
           <button type="button" className="btn btn-primary mb-2" onClick={() => handleBidAmountChange(50)}>Bid $50 over current price</button>
-          {/* Add more buttons for different bid options */}
+          <button type="button" className="btn btn-success" onClick={handleBidSubmit}>Submit Bid</button>
+          <button type="button" className="btn btn-danger mt-2" onClick={resetPrice}>Reset to Original Price</button>
         </div>
-        <button type="button" className="btn btn-success" onClick={handleBidSubmit}>Submit Bid</button>
-        <button type="button" className="btn btn-danger mt-2" onClick={resetPrice}>Reset to Original Price</button>
+
       </div>
       <div className="mt-4">
         <h4>Bid History</h4>
         <table className="table">
           <thead>
             <tr>
-              <th scope="col">Bid Price</th>
+              <th scope="col">Bid price</th>
+              <th scope="col">Username</th>
+              <th scope="col">Time</th>
             </tr>
           </thead>
           <tbody>
@@ -80,6 +92,7 @@ function AuctionDetails({ auctionsList }) {
               <tr key={index}>
                 <td>{bid.price}</td>
                 <td>{bid.username}</td>
+                <td>{bid.time}</td>
               </tr>
             ))}
           </tbody>
