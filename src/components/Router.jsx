@@ -8,7 +8,6 @@ import Dashboard from "../pages/Dashboard.jsx";
 import AuctionsOnUserPage from "../pages/AuctionsOnUserPage.jsx";
 import AuctionDetails from "../pages/AuctionDetails.jsx";
 import { useAuth } from "../context/Context.jsx";
-import Test from "./UsersComponents/Test.jsx";
 
 function Router() {
   const [user, setUser] = useState(null);
@@ -32,7 +31,6 @@ function Router() {
           element={<AuctionDetails auctionsList={auctionsList} />}
         />
         <Route path="/dashboard" element={<Dashboard />}></Route>
-        <Route path="/test" element={<Test />}></Route>
         <Route path="/login" element={<Loginpage login={login} />} />
       </Routes>
     </>

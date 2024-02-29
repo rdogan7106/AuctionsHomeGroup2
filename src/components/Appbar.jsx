@@ -27,11 +27,6 @@ function Appbar() {
                 Home
               </Link>
             </li>
-            <li className="nav-item me-2">
-              <Link className="nav-link" to="/test">
-                Test
-              </Link>
-            </li>
 
             {user ? (
               user.type == "user" ? (
