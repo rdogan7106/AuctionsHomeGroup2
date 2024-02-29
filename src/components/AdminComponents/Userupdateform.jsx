@@ -33,7 +33,9 @@ function Userupdateform({updateUser, setActiveComponent}) {
            <div className="container mt-5">
           <h2>Register Form</h2>
           <form onSubmit={handleSubmit}>
-            <div className="mb-3">
+
+          <div className="d-flex flex-wrap justify-content-between ">
+            <div className="mb-3 col-lg-3 col-md-12 col-sm-12">
               <label htmlFor="username" className="form-label" >
                 User Name
               </label>
@@ -47,7 +49,7 @@ function Userupdateform({updateUser, setActiveComponent}) {
               />
             </div>
     
-            <div className="mb-3">
+            <div className="mb-3 col-lg-3 col-md-12 col-sm-12">
               <label htmlFor="firstname" className="form-label">
                 First Name
               </label>
@@ -61,7 +63,7 @@ function Userupdateform({updateUser, setActiveComponent}) {
               />
             </div>
     
-            <div className="mb-3">
+            <div className="mb-3 col-lg-3 col-md-12 col-sm-12">
               <label htmlFor="lastname" className="form-label">
                 Last Name
               </label>
@@ -75,6 +77,8 @@ function Userupdateform({updateUser, setActiveComponent}) {
               />
             </div>
     
+</div>
+
             <div className="mb-3">
               <label htmlFor="personalNumber" className="form-label">
                 Personal Number
