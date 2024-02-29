@@ -9,7 +9,7 @@ export const useAuth = () => useContext(AuthContext);
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [userList,setUserList]  = useState(null)
+  const [userList, setUserList] = useState(null)
   const [auctionsList, setAuctionsList] = useState(null)
 
   const login = async (username, password) => {
@@ -23,20 +23,20 @@ export const AuthProvider = ({ children }) => {
       (user) => user.username === username && user.password === password
     );
     if (user) {
-        setUser(user); 
+      setUser(user);
       return true;
     } else {
       return false;
     }
- 
+
   };
 
   const logout = () => {
     setUser(null);
   };
-  
+
   return (
-    <AuthContext.Provider value={{ user, login, logout, userList,setUserList, auctionsList ,setAuctionsList}}>
+    <AuthContext.Provider value={{ user, login, logout, userList, setUserList, auctionsList, setAuctionsList }}>
       {children}
     </AuthContext.Provider>
   );
