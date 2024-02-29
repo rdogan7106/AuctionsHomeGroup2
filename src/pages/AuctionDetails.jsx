@@ -16,6 +16,9 @@ function AuctionDetails({ auctionsList }) {
     const storedHistory = localStorage.getItem(`bidHistory_${auctionId}`);
     return storedHistory ? JSON.parse(storedHistory) : [];
   });
+  useEffect(() => {
+    localStorage.setItem(`bidHistory_${auctionId}`, JSON.stringify(bidHistory));
+  }, [auctionId, bidHistory]);
 
   useEffect(() => {
     localStorage.setItem(`currentPrice_${auctionId}`, JSON.stringify(currentPrice));
@@ -66,37 +69,39 @@ function AuctionDetails({ auctionsList }) {
           <p>Current Price: {currentPrice}</p>
         </div>
       </div>
-      <div id='offer'>
-        <h4>Bid Options</h4>
-        <div className="btn-group-vertical" role="group">
-          <button type="button" className="btn btn-primary mb-2" onClick={() => handleBidAmountChange(10)}>Bid $10 over current price</button>
-          <button type="button" className="btn btn-primary mb-2" onClick={() => handleBidAmountChange(20)}>Bid $20 over current price</button>
-          <button type="button" className="btn btn-primary mb-2" onClick={() => handleBidAmountChange(50)}>Bid $50 over current price</button>
-          <button type="button" className="btn btn-success" onClick={handleBidSubmit}>Submit Bid</button>
-          <button type="button" className="btn btn-danger mt-2" onClick={resetPrice}>Reset to Original Price</button>
+      <div className="d-flex flex-column justify-content-start align-items-start ml-5">
+        <div id='offer' className="mb-4">
+          <h4>Bid Options</h4>
+          <div className="btn-group-vertical" role="group">
+            <button type="button" className="btn btn-primary mb-2" onClick={() => handleBidAmountChange(10)}>Bid $10 over current price</button>
+            <button type="button" className="btn btn-primary mb-2" onClick={() => handleBidAmountChange(20)}>Bid $20 over current price</button>
+            <button type="button" className="btn btn-primary mb-2" onClick={() => handleBidAmountChange(50)}>Bid $50 over current price</button>
+            <button type="button" className="btn btn-success" onClick={handleBidSubmit}>Submit Bid</button>
+            <button type="button" className="btn btn-danger mt-2" onClick={resetPrice}>Reset to Original Price</button>
+          </div>
         </div>
 
-      </div>
-      <div className="mt-4">
-        <h4>Bid History</h4>
-        <table className="table">
-          <thead>
-            <tr>
-              <th scope="col">Bid price</th>
-              <th scope="col">Username</th>
-              <th scope="col">Time</th>
-            </tr>
-          </thead>
-          <tbody>
-            {bidHistory.map((bid, index) => (
-              <tr key={index}>
-                <td>{bid.price}</td>
-                <td>{bid.username}</td>
-                <td>{bid.time}</td>
+        <div className="mt-4">
+          <h4>Bid History</h4>
+          <table className="table">
+            <thead>
+              <tr>
+                <th scope="col">Bid price</th>
+                <th scope="col">Username</th>
+                <th scope="col">Time</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {bidHistory.slice().reverse().map((bid, index) => (
+                <tr key={index}>
+                  <td>{bid.price}</td>
+                  <td>{bid.username}</td>
+                  <td>{bid.time}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );

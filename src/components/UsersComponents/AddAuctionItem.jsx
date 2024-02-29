@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import { useState, useContext  } from "react";
+import { useState, useContext } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { useAuth } from "../../context/Context.jsx";
-function AddAuctionItem({setActiveComponent, updateAuction}) {
-  const { user, logout } = useAuth();  
+function AddAuctionItem({ setActiveComponent, updateAuction }) {
+  const { user, logout } = useAuth();
   const [formData, setFormData] = useState({
     sellerId: user?.id || "",
     sellerName: user?.username || "",
@@ -17,7 +17,7 @@ function AddAuctionItem({setActiveComponent, updateAuction}) {
     bids: [],
     startDate: "",
     endDate: "",
-    status:"in progress",
+    status: "in progress",
   });
 
   const handleChange = (e) => {
@@ -40,14 +40,15 @@ function AddAuctionItem({setActiveComponent, updateAuction}) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newAuctionItem = { ...formData, id: uuidv4() };
-    const response = await fetch("http://localhost:3001/auctions", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newAuctionItem),})
-        setActiveComponent("Useritems")
-  
+    const response = await fetch("http://localhost:3000/auctions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newAuctionItem),
+    })
+    setActiveComponent("Useritems")
+
   };
 
   return (
