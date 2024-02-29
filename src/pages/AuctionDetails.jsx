@@ -76,6 +76,7 @@ function AuctionDetails({ auctionsList }) {
             <button type="button" className="btn btn-primary mb-2" onClick={() => handleBidAmountChange(10)}>Bid $10 over current price</button>
             <button type="button" className="btn btn-primary mb-2" onClick={() => handleBidAmountChange(20)}>Bid $20 over current price</button>
             <button type="button" className="btn btn-primary mb-2" onClick={() => handleBidAmountChange(50)}>Bid $50 over current price</button>
+            <input type="number" placeholder="Enter custom bid amount" value={bidAmount} onChange={(e) => setBidAmount(Number(e.target.value))} />
             <button type="button" className="btn btn-success" onClick={handleBidSubmit}>Submit Bid</button>
             <button type="button" className="btn btn-danger mt-2" onClick={resetPrice}>Reset to Original Price</button>
           </div>
