@@ -72,11 +72,13 @@
       "id": 1,
       "sellerId": "u2",
       "itemDetails": {
-        "name": "Antika Vazo",
-        "description": "19. yüzyıldan kalma nadir bir vazo.",
-        "image": "https://cdn.pixabay.com/photo/2020/04/29/16/10/vase-5109481_1280.jpg",
-        "price": 100
+        "title": "sadasas",
+        "description": "19. yüzyıldan kalma nadir bir vazo. asdasdasas",
+        "price": 100,
+        "image": "https://cdn.pixabay.com/photo/2020/04/29/16/10/vase-5109481_1280.jpg"
       },
+      "startDate": "2024-03-10",
+      "endDate": "2024-03-16",
       "bids": [
         {
           "bidderId": 3,
@@ -90,10 +92,7 @@
           "amount": 200,
           "bidTime": "2023-03-01T11:00:00Z"
         }
-      ],
-      "startTime": "2023-03-01T09:00:00Z",
-      "endTime": "2023-03-05T09:00:00Z",
-      "status": "finished"
+      ]
     },
     {
       "id": 2,

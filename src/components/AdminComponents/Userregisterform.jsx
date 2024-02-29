@@ -34,7 +34,7 @@ function Userregisterform({setActiveComponent}) {
     );
     if (!alreadyExists) {
         const newUser = { ...formData, id: uuidv4() }
-      const response = await fetch("http://localhost:3001/users", {
+      const response = await fetch("http://localhost:3000/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
