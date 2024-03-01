@@ -16,6 +16,7 @@ function AuctionDetails({ auctionsList }) {
     const storedHistory = localStorage.getItem(`bidHistory_${auctionId}`);
     return storedHistory ? JSON.parse(storedHistory) : [];
   });
+
   useEffect(() => {
     localStorage.setItem(`bidHistory_${auctionId}`, JSON.stringify(bidHistory));
   }, [auctionId, bidHistory]);
@@ -25,10 +26,6 @@ function AuctionDetails({ auctionsList }) {
     localStorage.setItem(`bidHistory_${auctionId}`, JSON.stringify(bidHistory));
   }, [auctionId, currentPrice, bidHistory]);
 
-  const handleBidAmountChange = (amount) => {
-    setBidAmount(amount);
-  };
-
   const handleBidSubmit = () => {
     const latestBid = bidHistory[bidHistory.length - 1];
     if (latestBid && latestBid.username === user.username) {
@@ -37,6 +34,10 @@ function AuctionDetails({ auctionsList }) {
     }
     if (auction.sellerId === user.username) {
       alert("You cannot bid on your own items")
+      return;
+    }
+    if (currentPrice + bidAmount == currentPrice) {
+      alert("You need to enter a value above zero")
       return;
     }
 
@@ -70,20 +71,29 @@ function AuctionDetails({ auctionsList }) {
         </div>
       </div>
       <div className="d-flex flex-column justify-content-start align-items-start ml-5">
-        <div id='offer' className="mb-4">
-          <h4>Bid Options</h4>
-          <div className="btn-group-vertical" role="group">
-            <button type="button" className="btn btn-primary mb-2" onClick={() => handleBidAmountChange(10)}>Bid $10 over current price</button>
-            <button type="button" className="btn btn-primary mb-2" onClick={() => handleBidAmountChange(20)}>Bid $20 over current price</button>
-            <button type="button" className="btn btn-primary mb-2" onClick={() => handleBidAmountChange(50)}>Bid $50 over current price</button>
-            <input type="number" placeholder="Enter custom bid amount" value={bidAmount} onChange={(e) => setBidAmount(Number(e.target.value))} />
-            <button type="button" className="btn btn-success" onClick={handleBidSubmit}>Submit Bid</button>
-            <button type="button" className="btn btn-danger mt-2" onClick={resetPrice}>Reset to Original Price</button>
+
+        <div id='offer' className="mb-4 col-md-12">
+          <h4>Bid amount</h4>
+          <div className="row">
+            <div className="col-md-12">
+              <input type="number" className="form-control col" placeholder="Enter custom bid amount" value={bidAmount} onChange={(e) => setBidAmount(Number(e.target.value))} />
+            </div>
+          </div>
+          <div className="mt-2">
+            <div className="mb-2 d-flex align-items-center justify-content-center" style={{ height: "100%" }}>
+              <button type="button" className="btn btn-dark btn-block d-flex align-items-center justify-content-center py-3" style={{ width: "100%", fontSize: "1.2rem", fontWeight: "bold", lineHeight: "normal" }} onClick={handleBidSubmit}>
+                Submit Bid
+              </button>
+            </div>
+            <div className="col-md-12">
+              <button type="button" className="btn btn-danger btn-block" style={{ width: "100%" }} onClick={resetPrice}>Reset to Original Price</button>
+            </div>
           </div>
         </div>
 
+
         <div className="mt-4">
-          <h4>Bid History</h4>
+          <h4>Bid history</h4>
           <table className="table">
             <thead>
               <tr>
