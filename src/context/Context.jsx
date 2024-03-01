@@ -31,6 +31,15 @@ export const AuthProvider = ({ children }) => {
 
   };
 
+  React.useEffect(() => {
+    const fetchAuctions = async () => {
+      const response = await fetch("http://localhost:3000/auctions");
+      const data = await response.json();
+      setAuctionsList(data);
+    };
+    fetchAuctions();
+  }, []);
+
   const logout = () => {
     setUser(null);
   };
