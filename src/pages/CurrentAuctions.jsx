@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import { useAuth } from "../context/Context.jsx";
 import { Link } from "react-router-dom";
+import Timer from "../components/Timer.jsx";
 
 function CurrentAuctions() {
   const { auctionsList } = useAuth(); 
@@ -57,14 +58,8 @@ function CurrentAuctions() {
                 >
                   Bids: {filteredAuction.bids.length || 0}
                 </Typography>
-              </CardActions>
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                style={{ paddingLeft: "16px", paddingBottom: "8px" }}
-              >
-                Time Left:{}
-              </Typography>
+              </CardActions>          
+              {Timer(filteredAuction.endDate)}
             </Card>
           ))}
       </div>
