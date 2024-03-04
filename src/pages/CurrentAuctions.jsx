@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -9,7 +9,7 @@ import { useAuth } from "../context/Context.jsx";
 import { Link } from "react-router-dom";
 
 function CurrentAuctions() {
-  const { auctionsList } = useAuth();
+  const { auctionsList } = useAuth(); 
   return (
     <div className="container">
       <div className="d-flex flex-wrap">
@@ -63,8 +63,7 @@ function CurrentAuctions() {
                 color="text.secondary"
                 style={{ paddingLeft: "16px", paddingBottom: "8px" }}
               >
-                Time Left:{" "}
-               
+                Time Left:{}
               </Typography>
             </Card>
           ))}
