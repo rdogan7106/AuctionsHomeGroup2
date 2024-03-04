@@ -9,6 +9,7 @@ import Userregisterform from "../components/AdminComponents/Userregisterform.jsx
 import Userupdateform from "../components/AdminComponents/Userupdateform.jsx";
 import AddAuctionItem from "../components/UsersComponents/AddAuctionItem.jsx";
 import UpdateAuctionItem from "../components/AdminComponents/UpdateAuctionItem.jsx";
+import Userpurchases from "../components/UsersComponents/Userpurcaheses.jsx";
 
 
 function Dashboard() {
@@ -28,10 +29,12 @@ function Dashboard() {
         return <Userregisterform  setActiveComponent={setActiveComponent}/>;
       case "Userupdateform":
         return <Userupdateform  updateUser = {updateUser} setActiveComponent={setActiveComponent}/>;
-        case "AddAuctionItem":
-          return <AddAuctionItem   setActiveComponent={setActiveComponent}/>;
-        case "UpdateAuctionItem":
-          return <UpdateAuctionItem   setActiveComponent={setActiveComponent} updateAuction = {updateAuction} />;
+      case "AddAuctionItem":
+        return <AddAuctionItem   setActiveComponent={setActiveComponent}/>;
+      case "UpdateAuctionItem":
+        return <UpdateAuctionItem   setActiveComponent={setActiveComponent} updateAuction = {updateAuction} />;
+      case "Userpurchases":
+        return <Userpurchases   setActiveComponent={setActiveComponent}  />
       default:
         return <h1>Hi! Something went wrong!</h1>;
     }

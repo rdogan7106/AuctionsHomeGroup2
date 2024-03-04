@@ -40,6 +40,14 @@ function Sidenav({ setActiveComponent }) {
           </>
         ) : (
           <>
+           <li className="nav-item">
+              <button
+                className="btn w-100"
+                onClick={() => setActiveComponent("Userpurchases")}
+              >
+                My Purchases
+              </button>
+            </li>
             <li className="nav-item">
               <button
                 className="btn w-100"

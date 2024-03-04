@@ -32,7 +32,7 @@ function Users({setActiveComponent,setUpdateUser}) {
   }
   React.useEffect(() => {
     const fetchUsers = async () => {
-      const response = await fetch("http://localhost:3001/users");
+      const response = await fetch("http://localhost:3000/users");
       const data = await response.json();
       const filteredUsers = data.filter(user => user.type === "user");
       setUserList(filteredUsers);
@@ -50,7 +50,7 @@ function Users({setActiveComponent,setUpdateUser}) {
     setPage(0);
   };
   const deleteUser = async (userId)=>{
-    const response = await fetch(`http://localhost:3001/users/${userId}`, {
+    const response = await fetch(`http://localhost:3000/users/${userId}`, {
       method: "DELETE",
     });
     if (!response.ok) {

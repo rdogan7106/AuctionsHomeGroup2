@@ -72,11 +72,13 @@
       "id": 1,
       "sellerId": "u2",
       "itemDetails": {
-        "name": "Antika Vazo",
-        "description": "19. yüzyıldan kalma nadir bir vazo.",
-        "image": "https://cdn.pixabay.com/photo/2020/04/29/16/10/vase-5109481_1280.jpg",
-        "price": 100
+        "title": "sadasas",
+        "description": "19. yüzyıldan kalma nadir bir vazo. asdasdasas",
+        "price": 100,
+        "image": "https://cdn.pixabay.com/photo/2020/04/29/16/10/vase-5109481_1280.jpg"
       },
+      "startDate": "2024-03-10",
+      "endDate": "2024-03-16",
       "bids": [
         {
           "bidderId": 3,
@@ -90,10 +92,7 @@
           "amount": 200,
           "bidTime": "2023-03-01T11:00:00Z"
         }
-      ],
-      "startTime": "2023-03-01T09:00:00Z",
-      "endTime": "2023-03-05T09:00:00Z",
-      "status": "finished"
+      ]
     },
     {
       "id": 2,
@@ -189,6 +188,36 @@
       "startDate": "2024-02-07",
       "endDate": "2024-02-29",
       "bids": []
+    },
+    {
+      "sellerId": 3,
+      "sellerName": "u3",
+      "itemDetails": {
+        "title": "New Item",
+        "description": "from 1800",
+        "image": "https://cdn.pixabay.com/photo/2020/03/05/12/48/spring-4904395_640.jpg",
+        "price": "2000"
+      },
+      "bids": [],
+      "startDate": "2024-03-04",
+      "endDate": "2024-03-06",
+      "status": "in progress",
+      "id": "827a60ac-5d9c-4b40-8e8e-37983104ab2c"
+    },
+    {
+      "sellerId": 3,
+      "sellerName": "u3",
+      "itemDetails": {
+        "title": "New Item 2",
+        "description": "New Item 2",
+        "image": "https://cdn.pixabay.com/photo/2018/04/05/14/09/sunflowers-3292932_1280.jpg",
+        "price": "2112"
+      },
+      "bids": [],
+      "startDate": "2024-03-04",
+      "endDate": "2024-03-30",
+      "status": "in progress",
+      "id": "d2cca1f3-2cc8-4be1-ae1d-f1a563ab8f79"
     }
   ]
 }
