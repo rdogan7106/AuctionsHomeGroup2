@@ -7,6 +7,7 @@ import Loginpage from "../pages/Loginpage.jsx";
 import Dashboard from "../pages/Dashboard.jsx";
 import AuctionsOnUserPage from "../pages/AuctionsOnUserPage.jsx";
 import AuctionDetails from "../pages/AuctionDetails.jsx";
+import CurrentAuctions from "../pages/CurrentAuctions.jsx";
 import { useAuth } from "../context/Context.jsx";
 
 function Router() {
@@ -26,6 +27,7 @@ function Router() {
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/auctions" element={<AuctionsOnUserPage />}></Route>
+        <Route path="/current-auctions" element={<CurrentAuctions />}></Route>
         <Route exact 
           path="/auctions/:auctionId"
           element={<AuctionDetails auctionsList={auctionsList} />}

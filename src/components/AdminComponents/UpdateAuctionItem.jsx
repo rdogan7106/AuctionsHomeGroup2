@@ -40,7 +40,7 @@ function UpdateAuctionItem({ updateAuction, setActiveComponent }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await fetch(
-      `http://localhost:3001/auctions/${updateAuction.id}`,
+      `http://localhost:3000/auctions/${updateAuction.id}`,
       {
         method: "PUT",
         headers: {
@@ -61,19 +61,36 @@ function UpdateAuctionItem({ updateAuction, setActiveComponent }) {
     <div className="container mt-5">
       <h2>Update Auction Form</h2>
       <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label htmlFor="title" className="form-label">
-            Title
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="title"
-            name="title"
-            value={formData.itemDetails.title}
-            onChange={handleChange}
-            required
-          />
+        <div className="d-flex flex-wrap justify-content-between ">
+          <div className="mb-3 col-lg-5 col-md-12 col-sm-12">
+            <label htmlFor="title" className="form-label">
+              Title
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              id="title"
+              name="title"
+              value={formData.itemDetails.title}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="mb-3 col-lg-5 col-md-12 col-sm-12">
+            <label htmlFor="price" className="form-label">
+              Price
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              id="price"
+              name="price"
+              value={formData.itemDetails.price}
+              onChange={handleChange}
+              required
+            />
+          </div>
         </div>
 
         <div className="mb-3">
@@ -90,50 +107,38 @@ function UpdateAuctionItem({ updateAuction, setActiveComponent }) {
             required
           />
         </div>
-        <div className="mb-3">
-          <label htmlFor="price" className="form-label">
-            Price
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="price"
-            name="price"
-            value={formData.itemDetails.price}
-            onChange={handleChange}
-            required
-          />
+        <div className="d-flex flex-wrap justify-content-between ">
+          <div className="mb-3 col-lg-5 col-md-12 col-sm-12 ">
+            <label htmlFor="startDate" className="form-label">
+              Start Date
+            </label>
+            <input
+              type="date"
+              className="form-control"
+              id="startDate"
+              name="startDate"
+              value={formData.startDate}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="mb-3 col-lg-5 col-md-12 col-sm-12 ">
+            <label htmlFor="endDate" className="form-label">
+              End Date
+            </label>
+            <input
+              type="date"
+              className="form-control"
+              id="endDate"
+              name="endDate"
+              value={formData.endDate}
+              onChange={handleChange}
+              required
+            />
+          </div>
         </div>
 
-        <div className="mb-3">
-          <label htmlFor="startDate" className="form-label">
-            Start Date
-          </label>
-          <input
-            type="date"
-            className="form-control"
-            id="startDate"
-            name="startDate"
-            value={formData.startDate}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
-        <div className="mb-3">
-          <label htmlFor="endDate" className="form-label">
-            End Date
-          </label>
-          <input
-            type="date"
-            className="form-control"
-            id="endDate"
-            name="endDate"
-            value={formData.endDate}
-            onChange={handleChange}
-            required
-          />
-        </div>
         <div className="mb-3">
           <label htmlFor="image" className="form-label">
             Image

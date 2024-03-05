@@ -4,7 +4,7 @@ import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { useAuth } from "../../context/Context.jsx";
 
-function Userregisterform({setActiveComponent}) {
+function Userregisterform({ setActiveComponent }) {
   const { userList, setUserList } = useAuth();
   const [formData, setFormData] = useState({
     username: "",
@@ -33,15 +33,15 @@ function Userregisterform({setActiveComponent}) {
         user.email === formData.email
     );
     if (!alreadyExists) {
-        const newUser = { ...formData, id: uuidv4() }
-      const response = await fetch("http://localhost:3001/users", {
+      const newUser = { ...formData, id: uuidv4() };
+      const response = await fetch("http://localhost:3000/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(newUser),
       });
-      setActiveComponent("Users")
+      setActiveComponent("Users");
     } else {
       alert("A user with the same personal number or email already exists.");
       return;
@@ -62,51 +62,61 @@ function Userregisterform({setActiveComponent}) {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 ">
       <h2>Register Form</h2>
       <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label htmlFor="username" className="form-label" >
-            User Name
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="username"
-            name="username"
-            value={formData.username}
-            onChange={handleChange} required
-          />
+        <div className="d-flex flex-wrap justify-content-between ">
+          <div className="mb-3  col-lg-3 col-md-12 col-sm-12">
+            <label htmlFor="username" className="form-label">
+              User Name
+            </label>
+            <input
+              type="text"
+              className="form-control w-100"
+              id="username"
+              name="username"
+              value={formData.username}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="mb-3 col-lg-3 col-md-12 col-sm-12">
+            <label htmlFor="firstname" className="form-label">
+              First Name
+            </label>
+            <input
+              type="text"
+              className="form-control w-100"
+              id="firstname"
+              name="firstname"
+              value={formData.firstname}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="mb-3  col-lg-3 col-md-12 col-sm-12">
+            <label htmlFor="lastname" className="form-label">
+              Last Name
+            </label>
+            <input
+              type="text"
+              className="form-control w-100"
+              id="lastname"
+              name="lastname"
+              value={formData.lastname}
+              onChange={handleChange}
+              required
+            />
+          </div>
         </div>
 
-        <div className="mb-3">
-          <label htmlFor="firstname" className="form-label">
-            First Name
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="firstname"
-            name="firstname"
-            value={formData.firstname}
-            onChange={handleChange} required
-          />
-        </div>
 
-        <div className="mb-3">
-          <label htmlFor="lastname" className="form-label">
-            Last Name
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="lastname"
-            name="lastname"
-            value={formData.lastname}
-            onChange={handleChange} required
-          />
-        </div>
+        <div className="d-flex flex-wrap justify-content-between ">
 
+          
+        </div>
         <div className="mb-3">
           <label htmlFor="personalNumber" className="form-label">
             Personal Number
@@ -117,7 +127,8 @@ function Userregisterform({setActiveComponent}) {
             id="personalNumber"
             name="personalNumber"
             value={formData.personalNumber}
-            onChange={handleChange} required
+            onChange={handleChange}
+            required
           />
         </div>
         <div className="mb-3">
@@ -130,7 +141,8 @@ function Userregisterform({setActiveComponent}) {
             id="email"
             name="email"
             value={formData.email}
-            onChange={handleChange} required
+            onChange={handleChange}
+            required
           />
         </div>
         <div className="mb-3">
@@ -143,7 +155,8 @@ function Userregisterform({setActiveComponent}) {
             id="phone"
             name="phone"
             value={formData.phone}
-            onChange={handleChange} required
+            onChange={handleChange}
+            required
           />
         </div>
         <div className="mb-3">
@@ -156,7 +169,8 @@ function Userregisterform({setActiveComponent}) {
             id="password"
             name="password"
             value={formData.password}
-            onChange={handleChange} required
+            onChange={handleChange}
+            required
           />
         </div>
         <button type="submit" className="btn btn-primary">
