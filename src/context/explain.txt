@@ -1,0 +1,41 @@
+import React, { createContext, useContext, useState } from 'react';
+
+// Step 1: Create a context
+const MyContext = createContext();
+
+// Step 2: Create a component that uses the context
+const MyComponent = () => {
+  // Step 3: Use the useContext hook to consume the context value
+  const contextValue = useContext(MyContext);
+
+  return (
+    <div>
+      {/* Use the context value in the component */}
+      {contextValue}
+    </div>
+  );
+};
+
+// Step 4: Create a component that provides the context value
+const MyProvider = ({ children }) => {
+  const [contextValue, setContextValue] = useState('Hello from Context');
+
+  return (
+    // Step 5: Use the Provider component to wrap components that need the context
+    <MyContext.Provider value={contextValue}>
+      {children}
+    </MyContext.Provider>
+  );
+};
+
+// Step 6: Use the components
+const App = () => {
+  return (
+    // Step 7: Wrap the components that need the context with the provider
+    <MyProvider>
+      <MyComponent />
+    </MyProvider>
+  );
+};
+
+export default App;
