@@ -218,6 +218,81 @@
       "endDate": "2024-03-30",
       "status": "in progress",
       "id": "d2cca1f3-2cc8-4be1-ae1d-f1a563ab8f79"
+    },
+    {
+      "sellerId": 3,
+      "sellerName": "u3",
+      "itemDetails": {
+        "title": "New Item3",
+        "description": "Brand New",
+        "image": "https://cdn.pixabay.com/photo/2020/03/05/12/48/spring-4904395_640.jpg",
+        "price": "90"
+      },
+      "bids": [],
+      "startDate": "2024-03-02",
+      "endDate": "2024-03-23",
+      "status": "in progress",
+      "id": "e7148506-ba4d-4eff-ac85-0b57aa04e3e9"
+    },
+    {
+      "sellerId": 3,
+      "sellerName": "u3",
+      "itemDetails": {
+        "title": "new Item4",
+        "description": "New Item 4",
+        "image": "https://cdn.pixabay.com/photo/2018/04/05/14/09/sunflowers-3292932_1280.jpg",
+        "price": "23"
+      },
+      "bids": [],
+      "startDate": "2024-03-01",
+      "endDate": "2024-03-30",
+      "status": "in progress",
+      "id": "849cc470-1825-48e5-98e2-c86ebd474553"
+    },
+    {
+      "sellerId": 3,
+      "sellerName": "u3",
+      "itemDetails": {
+        "title": "new Item5",
+        "description": "New Item 5",
+        "image": "https://cdn.pixabay.com/photo/2020/03/05/12/48/spring-4904395_640.jpg",
+        "price": "90"
+      },
+      "bids": [],
+      "startDate": "2024-03-09",
+      "endDate": "2024-03-01",
+      "status": "in progress",
+      "id": "5c3ee8b5-fded-4271-a442-bba6129a81da"
+    },
+    {
+      "sellerId": 4,
+      "sellerName": "u4",
+      "itemDetails": {
+        "title": "new Item6",
+        "description": "new Item 6",
+        "image": "https://cdn.pixabay.com/photo/2018/04/05/14/09/sunflowers-3292932_1280.jpg",
+        "price": "90"
+      },
+      "bids": [],
+      "startDate": "2024-03-22",
+      "endDate": "2024-03-02",
+      "status": "in progress",
+      "id": "8ba37091-575b-4a37-9d0c-70f29a4b9525"
+    },
+    {
+      "sellerId": 4,
+      "sellerName": "u4",
+      "itemDetails": {
+        "title": "new Item 7",
+        "description": "new Item 7",
+        "image": "https://cdn.pixabay.com/photo/2018/04/05/14/09/sunflowers-3292932_1280.jpg",
+        "price": "0"
+      },
+      "bids": [],
+      "startDate": "2024-03-07",
+      "endDate": "2024-03-30",
+      "status": "in progress",
+      "id": "d8dd31d7-0acd-426b-8224-2ef03e313b04"
     }
   ]
 }
