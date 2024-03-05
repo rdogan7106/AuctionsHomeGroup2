@@ -76,8 +76,15 @@ function AuctionDetails({ auctionsList }) {
           <h4>Bid amount</h4>
           <div className="row">
             <div className="col-md-12">
-              <input type="number" className="form-control col" placeholder="Enter custom bid amount" value={bidAmount} onChange={(e) => setBidAmount(Number(e.target.value))} />
+              <input
+                type="number"
+                className="form-control col"
+                placeholder="Enter bid amount"
+                value={bidAmount || ''}
+                onChange={(e) => setBidAmount(Number(e.target.value))}
+              />
             </div>
+
           </div>
           <div className="mt-2">
             <div className="mb-2 d-flex align-items-center justify-content-center" style={{ height: "100%" }}>
