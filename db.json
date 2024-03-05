@@ -284,6 +284,21 @@
       "endDate": "2024-03-30",
       "status": "in progress",
       "id": "d2cca1f3-2cc8-4be1-ae1d-f1a563ab8f79"
+    },
+    {
+      "sellerId": "4",
+      "sellerName": "u4",
+      "itemDetails": {
+        "title": "new item9",
+        "description": "as",
+        "image": "https://cdn.pixabay.com/photo/2018/04/05/14/09/sunflowers-3292932_1280.jpg",
+        "price": "0"
+      },
+      "bids": [],
+      "startDate": "2024-03-06",
+      "endDate": "2024-03-22",
+      "status": "in progress",
+      "id": "2398a2e6-ff22-4bf2-9ab1-a291c1710ad1"
     }
   ]
 }

@@ -40,24 +40,32 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newAuctionItem = { ...formData, id: uuidv4() };
-    const response = await fetch("http://localhost:3001/auctions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newAuctionItem),
-    })
-    setActiveComponent("Useritems")
-
+    const now = new Date();
+    const start = new Date(newAuctionItem.startDate);
+    const end = new Date(newAuctionItem.endDate);
+    if (start < now) {
+      alert("Start time cannot be earlier than today");
+    } else if (end <= start) {
+      alert("End Time cannot be earlier than Start Time ");
+    } else if (Number(newAuctionItem.itemDetails.price) < 1) {
+      alert("Please enter a price ");
+    } else {
+      const response = await fetch("http://localhost:3000/auctions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newAuctionItem),
+      });
+      setActiveComponent("Useritems");
+    }
   };
 
   return (
     <div className="container mt-5">
       <h2>Register Form</h2>
       <form onSubmit={handleSubmit}>
-
         <div className="d-flex flex-wrap justify-content-between ">
-
           <div className="mb-3 col-lg-5 col-md-12 col-sm-12">
             <label htmlFor="title" className="form-label">
               Title
@@ -72,7 +80,6 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
               required
             />
           </div>
-
 
           <div className="mb-3 col-lg-5 col-md-12 col-sm-12">
             <label htmlFor="price" className="form-label">
@@ -91,7 +98,6 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
         </div>
 
         <div className="d-flex flex-wrap justify-content-between ">
-
           <div className="mb-3 col-lg-5 col-md-12 col-sm-12">
             <label htmlFor="startDate" className="form-label">
               Start Date
