@@ -34,7 +34,7 @@ function Timer(endDate) {
     >
       {timeLeft.days !== undefined
         ? `${timeLeft.days} days ${timeLeft.hours} hours ${timeLeft.minutes} minutes ${timeLeft.seconds} second`
-        : "Açık artırma kapandı!"}
+        : "Auction closed!"}
     </Typography>
   );
 }

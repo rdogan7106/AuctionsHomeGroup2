@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import { useState, useContext  } from "react";
+import { useState, useContext } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { useAuth } from "../../context/Context.jsx";
-function AddAuctionItem({setActiveComponent, updateAuction}) {
-  const { user, logout } = useAuth();  
+function AddAuctionItem({ setActiveComponent, updateAuction }) {
+  const { user, logout } = useAuth();
   const [formData, setFormData] = useState({
     sellerId: user?.id || "",
     sellerName: user?.username || "",
@@ -17,7 +17,7 @@ function AddAuctionItem({setActiveComponent, updateAuction}) {
     bids: [],
     startDate: "",
     endDate: "",
-    status:"in progress",
+    status: "in progress",
   });
 
   const handleChange = (e) => {
@@ -40,38 +40,97 @@ function AddAuctionItem({setActiveComponent, updateAuction}) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newAuctionItem = { ...formData, id: uuidv4() };
-    const response = await fetch("http://localhost:3000/auctions", {
+    const now = new Date();
+    const start = new Date(newAuctionItem.startDate);
+    const end = new Date(newAuctionItem.endDate);
+    if (start < now) {
+      alert("Start time cannot be earlier than today");
+    } else if (end <= start) {
+      alert("End Time cannot be earlier than Start Time ");
+    } else if (Number(newAuctionItem.itemDetails.price) < 1) {
+      alert("Please enter a price ");
+    } else {
+      const response = await fetch("http://localhost:3000/auctions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(newAuctionItem),})
-        setActiveComponent("Useritems")
-  
+        body: JSON.stringify(newAuctionItem),
+      });
+      setActiveComponent("Useritems");
+    }
   };
 
   return (
     <div className="container mt-5">
       <h2>Register Form</h2>
       <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label htmlFor="title" className="form-label">
-            Title
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="title"
-            name="title"
-            value={formData.itemDetails.title}
-            onChange={handleChange}
-            required
-          />
+        <div className="d-flex flex-wrap justify-content-between ">
+          <div className="mb-3 col-lg-5 col-md-12 col-sm-12">
+            <label htmlFor="title" className="form-label">
+              Title
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              id="title"
+              name="title"
+              value={formData.itemDetails.title}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="mb-3 col-lg-5 col-md-12 col-sm-12">
+            <label htmlFor="price" className="form-label">
+              Price
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              id="price"
+              name="price"
+              value={formData.itemDetails.price}
+              onChange={handleChange}
+              required
+            />
+          </div>
         </div>
 
+        <div className="d-flex flex-wrap justify-content-between ">
+          <div className="mb-3 col-lg-5 col-md-12 col-sm-12">
+            <label htmlFor="startDate" className="form-label">
+              Start Date
+            </label>
+            <input
+              type="date"
+              className="form-control"
+              id="startDate"
+              name="startDate"
+              value={formData.itemDetails.startDate}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="mb-3 col-lg-5 col-md-12 col-sm-12">
+            <label htmlFor="endDate" className="form-label">
+              End Date
+            </label>
+            <input
+              type="date"
+              className="form-control"
+              id="endDate"
+              name="endDate"
+              value={formData.itemDetails.endDate}
+              onChange={handleChange}
+              required
+            />
+          </div>
+        </div>
         <div className="mb-3">
           <label htmlFor="description" className="form-label">
-            Title
+            Description
           </label>
           <input
             type="text"
@@ -79,50 +138,6 @@ function AddAuctionItem({setActiveComponent, updateAuction}) {
             id="description"
             name="description"
             value={formData.itemDetails.description}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="price" className="form-label">
-            Price
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="price"
-            name="price"
-            value={formData.itemDetails.price}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
-        <div className="mb-3">
-          <label htmlFor="startDate" className="form-label">
-            Start Date
-          </label>
-          <input
-            type="date"
-            className="form-control"
-            id="startDate"
-            name="startDate"
-            value={formData.itemDetails.startDate}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
-        <div className="mb-3">
-          <label htmlFor="endDate" className="form-label">
-            End Date
-          </label>
-          <input
-            type="date"
-            className="form-control"
-            id="endDate"
-            name="endDate"
-            value={formData.itemDetails.endDate}
             onChange={handleChange}
             required
           />
