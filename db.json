@@ -120,6 +120,17 @@
       "personalNumber": "444444444444444",
       "firstname": "asdadasdasd",
       "lastname": "MASDASD"
+    },
+    {
+      "id": "20f53429-093b-4317-be14-464b9f31b8d3",
+      "username": "u5",
+      "password": "uu",
+      "type": "user",
+      "email": "jkhjh@jhkn.com",
+      "phone": "21223",
+      "personalNumber": "12122",
+      "firstname": "uu",
+      "lastname": "uu"
     }
   ],
   "auctions": [

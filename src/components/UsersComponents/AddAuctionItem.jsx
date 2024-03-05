@@ -40,25 +40,15 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newAuctionItem = { ...formData, id: uuidv4() };
-    const response = await fetch("http://localhost:3000/auctions", {
-<<<<<<<< < Temporary merge branch 1
+    const response = await fetch("http://localhost:3001/auctions", {
       method: "POST",
       headers: {
-      "Content-Type": "application/json",
-    },
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(newAuctionItem),
     })
     setActiveComponent("Useritems")
 
-=========
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newAuctionItem),})
-        setActiveComponent("Useritems")
-
->>>>>>>>> Temporary merge branch 2
   };
 
   return (
@@ -66,71 +56,71 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
       <h2>Register Form</h2>
       <form onSubmit={handleSubmit}>
 
-      <div className="d-flex flex-wrap justify-content-between ">
+        <div className="d-flex flex-wrap justify-content-between ">
 
-        <div className="mb-3 col-lg-5 col-md-12 col-sm-12">
-          <label htmlFor="title" className="form-label">
-            Title
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="title"
-            name="title"
-            value={formData.itemDetails.title}
-            onChange={handleChange}
-            required
-          />
+          <div className="mb-3 col-lg-5 col-md-12 col-sm-12">
+            <label htmlFor="title" className="form-label">
+              Title
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              id="title"
+              name="title"
+              value={formData.itemDetails.title}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+
+          <div className="mb-3 col-lg-5 col-md-12 col-sm-12">
+            <label htmlFor="price" className="form-label">
+              Price
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              id="price"
+              name="price"
+              value={formData.itemDetails.price}
+              onChange={handleChange}
+              required
+            />
+          </div>
         </div>
 
+        <div className="d-flex flex-wrap justify-content-between ">
 
-        <div className="mb-3 col-lg-5 col-md-12 col-sm-12">
-          <label htmlFor="price" className="form-label">
-            Price
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="price"
-            name="price"
-            value={formData.itemDetails.price}
-            onChange={handleChange}
-            required
-          />
-        </div>
-</div>
+          <div className="mb-3 col-lg-5 col-md-12 col-sm-12">
+            <label htmlFor="startDate" className="form-label">
+              Start Date
+            </label>
+            <input
+              type="date"
+              className="form-control"
+              id="startDate"
+              name="startDate"
+              value={formData.itemDetails.startDate}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-<div className="d-flex flex-wrap justify-content-between ">
-
-        <div className="mb-3 col-lg-5 col-md-12 col-sm-12">
-          <label htmlFor="startDate" className="form-label">
-            Start Date
-          </label>
-          <input
-            type="date"
-            className="form-control"
-            id="startDate"
-            name="startDate"
-            value={formData.itemDetails.startDate}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
-        <div className="mb-3 col-lg-5 col-md-12 col-sm-12">
-          <label htmlFor="endDate" className="form-label">
-            End Date
-          </label>
-          <input
-            type="date"
-            className="form-control"
-            id="endDate"
-            name="endDate"
-            value={formData.itemDetails.endDate}
-            onChange={handleChange}
-            required
-          />
-        </div>
+          <div className="mb-3 col-lg-5 col-md-12 col-sm-12">
+            <label htmlFor="endDate" className="form-label">
+              End Date
+            </label>
+            <input
+              type="date"
+              className="form-control"
+              id="endDate"
+              name="endDate"
+              value={formData.itemDetails.endDate}
+              onChange={handleChange}
+              required
+            />
+          </div>
         </div>
         <div className="mb-3">
           <label htmlFor="description" className="form-label">

@@ -12,7 +12,6 @@ import TableRow from "@mui/material/TableRow";
 import SystemUpdateAltIcon from '@mui/icons-material/SystemUpdateAlt';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-<<<<<<<< < Temporary merge branch 1
 function Auctions({ setActiveComponent, setUpdateAuction }) {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
@@ -33,7 +32,7 @@ function Auctions({ setActiveComponent, setUpdateAuction }) {
 
   React.useEffect(() => {
     const fetchAuctions = async () => {
-      const response = await fetch("http://localhost:3000/auctions");
+      const response = await fetch("http://localhost:3001/auctions");
       const data = await response.json();
       setAuctionsList(data);
     };
@@ -50,64 +49,11 @@ function Auctions({ setActiveComponent, setUpdateAuction }) {
     setPage(0);
   };
   const deleteAuction = async (auctionId) => {
-    const response = await fetch(`http://localhost:3000/auctions/${auctionId}`, {
+    const response = await fetch(`http://localhost:3001/auctions/${auctionId}`, {
       method: "DELETE",
     });
     if (!response.ok) {
       throw new Error('Something went wrong with the deletion');
-=========
-function Auctions({setActiveComponent, setUpdateAuction}) {
-    const [page, setPage] = React.useState(0);
-    const [rowsPerPage, setRowsPerPage] = React.useState(10);
-    const [auctionsList, setAuctionsList] = React.useState([]);
-    const columns = [
-        { id: "id", label: "id", minWidth: 80 },
-        { id: "seller", label: "seller", minWidth: 80 },
-        { id: "title", label: "title", minWidth: 80 },
-        { id: "price", label: "price", minWidth: 80 },
-        { id: "startdate", label: "startdate", minWidth: 80 },
-        { id: "enddate", label: "endate", minWidth: 80 },
-        { id: "bids", label: "bids", minWidth: 100 },
-        { id: "lastbid", label: "lastbid", minWidth: 100 },
-        { id: "status", label: "status", minWidth: 50 },
-        { id: "update", label: "update", minWidth: 50 },
-        { id: "delete", label: "delete", minWidth: 50 },
-    ]
-
-    React.useEffect(() => {
-      const fetchAuctions = async () => {
-        const response = await fetch("http://localhost:3000/auctions");
-        const data = await response.json();
-        setAuctionsList(data);
-      };
-
-      fetchAuctions();
-    }, []);
-
-    const handleChangePage = (event, newPage) => {
-      setPage(newPage);
-    };
-
-    const handleChangeRowsPerPage = (event) => {
-      setRowsPerPage(+event.target.value);
-      setPage(0);
-    };
-    const deleteAuction = async (auctionId)=>{
-        const response = await fetch(`http://localhost:3000/auctions/${auctionId}`, {
-          method: "DELETE",
-        });
-        if (!response.ok) {
-          throw new Error('Something went wrong with the deletion');
-        }
-        setAuctionsList((prevauctions) => prevauctions.filter((auction) => auction.id !== auctionId));
-
-      }
-
-    const handleAuctionUpdate = (auction)=> {
-      setUpdateAuction(auction)
-      setActiveComponent("UpdateAuctionItem")
-
->>>>>>>>> Temporary merge branch 2
     }
     setAuctionsList((prevauctions) => prevauctions.filter((auction) => auction.id !== auctionId));
 
