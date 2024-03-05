@@ -32,7 +32,7 @@ function Auctions({setActiveComponent, setUpdateAuction}) {
   
     React.useEffect(() => {
       const fetchAuctions = async () => {
-        const response = await fetch("http://localhost:3001/auctions");
+        const response = await fetch("http://localhost:3000/auctions");
         const data = await response.json();
         setAuctionsList(data);
       };
@@ -49,7 +49,7 @@ function Auctions({setActiveComponent, setUpdateAuction}) {
       setPage(0);
     };
     const deleteAuction = async (auctionId)=>{
-        const response = await fetch(`http://localhost:3001/auctions/${auctionId}`, {
+        const response = await fetch(`http://localhost:3000/auctions/${auctionId}`, {
           method: "DELETE",
         });
         if (!response.ok) {
