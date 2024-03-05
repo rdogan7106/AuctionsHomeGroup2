@@ -9,6 +9,7 @@ import AuctionsOnUserPage from "../pages/AuctionsOnUserPage.jsx";
 import AuctionDetails from "../pages/AuctionDetails.jsx";
 import CurrentAuctions from "../pages/CurrentAuctions.jsx";
 import { useAuth } from "../context/Context.jsx";
+import Userregisterform from './UsersComponents/UserRegistrationUsers.jsx';
 
 function Router() {
   const [user, setUser] = useState(null);
@@ -34,6 +35,7 @@ function Router() {
         />
         <Route path="/dashboard" element={<Dashboard />}></Route>
         <Route path="/login" element={<Loginpage login={login} />} />
+        <Route path="/Userregisterform" element={<Userregisterform />}></Route>
       </Routes>
     </>
   );
