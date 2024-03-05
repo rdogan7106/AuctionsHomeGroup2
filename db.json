@@ -65,61 +65,6 @@
       "firstname": "RAHMAN",
       "lastname": "DOGAN",
       "id": "2a83ba0e-7d08-4da6-b0aa-76e87e8e2215"
-    },
-    {
-      "id": "804ecb53-af3d-462e-982a-639b1c29f402",
-      "username": "Sofie",
-      "password": "ASDADSDASDA",
-      "type": "user",
-      "email": "7777777777777777@hotmail.com",
-      "phone": "4444444444444444444444",
-      "personalNumber": "777777777777777777",
-      "firstname": "Person",
-      "lastname": "KanelBulle"
-    },
-    {
-      "id": "6544f876-8537-4d56-a558-eb0e1ec4f34a",
-      "username": "Sofies",
-      "password": "AsSDADSDASDA",
-      "type": "user",
-      "email": "7777777s777777777@hotmail.com",
-      "phone": "44444s44444444444444444",
-      "personalNumber": "3333323333333333333333",
-      "firstname": "Persons",
-      "lastname": "KanelBulles"
-    },
-    {
-      "id": "957f73d8-3944-40f7-ab82-08cd4f03188d",
-      "username": "test",
-      "password": "ASDASDASD",
-      "type": "user",
-      "email": "kamel@hotmail.com",
-      "phone": "6666666666666666666",
-      "personalNumber": "222222222222222",
-      "firstname": "testing",
-      "lastname": "kanelnakel"
-    },
-    {
-      "id": "f7fd5d34-400e-4c9d-bbc4-81e2fe404324",
-      "username": "Rahman",
-      "password": "ASDASDASDASDASD",
-      "type": "user",
-      "email": "5555555555555555@hotmail.com",
-      "phone": "4444444444444444444444",
-      "personalNumber": "555555555555555555",
-      "firstname": "Godzilla",
-      "lastname": "Trexasoriouse"
-    },
-    {
-      "id": "fdda326a-2f11-4b5d-8675-f687bb683ee6",
-      "username": "KamelKamel",
-      "password": "ASDSADASDASD",
-      "type": "user",
-      "email": "sdasdasd@hotmail.com",
-      "phone": "999999999999999",
-      "personalNumber": "444444444444444",
-      "firstname": "asdadasdasd",
-      "lastname": "MASDASD"
     }
   ],
   "auctions": [
