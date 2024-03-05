@@ -63,7 +63,10 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
     <div className="container mt-5">
       <h2>Register Form</h2>
       <form onSubmit={handleSubmit}>
-        <div className="mb-3">
+
+      <div className="d-flex flex-wrap justify-content-between ">
+
+        <div className="mb-3 col-lg-5 col-md-12 col-sm-12">
           <label htmlFor="title" className="form-label">
             Title
           </label>
@@ -78,21 +81,8 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
           />
         </div>
 
-        <div className="mb-3">
-          <label htmlFor="description" className="form-label">
-            Title
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="description"
-            name="description"
-            value={formData.itemDetails.description}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="mb-3">
+       
+        <div className="mb-3 col-lg-5 col-md-12 col-sm-12">
           <label htmlFor="price" className="form-label">
             Price
           </label>
@@ -106,8 +96,11 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
             required
           />
         </div>
+</div>
 
-        <div className="mb-3">
+<div className="d-flex flex-wrap justify-content-between ">
+
+        <div className="mb-3 col-lg-5 col-md-12 col-sm-12">
           <label htmlFor="startDate" className="form-label">
             Start Date
           </label>
@@ -122,7 +115,7 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
           />
         </div>
 
-        <div className="mb-3">
+        <div className="mb-3 col-lg-5 col-md-12 col-sm-12">
           <label htmlFor="endDate" className="form-label">
             End Date
           </label>
@@ -132,6 +125,21 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
             id="endDate"
             name="endDate"
             value={formData.itemDetails.endDate}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        </div>
+        <div className="mb-3">
+          <label htmlFor="description" className="form-label">
+            Description
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="description"
+            name="description"
+            value={formData.itemDetails.description}
             onChange={handleChange}
             required
           />
