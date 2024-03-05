@@ -12,13 +12,22 @@ function AuctionDetails({ auctionsList }) {
   const [deliveryInfoHtml, setDeliveryInfoHtml] = useState('');
   const [showDeliveryOptions, setShowDeliveryOptions] = useState(false);
 
+  const counties = [
+    'Blekinge län', 'Dalarnas län', 'Gotlands län', 'Gävleborgs län',
+    'Hallands län', 'Jämtlands län', 'Jönköpings län', 'Kalmar län',
+    'Kronobergs län', 'Norrbottens län', 'Skåne län', 'Stockholms län',
+    'Södermanlands län', 'Uppsala län', 'Värmlands län', 'Västerbottens län',
+    'Västernorrlands län', 'Västmanlands län', 'Västra Götalands län',
+    'Örebro län', 'Östergötlands län'
+  ];
+
   const fetchDeliveryPrice = (selectedLan, enteredPostalCode) => {
     setShowDeliveryOptions(true);
-    return "600 SEK"; 
+    return "600 SEK";
   };
 
   const getDeliveryOptionsForLan = (lan) => {
-    const lanName = lan || 'ditt valda län'; 
+    const lanName = lan || 'ditt valda län';
     const deliveryOptionsHtml = `
       <strong>Transport inom ${lanName}</strong><br/>
       600 SEK<br/>
@@ -26,7 +35,6 @@ function AuctionDetails({ auctionsList }) {
       <strong>Paketleverans</strong><br/>
       900 SEK<br/>
       Till paketombud eller till din dörr.<br/><br/>
-      Tänk på att införselmoms och tullavgifter kan tillkomma när du köper föremål från andra länder. Avgifterna kan variera beroende på föremålens ursprung, värde och föremålstyp.
     `;
     return deliveryOptionsHtml;
   };
@@ -70,27 +78,11 @@ function AuctionDetails({ auctionsList }) {
               <div className='input-group mb-3'>
                 <select className='form-select' value={lan} onChange={handleLanChange}>
                   <option value=''>Välj ett län</option>
-                  <option value='Blekinge län'>Blekinge län</option>
-                  <option value='Dalarnas län'>Dalarnas län</option>
-                  <option value='Gotlands län'>Gotlands län</option>
-                  <option value='Gävleborgs län'>Gävleborgs län</option>
-                  <option value='Hallands län'>Hallands län</option>
-                  <option value='Jämtlands län'>Jämtlands län</option>
-                  <option value='Jönköpings län'>Jönköpings län</option>
-                  <option value='Kalmar län'>Kalmar län</option>
-                  <option value='Kronobergs län'>Kronobergs län</option>
-                  <option value='Norrbottens län'>Norrbottens län</option>
-                  <option value='Skåne län'>Skåne län</option>
-                  <option value='Stockholms län'>Stockholms län</option>
-                  <option value='Södermanlands län'>Södermanlands län</option>
-                  <option value='Uppsala län'>Uppsala län</option>
-                  <option value='Värmlands län'>Värmlands län</option>
-                  <option value='Västerbottens län'>Västerbottens län</option>
-                  <option value='Västernorrlands län'>Västernorrlands län</option>
-                  <option value='Västmanlands län'>Västmanlands län</option>
-                  <option value='Västra Götalands län'>Västra Götalands län</option>
-                  <option value='Örebro län'>Örebro län</option>
-                  <option value='Östergötlands län'>Östergötlands län</option>
+                  {counties.map((county) => (
+                    <option key={county} value={county}>
+                      {county}
+                    </option>
+                  ))}
                 </select>
                 <input type='text' className='form-control' placeholder='Postnummer' value={postalCode} onChange={handlePostalCodeChange} />
                 <button className='btn btn-dark' type='submit'>Sök pris</button>
@@ -107,6 +99,7 @@ function AuctionDetails({ auctionsList }) {
 }
 
 export default AuctionDetails;
+
 
 
 
