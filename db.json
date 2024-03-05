@@ -98,6 +98,28 @@
       "personalNumber": "222222222222222",
       "firstname": "testing",
       "lastname": "kanelnakel"
+    },
+    {
+      "id": "f7fd5d34-400e-4c9d-bbc4-81e2fe404324",
+      "username": "Rahman",
+      "password": "ASDASDASDASDASD",
+      "type": "user",
+      "email": "5555555555555555@hotmail.com",
+      "phone": "4444444444444444444444",
+      "personalNumber": "555555555555555555",
+      "firstname": "Godzilla",
+      "lastname": "Trexasoriouse"
+    },
+    {
+      "id": "fdda326a-2f11-4b5d-8675-f687bb683ee6",
+      "username": "KamelKamel",
+      "password": "ASDSADASDASD",
+      "type": "user",
+      "email": "sdasdasd@hotmail.com",
+      "phone": "999999999999999",
+      "personalNumber": "444444444444444",
+      "firstname": "asdadasdasd",
+      "lastname": "MASDASD"
     }
   ],
   "auctions": [
