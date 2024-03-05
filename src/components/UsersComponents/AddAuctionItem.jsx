@@ -40,7 +40,7 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newAuctionItem = { ...formData, id: uuidv4() };
-    const response = await fetch("http://localhost:3001/auctions", {
+    const response = await fetch("http://localhost:3000/auctions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

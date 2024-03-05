@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import Timer from "../components/Timer.jsx";
 
 function CurrentAuctions() {
-  const { auctionsList } = useAuth(); 
+  const { auctionsList } = useAuth();
   return (
     <div className="container">
       <div className="d-flex flex-wrap">
@@ -58,8 +58,20 @@ function CurrentAuctions() {
                 >
                   Bids: {filteredAuction.bids.length || 0}
                 </Typography>
-              </CardActions>          
-              {Timer(filteredAuction.endDate)}
+              </CardActions>
+              {filteredAuction.startDate > new Date() ? (
+                <>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    style={{ paddingLeft: "16px", paddingBottom: "8px" }}
+                  >
+                    Not Started
+                  </Typography>
+                </>
+              ) : (
+                Timer(filteredAuction.endDate)
+              )}
             </Card>
           ))}
       </div>
