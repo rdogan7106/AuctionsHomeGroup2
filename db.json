@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "username": "a1",
       "password": "a1",
       "type": "admin",
@@ -12,7 +12,7 @@
       "lastname": "Svenson"
     },
     {
-      "id": 3,
+      "id": "3",
       "username": "u3",
       "password": "u3",
       "type": "user",
@@ -23,7 +23,7 @@
       "lastname": "Svenson"
     },
     {
-      "id": 4,
+      "id": "4",
       "username": "u4",
       "password": "u4",
       "type": "user",
@@ -34,7 +34,7 @@
       "lastname": "Svenson"
     },
     {
-      "id": 5,
+      "id": "5",
       "username": "u5",
       "password": "u5",
       "type": "user",
@@ -65,11 +65,44 @@
       "firstname": "RAHMAN",
       "lastname": "DOGAN",
       "id": "2a83ba0e-7d08-4da6-b0aa-76e87e8e2215"
+    },
+    {
+      "id": "804ecb53-af3d-462e-982a-639b1c29f402",
+      "username": "Sofie",
+      "password": "ASDADSDASDA",
+      "type": "user",
+      "email": "7777777777777777@hotmail.com",
+      "phone": "4444444444444444444444",
+      "personalNumber": "777777777777777777",
+      "firstname": "Person",
+      "lastname": "KanelBulle"
+    },
+    {
+      "id": "6544f876-8537-4d56-a558-eb0e1ec4f34a",
+      "username": "Sofies",
+      "password": "AsSDADSDASDA",
+      "type": "user",
+      "email": "7777777s777777777@hotmail.com",
+      "phone": "44444s44444444444444444",
+      "personalNumber": "3333323333333333333333",
+      "firstname": "Persons",
+      "lastname": "KanelBulles"
+    },
+    {
+      "id": "957f73d8-3944-40f7-ab82-08cd4f03188d",
+      "username": "test",
+      "password": "ASDASDASD",
+      "type": "user",
+      "email": "kamel@hotmail.com",
+      "phone": "6666666666666666666",
+      "personalNumber": "222222222222222",
+      "firstname": "testing",
+      "lastname": "kanelnakel"
     }
   ],
   "auctions": [
     {
-      "id": 1,
+      "id": "1",
       "sellerId": "u2",
       "itemDetails": {
         "title": "sadasas",
@@ -95,7 +128,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "sellerId": "u3",
       "itemDetails": {
         "name": "Eski Kitap Koleksiyonu",
@@ -122,7 +155,7 @@
       "status": "finished"
     },
     {
-      "id": 3,
+      "id": "3",
       "sellerId": "u2",
       "itemDetails": {
         "name": "Antika Vazo",
@@ -149,7 +182,7 @@
       "status": "finished"
     },
     {
-      "id": 4,
+      "id": "4",
       "sellerId": "u3",
       "itemDetails": {
         "name": "Eski Kitap Koleksiyonu",
@@ -188,6 +221,21 @@
       "startDate": "2024-02-07",
       "endDate": "2024-02-29",
       "bids": []
+    },
+    {
+      "id": "b8b963ca-f168-4f7d-a0d0-bd7761f2717c",
+      "sellerId": "957f73d8-3944-40f7-ab82-08cd4f03188d",
+      "sellerName": "test",
+      "itemDetails": {
+        "title": "KingkongDoll",
+        "description": "asdasdasdas",
+        "image": "asdasd",
+        "price": "3333"
+      },
+      "bids": [],
+      "startDate": "2024-03-14",
+      "endDate": "2024-03-29",
+      "status": "in progress"
     }
   ]
 }
