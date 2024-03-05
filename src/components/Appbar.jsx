@@ -74,6 +74,11 @@ function Appbar() {
                     Login
                   </Link>
                 </li>
+                <li className="nav-item me-2">
+                  <Link className="nav-link" to="/Userregisterform">
+                    Register
+                  </Link>
+                </li>
               </>
             )}
           </ul>

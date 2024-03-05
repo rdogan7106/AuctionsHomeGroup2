@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "username": "a1",
       "password": "a1",
       "type": "admin",
@@ -12,7 +12,7 @@
       "lastname": "Svenson"
     },
     {
-      "id": 3,
+      "id": "3",
       "username": "u3",
       "password": "u3",
       "type": "user",
@@ -23,7 +23,7 @@
       "lastname": "Svenson"
     },
     {
-      "id": 4,
+      "id": "4",
       "username": "u4",
       "password": "u4",
       "type": "user",
@@ -34,7 +34,7 @@
       "lastname": "Svenson"
     },
     {
-      "id": 5,
+      "id": "5",
       "username": "u5",
       "password": "u5",
       "type": "user",
@@ -65,11 +65,66 @@
       "firstname": "RAHMAN",
       "lastname": "DOGAN",
       "id": "2a83ba0e-7d08-4da6-b0aa-76e87e8e2215"
+    },
+    {
+      "id": "804ecb53-af3d-462e-982a-639b1c29f402",
+      "username": "Sofie",
+      "password": "ASDADSDASDA",
+      "type": "user",
+      "email": "7777777777777777@hotmail.com",
+      "phone": "4444444444444444444444",
+      "personalNumber": "777777777777777777",
+      "firstname": "Person",
+      "lastname": "KanelBulle"
+    },
+    {
+      "id": "6544f876-8537-4d56-a558-eb0e1ec4f34a",
+      "username": "Sofies",
+      "password": "AsSDADSDASDA",
+      "type": "user",
+      "email": "7777777s777777777@hotmail.com",
+      "phone": "44444s44444444444444444",
+      "personalNumber": "3333323333333333333333",
+      "firstname": "Persons",
+      "lastname": "KanelBulles"
+    },
+    {
+      "id": "957f73d8-3944-40f7-ab82-08cd4f03188d",
+      "username": "test",
+      "password": "ASDASDASD",
+      "type": "user",
+      "email": "kamel@hotmail.com",
+      "phone": "6666666666666666666",
+      "personalNumber": "222222222222222",
+      "firstname": "testing",
+      "lastname": "kanelnakel"
+    },
+    {
+      "id": "f7fd5d34-400e-4c9d-bbc4-81e2fe404324",
+      "username": "Rahman",
+      "password": "ASDASDASDASDASD",
+      "type": "user",
+      "email": "5555555555555555@hotmail.com",
+      "phone": "4444444444444444444444",
+      "personalNumber": "555555555555555555",
+      "firstname": "Godzilla",
+      "lastname": "Trexasoriouse"
+    },
+    {
+      "id": "fdda326a-2f11-4b5d-8675-f687bb683ee6",
+      "username": "KamelKamel",
+      "password": "ASDSADASDASD",
+      "type": "user",
+      "email": "sdasdasd@hotmail.com",
+      "phone": "999999999999999",
+      "personalNumber": "444444444444444",
+      "firstname": "asdadasdasd",
+      "lastname": "MASDASD"
     }
   ],
   "auctions": [
     {
-      "id": 1,
+      "id": "1",
       "sellerId": "u2",
       "itemDetails": {
         "title": "sadasas",
@@ -95,7 +150,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "sellerId": "u3",
       "itemDetails": {
         "name": "Eski Kitap Koleksiyonu",
@@ -122,7 +177,7 @@
       "status": "finished"
     },
     {
-      "id": 3,
+      "id": "3",
       "sellerId": "u2",
       "itemDetails": {
         "name": "Antika Vazo",
@@ -149,7 +204,7 @@
       "status": "finished"
     },
     {
-      "id": 4,
+      "id": "4",
       "sellerId": "u3",
       "itemDetails": {
         "name": "Eski Kitap Koleksiyonu",
@@ -188,36 +243,6 @@
       "startDate": "2024-02-07",
       "endDate": "2024-02-29",
       "bids": []
-    },
-    {
-      "sellerId": 3,
-      "sellerName": "u3",
-      "itemDetails": {
-        "title": "New Item",
-        "description": "from 1800",
-        "image": "https://cdn.pixabay.com/photo/2020/03/05/12/48/spring-4904395_640.jpg",
-        "price": "2000"
-      },
-      "bids": [],
-      "startDate": "2024-03-04",
-      "endDate": "2024-03-06",
-      "status": "in progress",
-      "id": "827a60ac-5d9c-4b40-8e8e-37983104ab2c"
-    },
-    {
-      "sellerId": 3,
-      "sellerName": "u3",
-      "itemDetails": {
-        "title": "New Item 2",
-        "description": "New Item 2",
-        "image": "https://cdn.pixabay.com/photo/2018/04/05/14/09/sunflowers-3292932_1280.jpg",
-        "price": "2112"
-      },
-      "bids": [],
-      "startDate": "2024-03-04",
-      "endDate": "2024-03-30",
-      "status": "in progress",
-      "id": "d2cca1f3-2cc8-4be1-ae1d-f1a563ab8f79"
     }
   ]
 }
