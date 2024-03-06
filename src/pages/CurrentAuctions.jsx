@@ -13,7 +13,7 @@ function CurrentAuctions() {
   const { auctionsList } = useAuth(); 
   return (
     <div className="container">
-      <div className="d-flex flex-wrap">
+      {auctionsList.length>0 ?<div className="d-flex flex-wrap">
         {auctionsList
           .filter((auction) => auction.status != "finished")
           .map((filteredAuction) => (
@@ -59,10 +59,11 @@ function CurrentAuctions() {
                   Bids: {filteredAuction.bids.length || 0}
                 </Typography>
               </CardActions>          
-              {Timer(filteredAuction.endDate)}
+              {Timer(filteredAuction)}
             </Card>
           ))}
-      </div>
+      </div>:<h2>No current auction found</h2>}
+      
     </div>
   );
 }

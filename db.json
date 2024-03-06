@@ -121,174 +121,37 @@
       "firstname": "asdadasdasd",
       "lastname": "MASDASD"
     }
-
   ],
   "auctions": [
-    {
-      "id": "1",
-      "sellerId": "u2",
-      "itemDetails": {
-        "title": "sadasas",
-        "description": "19. yüzyıldan kalma nadir bir vazo. asdasdasas",
-        "price": 100,
-        "image": "https://cdn.pixabay.com/photo/2020/04/29/16/10/vase-5109481_1280.jpg"
-      },
-      "startDate": "2024-03-10",
-      "endDate": "2024-03-16",
-      "bids": [
-        {
-          "bidderId": 3,
-          "bidder": "u3",
-          "amount": 150,
-          "bidTime": "2023-03-01T10:00:00Z"
-        },
-        {
-          "bidderId": 4,
-          "bidder": "u4",
-          "amount": 200,
-          "bidTime": "2023-03-01T11:00:00Z"
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "sellerId": "u3",
-      "itemDetails": {
-        "name": "Eski Kitap Koleksiyonu",
-        "description": "Çeşitli tarihlerden 20 adet nadir kitap.",
-        "image": "https://cdn.pixabay.com/photo/2020/04/29/16/10/vase-5109481_1280.jpg",
-        "price": 100
-      },
-      "bids": [
-        {
-          "bidderId": 4,
-          "bidder": "u4",
-          "amount": 300,
-          "bidTime": "2023-03-02T12:30:00Z"
-        },
-        {
-          "bidderId": 2,
-          "bidder": "u2",
-          "amount": 350,
-          "bidTime": "2023-03-02T13:45:00Z"
-        }
-      ],
-      "startTime": "2023-03-02T12:00:00Z",
-      "endTime": "2023-03-06T12:00:00Z",
-      "status": "finished"
-    },
-    {
-      "id": "3",
-      "sellerId": "u2",
-      "itemDetails": {
-        "name": "Antika Vazo",
-        "description": "19. yüzyıldan kalma nadir bir vazo.",
-        "image": "https://cdn.pixabay.com/photo/2020/04/29/16/10/vase-5109481_1280.jpg",
-        "price": 100
-      },
-      "bids": [
-        {
-          "bidderId": 3,
-          "bidder": "u3",
-          "amount": 150,
-          "bidTime": "2023-03-01T10:00:00Z"
-        },
-        {
-          "bidderId": 4,
-          "bidder": "u4",
-          "amount": 200,
-          "bidTime": "2023-03-01T11:00:00Z"
-        }
-      ],
-      "startTime": "2023-03-01T09:00:00Z",
-      "endTime": "2023-03-05T09:00:00Z",
-      "status": "finished"
-    },
-    {
-      "id": "4",
-      "sellerId": "u3",
-      "itemDetails": {
-        "name": "Eski Kitap Koleksiyonu",
-        "description": "Çeşitli tarihlerden 20 adet nadir kitap.",
-        "image": "https://cdn.pixabay.com/photo/2020/04/29/16/10/vase-5109481_1280.jpg",
-        "price": 100
-      },
-      "bids": [
-        {
-          "bidderId": 4,
-          "bidder": "u4",
-          "amount": 300,
-          "bidTime": "2023-03-02T12:30:00Z"
-        },
-        {
-          "bidderId": 4,
-          "bidder": "u4",
-          "amount": 350,
-          "bidTime": "2023-03-02T13:45:00Z"
-        }
-      ],
-      "startTime": "2023-03-02T12:00:00Z",
-      "endTime": "2023-03-06T12:00:00Z",
-      "status": "finished"
-    },
-    {
-      "id": "3f5708d0-cf7f-4d0f-bac6-70e948073596",
-      "sellerId": 4,
-      "sellerName": "u4",
-      "itemDetails": {
-        "title": "book is book",
-        "description": "old book",
-        "price": "1000",
-        "image": "https://cdn.pixabay.com/photo/2020/03/05/12/48/spring-4904395_640.jpg"
-      },
-      "startDate": "2024-02-07",
-      "endDate": "2024-02-29",
-      "bids": []
-    },
-    {
-      "sellerId": 3,
-      "sellerName": "u3",
-      "itemDetails": {
-        "title": "New Item",
-        "description": "from 1800",
-        "image": "https://cdn.pixabay.com/photo/2020/03/05/12/48/spring-4904395_640.jpg",
-        "price": "2000"
-      },
-      "bids": [],
-      "startDate": "2024-03-04",
-      "endDate": "2024-03-06",
-      "status": "in progress",
-      "id": "827a60ac-5d9c-4b40-8e8e-37983104ab2c"
-    },
-    {
-      "sellerId": 3,
-      "sellerName": "u3",
-      "itemDetails": {
-        "title": "New Item 2",
-        "description": "New Item 2",
-        "image": "https://cdn.pixabay.com/photo/2018/04/05/14/09/sunflowers-3292932_1280.jpg",
-        "price": "2112"
-      },
-      "bids": [],
-      "startDate": "2024-03-04",
-      "endDate": "2024-03-30",
-      "status": "in progress",
-      "id": "d2cca1f3-2cc8-4be1-ae1d-f1a563ab8f79"
-    },
     {
       "sellerId": "4",
       "sellerName": "u4",
       "itemDetails": {
-        "title": "new item9",
-        "description": "as",
-        "image": "https://cdn.pixabay.com/photo/2018/04/05/14/09/sunflowers-3292932_1280.jpg",
-        "price": "0"
+        "title": "PES 2024",
+        "description": "Brand New",
+        "image": "https://www.operationsports.com/wp-content/uploads/2023/09/efootball-2024-latest-mobile-menu-v0-t1i8bb900fmb1.jpg?w=1536",
+        "price": "100"
+      },
+      "bids": [],
+      "startDate": "2024-03-07",
+      "endDate": "2024-03-31",
+      "status": "in progress",
+      "id": "b02418e8-2d55-49e8-9843-43e4bc6f94af"
+    },
+    {
+      "sellerId": "3",
+      "sellerName": "u3",
+      "itemDetails": {
+        "title": "FIFA 2023",
+        "description": "old game",
+        "image": "https://www.operationsports.com/wp-content/uploads/2023/09/efootball-2024-latest-mobile-menu-v0-t1i8bb900fmb1.jpg?w=1536",
+        "price": "10"
       },
       "bids": [],
       "startDate": "2024-03-06",
-      "endDate": "2024-03-22",
+      "endDate": "2024-03-15",
       "status": "in progress",
-      "id": "2398a2e6-ff22-4bf2-9ab1-a291c1710ad1"
+      "id": "f7c3d0da-70b4-4f7a-91ee-de77af914433"
     }
   ]
 }

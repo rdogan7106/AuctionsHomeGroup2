@@ -39,10 +39,14 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const newAuctionItem = { ...formData, id: uuidv4() };
-    const now = new Date();
+    const newAuctionItem = { ...formData, id: uuidv4() };    
     const start = new Date(newAuctionItem.startDate);
     const end = new Date(newAuctionItem.endDate);
+    const now = new Date();
+    now.setHours(0)
+    now.setSeconds(0)
+    now.setMinutes(0)
+    now.setMilliseconds(0)
     if (start < now) {
       alert("Start time cannot be earlier than today");
     } else if (end <= start) {
