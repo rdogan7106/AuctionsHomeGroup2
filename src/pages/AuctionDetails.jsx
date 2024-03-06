@@ -165,14 +165,10 @@ function AuctionDetails({ auctionsList }) {
                   className="form-select"
                   value={lan}
                   onChange={handleLanChange}
-                >
+                />
                   <option value="">Välj ett län</option>
-                  {counties.map((county) => (
-                    <option key={county} value={county}>
-                      {county}
-                    </option>
-                  ))}
-                </select>
+
+
                 <input
                   type="text"
                   className="form-control"
@@ -263,6 +259,7 @@ function AuctionDetails({ auctionsList }) {
               </table>
             </div>
           </div>
+
         </div>
       </div>
     </div>
