@@ -64,65 +64,56 @@ function Auctions({ setActiveComponent, setUpdateAuction }) {
     setActiveComponent("UpdateAuctionItem")
 
   }
-  setAuctionsList((prevauctions) => prevauctions.filter((auction) => auction.id !== auctionId));
 
-}
-
-const handleAuctionUpdate = (auction) => {
-  setUpdateAuction(auction)
-  setActiveComponent("UpdateAuctionItem")
-
-}
-
-return (
-  <Paper sx={{ width: "100%", overflow: "hidden" }}>
-    <TableContainer sx={{ maxHeight: 440 }}>
-      <Table stickyHeader aria-label="sticky table">
-        <TableHead>
-          <TableRow>
-            {columns.map((column) => (
-              <TableCell
-                key={column.id}
-                align={column.align}
-                style={{ minWidth: column.minWidth }}
-              >
-                {column.label}
-              </TableCell>
-            ))}
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {auctionsList.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((auction) => {
-            return (
-              <TableRow hover role="checkbox" tabIndex={-1} key={auction.id}>
-                <TableCell>{auction.id}</TableCell>
-                <TableCell>{auction.sellerId || auction.seller}</TableCell>
-                <TableCell>{auction.itemDetails.title}</TableCell>
-                <TableCell>{auction.itemDetails.price}</TableCell>
-                <TableCell>{auction.startDate}</TableCell>
-                <TableCell>{auction.endDate}</TableCell>
-                <TableCell>{auction.bids.length}</TableCell>
-                <TableCell>{auction.bids[auction.bids.length - 1]?.amount || 'No bids'}</TableCell>
-                <TableCell>{auction.status}</TableCell>
-                <TableCell onClick={() => handleAuctionUpdate(auction)}><SystemUpdateAltIcon /></TableCell>
-                <TableCell onClick={() => deleteAuction(auction.id)}><DeleteIcon /></TableCell>
-              </TableRow>
-            );
-          })}
-        </TableBody>
-      </Table>
-    </TableContainer>
-    <TablePagination
-      rowsPerPageOptions={[10, 25, 100]}
-      component="div"
-      count={auctionsList.length}
-      rowsPerPage={rowsPerPage}
-      page={page}
-      onPageChange={handleChangePage}
-      onRowsPerPageChange={handleChangeRowsPerPage}
-    />
-  </Paper>
-);
+  return (
+    <Paper sx={{ width: "100%", overflow: "hidden" }}>
+      <TableContainer sx={{ maxHeight: 440 }}>
+        <Table stickyHeader aria-label="sticky table">
+          <TableHead>
+            <TableRow>
+              {columns.map((column) => (
+                <TableCell
+                  key={column.id}
+                  align={column.align}
+                  style={{ minWidth: column.minWidth }}
+                >
+                  {column.label}
+                </TableCell>
+              ))}
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {auctionsList.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((auction) => {
+              return (
+                <TableRow hover role="checkbox" tabIndex={-1} key={auction.id}>
+                  <TableCell>{auction.id}</TableCell>
+                  <TableCell>{auction.sellerId || auction.seller}</TableCell>
+                  <TableCell>{auction.itemDetails.title}</TableCell>
+                  <TableCell>{auction.itemDetails.price}</TableCell>
+                  <TableCell>{auction.startDate}</TableCell>
+                  <TableCell>{auction.endDate}</TableCell>
+                  <TableCell>{auction.bids.length}</TableCell>
+                  <TableCell>{auction.bids[auction.bids.length - 1]?.amount || 'No bids'}</TableCell>
+                  <TableCell>{auction.status}</TableCell>
+                  <TableCell onClick={() => handleAuctionUpdate(auction)}><SystemUpdateAltIcon /></TableCell>
+                  <TableCell onClick={() => deleteAuction(auction.id)}><DeleteIcon /></TableCell>
+                </TableRow>
+              );
+            })}
+          </TableBody>
+        </Table>
+      </TableContainer>
+      <TablePagination
+        rowsPerPageOptions={[10, 25, 100]}
+        component="div"
+        count={auctionsList.length}
+        rowsPerPage={rowsPerPage}
+        page={page}
+        onPageChange={handleChangePage}
+        onRowsPerPageChange={handleChangeRowsPerPage}
+      />
+    </Paper>
+  );
 }
 
 export default Auctions
