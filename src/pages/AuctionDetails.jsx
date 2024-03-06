@@ -99,7 +99,10 @@ function AuctionDetails({ auctionsList }) {
 
   const handleBidSubmit = () => {
     const latestBid = bidHistory[bidHistory.length - 1];
-
+    if (latestBid && latestBid.username === user.username) {
+      alert("You cannot place consecutive bids.");
+      return;
+    }
     if (auction.sellerId === user.username) {
       alert("You cannot bid on your own items");
       return;
@@ -165,10 +168,14 @@ function AuctionDetails({ auctionsList }) {
                   className="form-select"
                   value={lan}
                   onChange={handleLanChange}
-                />
+                >
                   <option value="">Välj ett län</option>
-
-
+                  {counties.map((county) => (
+                    <option key={county} value={county}>
+                      {county}
+                    </option>
+                  ))}
+                </select>
                 <input
                   type="text"
                   className="form-control"
@@ -259,7 +266,6 @@ function AuctionDetails({ auctionsList }) {
               </table>
             </div>
           </div>
-
         </div>
       </div>
     </div>
