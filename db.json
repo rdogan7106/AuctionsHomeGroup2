@@ -152,6 +152,21 @@
       "endDate": "2024-03-15",
       "status": "in progress",
       "id": "f7c3d0da-70b4-4f7a-91ee-de77af914433"
+    },
+    {
+      "sellerId": "3",
+      "sellerName": "u3",
+      "itemDetails": {
+        "title": "Assassin's Creed",
+        "description": "from 2022",
+        "image": "https://gmedia.playstation.com/is/image/SIEPDC/Assassins-creed-mirage-hero-desktop-01-en-25oct22?$1600px$",
+        "price": "90"
+      },
+      "bids": [],
+      "startDate": "2024-03-07",
+      "endDate": "2024-03-30",
+      "status": "in progress",
+      "id": "04772765-7239-4699-a39a-f95ed34a377e"
     }
   ]
 }

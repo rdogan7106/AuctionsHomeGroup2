@@ -4,7 +4,7 @@ import { useState, useContext } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { useAuth } from "../../context/Context.jsx";
 function AddAuctionItem({ setActiveComponent, updateAuction }) {
-  const { user, logout } = useAuth();
+  const { user, logout, auctionsList, setAuctionsList } = useAuth();
   const [formData, setFormData] = useState({
     sellerId: user?.id || "",
     sellerName: user?.username || "",
@@ -62,6 +62,7 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
         body: JSON.stringify(newAuctionItem),
       });
       setActiveComponent("Useritems");
+      setAuctionsList([...auctionsList,newAuctionItem])
     }
   };
 
