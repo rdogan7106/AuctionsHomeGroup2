@@ -4,7 +4,7 @@ import { useState, useContext } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { useAuth } from "../../context/Context.jsx";
 function AddAuctionItem({ setActiveComponent, updateAuction }) {
-  const { user, logout, auctionsList, setAuctionsList } = useAuth();
+  const { user,  auctionsList, setAuctionsList } = useAuth();
   const [formData, setFormData] = useState({
     sellerId: user?.id || "",
     sellerName: user?.username || "",
@@ -43,10 +43,7 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
     const start = new Date(newAuctionItem.startDate);
     const end = new Date(newAuctionItem.endDate);
     const now = new Date();
-    now.setHours(0)
-    now.setSeconds(0)
-    now.setMinutes(0)
-    now.setMilliseconds(0)
+
     if (start < now) {
       alert("Start time cannot be earlier than today");
     } else if (end <= start) {
@@ -108,7 +105,7 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
               Start Date
             </label>
             <input
-              type="date"
+              type="datetime-local"
               className="form-control"
               id="startDate"
               name="startDate"
@@ -123,7 +120,7 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
               End Date
             </label>
             <input
-              type="date"
+              type="datetime-local"
               className="form-control"
               id="endDate"
               name="endDate"

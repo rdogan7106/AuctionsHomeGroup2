@@ -1,8 +1,10 @@
 import Typography from "@mui/material/Typography";
 import { useState, useEffect } from "react";
-
+//import { useAuth } from "../context/Context.jsx";
 function Timer(auction) {
-  const calculateTimeLeft = () => {
+  //const { auctionsList, setAuctionsList } = useAuth();
+
+  const calculateTimeLeft = async () => {
     let difference = null;
     let timeLeft = {};
 
@@ -17,6 +19,7 @@ function Timer(auction) {
         minutes: Math.floor((difference / 1000 / 60) % 60),
         seconds: Math.floor((difference / 1000) % 60),
       };
+
     } else if (new Date(auction.startDate) - new Date() >= 0) {
       difference = new Date() - new Date(auction.startDate);
       timeLeft = {
@@ -29,6 +32,7 @@ function Timer(auction) {
     return timeLeft;
   };
 
+ 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   useEffect(() => {
@@ -47,8 +51,7 @@ function Timer(auction) {
     >
       {timeLeft.days > 0
         ? `${timeLeft.days} days ${timeLeft.hours} hours ${timeLeft.minutes} minutes ${timeLeft.seconds} second left `
-        : `Will start ${-timeLeft.days} days ${-timeLeft.hours} hours ${-timeLeft.minutes} minutes ${-timeLeft.seconds} second `}
-     
+        : `Will start ${timeLeft.days} days ${timeLeft.hours} hours ${timeLeft.minutes} minutes ${timeLeft.seconds} second `}
     </Typography>
   );
 }

@@ -131,54 +131,38 @@
       "personalNumber": "231231231313",
       "firstname": "okokokokok",
       "lastname": "sssssssssslslss"
-
     }
   ],
   "auctions": [
     {
-      "sellerId": "4",
-      "sellerName": "u4",
-      "itemDetails": {
-        "title": "PES 2024",
-        "description": "Brand New",
-        "image": "https://www.operationsports.com/wp-content/uploads/2023/09/efootball-2024-latest-mobile-menu-v0-t1i8bb900fmb1.jpg?w=1536",
-        "price": "100"
-      },
-      "bids": [],
-      "startDate": "2024-03-07",
-      "endDate": "2024-03-31",
-      "status": "in progress",
-      "id": "b02418e8-2d55-49e8-9843-43e4bc6f94af"
-    },
-    {
       "sellerId": "3",
       "sellerName": "u3",
       "itemDetails": {
-        "title": "FIFA 2023",
-        "description": "old game",
-        "image": "https://www.operationsports.com/wp-content/uploads/2023/09/efootball-2024-latest-mobile-menu-v0-t1i8bb900fmb1.jpg?w=1536",
+        "title": "Fifa 2020",
+        "description": "New Item 4",
+        "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUVFBgVFRUYGBgaGxsdGhsbGyAeJBwgIBsgIBobHR0jIi0kIB0pIBgdJTclKS4wNDQ0ICM5PzkyPi4yNDABCwsLEA8QHRISHTIpJCk2MjIyNTIyNTIyMjIyMDQyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIAKgBLAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAADAQIEBQYABwj/xABJEAACAQIEAwUEBwUDCwQDAAABAhEAAwQSITEFQVEGEyJhcTKBkbEHQlKSocHRFCNy4fAzYtIVJCVTVIKTorLC40Oz0/EXc3T/xAAZAQADAQEBAAAAAAAAAAAAAAAAAQIDBAX/xAAsEQACAgEDBAAFAwUAAAAAAAAAAQIRAxIhMQQTQVEiMnGBoTNSYRQjQpHw/9oADAMBAAIRAxEAPwD0heLxmz23GVwhK+L2iuXQa/XHKu4Zj7TJ3ZZZV3TK2+jHKCp19mN68hw30h4hcwuIjhoMgEHOqKEbf7SKT74q7wHbvDv3ouoyZ7qXFEZxA7sMv8RCHlzqqQj0LFdn8HdnNZtnfVRlPnqsa1mOL9gsKQSjuh9Qw/ET+NFw3G8G5m3iEAW5IC3MujJEhSQPac8uRqBj+NgARikPiuLqyHmSp0I5L+NPQxnnPEcEtt2W3cZ8rMp8BUyNDpMRMjntUU4Vx9U+8Vub3FsuRBbz7TlMatBLARl+sJJM60TD4stcKNbjyMtI5nRY59etTqXcUfHs3WJabfJgUIOhWKelnL4kZkbqpI+VWHG8Jbt4ggMUMA7+7Y+lbLsVfwOIw3+d/s3eK7KSclskQMp8OX4+VXpWpr0c7sy2G7S4y2ADfF1RstwZo95mB6VNw/bW8oH7rUfWRpHOJBPUj7vnNbm72HwF0ZrZYA7FLgYe7NmqmxP0ZqWZbWIZfCphkmZLaGGH2elGk",
         "price": "10"
       },
       "bids": [],
-      "startDate": "2024-03-06",
-      "endDate": "2024-03-15",
+      "startDate": "2024-03-07T22:05",
+      "endDate": "2024-03-23T22:06",
       "status": "in progress",
-      "id": "f7c3d0da-70b4-4f7a-91ee-de77af914433"
+      "id": "fb375fe1-2130-46c5-8ccd-d2c4065e2480"
     },
     {
       "sellerId": "3",
       "sellerName": "u3",
       "itemDetails": {
-        "title": "Assassin's Creed",
-        "description": "from 2022",
-        "image": "https://gmedia.playstation.com/is/image/SIEPDC/Assassins-creed-mirage-hero-desktop-01-en-25oct22?$1600px$",
-        "price": "90"
+        "title": "1",
+        "description": "asd",
+        "image": "asdsad",
+        "price": "1"
       },
       "bids": [],
-      "startDate": "2024-03-07",
-      "endDate": "2024-03-30",
-      "status": "in progress",
-      "id": "04772765-7239-4699-a39a-f95ed34a377e"
+      "startDate": "2024-03-07T22:34",
+      "endDate": "2024-03-07T23:14",
+      "status": "finished",
+      "id": "fe295d9d-ec22-4d02-b21e-7f1942148805"
     }
   ]
 }
