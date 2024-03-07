@@ -159,10 +159,25 @@
         "price": "1"
       },
       "bids": [],
-      "startDate": "2024-03-07T22:34",
-      "endDate": "2024-03-07T23:16",
+      "startDate": "2024-03-07",
+      "endDate": "2024-03-12",
       "status": "finished",
       "id": "fe295d9d-ec22-4d02-b21e-7f1942148805"
+    },
+    {
+      "sellerId": "4",
+      "sellerName": "u4",
+      "itemDetails": {
+        "title": "my game",
+        "description": "New Item 4",
+        "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUVFBgVFRUYGBgaGxsdGhsbGyAeJBwgIBsgIBobHR0jIi0kIB0pIBgdJTclKS4wNDQ0ICM5PzkyPi4yNDABCwsLEA8QHRISHTIpJCk2MjIyNTIyNTIyMjIyMDQyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIAKgBLAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAADAQIEBQYABwj/xABJEAACAQIEAwUEBwUDCwQDAAABAhEAAwQSITEFQVEGEyJhcTKBkbEHQlKSocHRFCNy4fAzYtIVJCVTVIKTorLC40Oz0/EXc3T/xAAZAQADAQEBAAAAAAAAAAAAAAAAAQIDBAX/xAAsEQACAgEDBAAFAwUAAAAAAAAAAQIRAxIhMQQTQVEiMnGBoTNSYRQjQpHw/9oADAMBAAIRAxEAPwD0heLxmz23GVwhK+L2iuXQa/XHKu4Zj7TJ3ZZZV3TK2+jHKCp19mN68hw30h4hcwuIjhoMgEHOqKEbf7SKT74q7wHbvDv3ouoyZ7qXFEZxA7sMv8RCHlzqqQj0LFdn8HdnNZtnfVRlPnqsa1mOL9gsKQSjuh9Qw/ET+NFw3G8G5m3iEAW5IC3MujJEhSQPac8uRqBj+NgARikPiuLqyHmSp0I5L+NPQxnnPEcEtt2W3cZ8rMp8BUyNDpMRMjntUU4Vx9U+8Vub3FsuRBbz7TlMatBLARl+sJJM60TD4stcKNbjyMtI5nRY59etTqXcUfHs3WJabfJgUIOhWKelnL4kZkbqpI+VWHG8Jbt4ggMUMA7+7Y+lbLsVfwOIw3+d/s3eK7KSclskQMp8OX4+VXpWpr0c7sy2G7S4y2ADfF1RstwZo95mB6VNw/bW8oH7rUfWRpHOJBPUj7vnNbm72HwF0ZrZYA7FLgYe7NmqmxP0ZqWZbWIZfCphkmZLaGGH2elGk",
+        "price": "100"
+      },
+      "bids": [],
+      "startDate": "2024-03-09T23:27",
+      "endDate": "2024-03-1git 9T23:27",
+      "status": "in progress",
+      "id": "1ecaef7d-d55c-4bd7-be88-35cd7b1024c3"
     }
   ]
 }
