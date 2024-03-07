@@ -1,6 +1,10 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
+<<<<<<< HEAD
 import ReCAPTCHA from "react-google-recaptcha";
+=======
+import ReCAPTCHA from "react-google-recaptcha"; 
+>>>>>>> mas_branch
 import { v4 as uuidv4 } from "uuid";
 import React, { createContext, useContext, useState, useEffect } from "react";
 
@@ -8,6 +12,18 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 const UserContext = createContext();
 function Userregisterform() {
   const [userList, setUserList] = useState([]);
+  const [formData, setFormData] = useState({
+    username: "",
+    password: "",
+    type: "user",
+    email: "",
+    phone: "",
+    personalNumber: "",
+    firstname: "",
+    lastname: "",
+  });
+  const [reCaptchaVerification, setReCaptchaVerification] = useState(false);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -20,18 +36,16 @@ function Userregisterform() {
   
 
     fetchData()
+<<<<<<< HEAD
 },[]);
+=======
+},);
+>>>>>>> mas_branch
 
-  const [formData, setFormData] = useState({
-    username: "",
-    password: "",
-    type: "user",
-    email: "",
-    phone: "",
-    personalNumber: "",
-    firstname: "",
-    lastname: "",
-  });
+const captchaVerify = (value) => {
+  // Set the state to true when reCAPTCHA is successfully verified
+  setReCaptchaVerification(true);
+};
 
   const [reCaptchaVerification, setReCaptchaVerification] = useState(false);
 
@@ -56,9 +70,14 @@ function Userregisterform() {
     const alreadyExists = userList.some(
       (user) =>
         user.personalNumber === formData.personalNumber ||
-        user.email === formData.email
+        user.email === formData.email ||
+        user.username === formData.username
     );
+<<<<<<< HEAD
     if (!alreadyExists&& reCaptchaVerification) {
+=======
+    if (!alreadyExists && reCaptchaVerification ) {
+>>>>>>> mas_branch
       const newUser = { ...formData, id: uuidv4() };
       const response = await fetch("http://localhost:3000/users", {
         method: "POST",
@@ -69,11 +88,18 @@ function Userregisterform() {
         
       });
       alert("User Registered.");
+<<<<<<< HEAD
     } else if(!reCaptchaVerification) {
       alert("Submit reCaptcha Correctly !");}
       else {alert("A user with the same personal number or email already exists");
       
     }
+=======
+    } else if (!reCaptchaVerification && alreadyExists){
+      alert("Submit reCaptcha correctly!");}
+      else {alert("A user with the same personal number or email or Username already exists."); return;}
+      
+>>>>>>> mas_branch
 
     setUserList((prevUsers) => [...prevUsers, { ...formData, id: uuidv4() }]);
     setFormData({
