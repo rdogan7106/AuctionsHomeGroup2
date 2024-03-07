@@ -120,8 +120,18 @@
       "personalNumber": "444444444444444",
       "firstname": "asdadasdasd",
       "lastname": "MASDASD"
+    },
+    {
+      "id": "8d7cda9a-137e-4197-91b6-4e46fb65db7c",
+      "username": "JoeMasoud",
+      "password": "ASDASDASD",
+      "type": "user",
+      "email": "letsfindout@hotmail.com",
+      "phone": "1323232332323298",
+      "personalNumber": "231231231313",
+      "firstname": "okokokokok",
+      "lastname": "sssssssssslslss"
     }
-
   ],
   "auctions": [
     {
