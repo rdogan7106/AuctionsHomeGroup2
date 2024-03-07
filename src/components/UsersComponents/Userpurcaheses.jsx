@@ -4,7 +4,7 @@ import { useAuth } from '../../context/Context';
 function Userpurchases() {
     const { user, auctionsList } = useAuth();
 
-    // Filter auctionsList to get only auctions where the bid history's latest bidder is the logged-in user
+
     const filteredAuctions = auctionsList.filter(auction => {
         const bidHistory = JSON.parse(localStorage.getItem(`bidHistory_${auction.id}`)) || [];
         const latestBid = bidHistory[bidHistory.length - 1];
@@ -26,7 +26,6 @@ function Userpurchases() {
                                 <br />
                                 Sold for: {localStorage.getItem(`currentPrice_${auction.id}`) || auction.itemDetails.price}
                             </p>
-                            {/* Add more details or actions here if needed */}
                         </div>
                     </div>
                 ))}
