@@ -44,7 +44,7 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
     const end = new Date(newAuctionItem.endDate);
     const now = new Date();
 
-    if (start < now) {
+    if (start.getDay() < now.getDay()) {
       alert("Start time cannot be earlier than today");
     } else if (end <= start) {
       alert("End Time cannot be earlier than Start Time ");
