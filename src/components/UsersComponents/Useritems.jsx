@@ -10,5 +10,5 @@ function Useritems() {
         let { auctionId } = useParams();
         let auction = auctionsList.find(auction => auction.id.toString() === auctionId);
 
-}
+}}
 export default Useritems
