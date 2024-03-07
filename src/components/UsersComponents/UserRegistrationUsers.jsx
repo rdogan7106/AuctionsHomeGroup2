@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-
+import ReCAPTCHA from "react-google-recaptcha"; 
 import { v4 as uuidv4 } from "uuid";
 import React, { createContext, useContext, useState, useEffect } from "react";
 
@@ -8,6 +8,18 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 const UserContext = createContext();
 function Userregisterform() {
   const [userList, setUserList] = useState([]);
+  const [formData, setFormData] = useState({
+    username: "",
+    password: "",
+    type: "user",
+    email: "",
+    phone: "",
+    personalNumber: "",
+    firstname: "",
+    lastname: "",
+  });
+  const [reCaptchaVerification, setReCaptchaVerification] = useState(false);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -20,18 +32,12 @@ function Userregisterform() {
   
 
     fetchData()
-});
+},);
 
-  const [formData, setFormData] = useState({
-    username: "",
-    password: "",
-    type: "user",
-    email: "",
-    phone: "",
-    personalNumber: "",
-    firstname: "",
-    lastname: "",
-  });
+const captchaVerify = (value) => {
+  // Set the state to true when reCAPTCHA is successfully verified
+  setReCaptchaVerification(true);
+};
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -46,9 +52,10 @@ function Userregisterform() {
     const alreadyExists = userList.some(
       (user) =>
         user.personalNumber === formData.personalNumber ||
-        user.email === formData.email
+        user.email === formData.email ||
+        user.username === formData.username
     );
-    if (!alreadyExists) {
+    if (!alreadyExists && reCaptchaVerification ) {
       const newUser = { ...formData, id: uuidv4() };
       const response = await fetch("http://localhost:3000/users", {
         method: "POST",
@@ -59,10 +66,10 @@ function Userregisterform() {
         
       });
       alert("User Registered.");
-    } else {
-      alert("A user with the same personal number or email already exists.");
-      return;
-    }
+    } else if (!reCaptchaVerification && alreadyExists){
+      alert("Submit reCaptcha correctly!");}
+      else {alert("A user with the same personal number or email or Username already exists."); return;}
+      
 
     setUserList((prevUsers) => [...prevUsers, { ...formData, id: uuidv4() }]);
     setFormData({
@@ -190,6 +197,7 @@ function Userregisterform() {
             required
           />
         </div>
+        <ReCAPTCHA sitekey="6Ld9WY8pAAAAAGvkUF1f9MAbB5vMJ0KV3g1S7_C0" onChange={captchaVerify}/>
         <button type="submit" className="btn btn-primary">
           Register
         </button>
