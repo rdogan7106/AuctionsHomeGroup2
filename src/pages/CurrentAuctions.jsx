@@ -87,6 +87,7 @@ function CurrentAuctions() {
                   </Typography>
                 </CardActions>
                 <Timer auction={filteredAuction} />
+
               </Card>
             ))}
         </div>
