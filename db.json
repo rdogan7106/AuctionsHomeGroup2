@@ -122,7 +122,6 @@
       "lastname": "MASDASD"
     },
     {
-<<<<<<< HEAD
       "id": "8d7cda9a-137e-4197-91b6-4e46fb65db7c",
       "username": "JoeMasoud",
       "password": "ASDASDASD",
@@ -132,50 +131,7 @@
       "personalNumber": "231231231313",
       "firstname": "okokokokok",
       "lastname": "sssssssssslslss"
-=======
-      "id": "617b5829-96fb-4137-b5b3-d2a855f4a2e7",
-      "username": "JessicaAlba",
-      "password": "ASDASDASD",
-      "type": "user",
-      "email": "kamsadas@hotmail.com",
-      "phone": "555555555555",
-      "personalNumber": "3333333333333",
-      "firstname": "adssada",
-      "lastname": "kjakldja"
-    },
-    {
-      "id": "d5182ae0-f97d-4741-8c0a-83e5cb7166af",
-      "username": "JessicaAlba",
-      "password": "ASDASDASD",
-      "type": "user",
-      "email": "asdlasdmm@hotmail.com",
-      "phone": "88888888888888",
-      "personalNumber": "543434243333",
-      "firstname": "adadsasd",
-      "lastname": "wwiiwiiwi"
-    },
-    {
-      "id": "0f2a136a-48c2-42cb-b399-6a96cb5d7c9e",
-      "username": "KamelKamel",
-      "password": "ASDASDASD",
-      "type": "user",
-      "email": "kamelasddssd@hotmail.com",
-      "phone": "333333333333",
-      "personalNumber": "33333333333",
-      "firstname": "kjldjadklasj",
-      "lastname": "ksajdkldjakdj"
-    },
-    {
-      "id": "3f639c2c-dd1d-44f2-8633-b5240e98a7a8",
-      "username": "KamelKamel",
-      "password": "ASDASDASD",
-      "type": "user",
-      "email": "pwoeiwoei@hotmail.com",
-      "phone": "231923",
-      "personalNumber": "13333333212",
-      "firstname": "asdndkljkdj",
-      "lastname": "joiwejqioe"
->>>>>>> mas_branch
+
     }
   ],
   "auctions": [
