@@ -163,6 +163,51 @@
       "endDate": "2024-03-07T23:16",
       "status": "finished",
       "id": "fe295d9d-ec22-4d02-b21e-7f1942148805"
+    },
+    {
+      "id": "223db4c6-e148-44ff-9368-f8d8dd955742",
+      "sellerId": "3",
+      "sellerName": "u3",
+      "itemDetails": {
+        "title": "test",
+        "description": "test",
+        "image": "https://media.hornbach.se/hb/packshot/as.47281144.jpg?dvid=8",
+        "price": "100"
+      },
+      "bids": [],
+      "startDate": "2024-03-08T16:21",
+      "endDate": "2024-03-09T13:18",
+      "status": "in progress"
+    },
+    {
+      "id": "d8785a9e-74d0-4cfd-9859-d4e9e93e646f",
+      "sellerId": "3",
+      "sellerName": "u3",
+      "itemDetails": {
+        "title": "test2",
+        "description": "test",
+        "image": "https://media.hornbach.se/hb/packshot/as.47281144.jpg?dvid=8",
+        "price": "100"
+      },
+      "bids": [],
+      "startDate": "2024-03-08T13:43",
+      "endDate": "2024-03-08T13:44",
+      "status": "finished"
+    },
+    {
+      "id": "8cf69038-516f-419a-aaa6-6edea75ab90a",
+      "sellerId": "4",
+      "sellerName": "u4",
+      "itemDetails": {
+        "title": "test3",
+        "description": "test",
+        "image": "https://media.hornbach.se/hb/packshot/as.47281144.jpg?dvid=8",
+        "price": "100"
+      },
+      "bids": [],
+      "startDate": "2024-03-08T13:57",
+      "endDate": "2024-03-08T13:58",
+      "status": "finished"
     }
   ]
 }

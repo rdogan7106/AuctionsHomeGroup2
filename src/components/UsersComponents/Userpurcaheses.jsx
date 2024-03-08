@@ -8,9 +8,11 @@ function Userpurchases() {
     const filteredAuctions = auctionsList.filter(auction => {
         const bidHistory = JSON.parse(localStorage.getItem(`bidHistory_${auction.id}`)) || [];
         const latestBid = bidHistory[bidHistory.length - 1];
-        const sold = auction.status === "finished"
+        const now = new Date();
+        const sold = auction.status === "finished" || new Date(auction.endDate) < now;
         return latestBid && latestBid.username === user.username && sold;
     });
+
 
     return (
         <div>
