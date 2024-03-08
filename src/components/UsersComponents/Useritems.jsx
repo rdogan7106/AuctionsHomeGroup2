@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { useParams } from 'react-router-dom';
-
-export default UserItems;
+function Useritems() {
+    return <h1>User items veton</h1>
+}
+export default Useritems
