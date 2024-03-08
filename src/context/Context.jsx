@@ -18,7 +18,7 @@ export const AuthProvider = ({ children }) => {
     const auctionResponse = await fetch("http://localhost:3000/auctions");
     const auctions = await auctionResponse.json();
     setAuctionsList(auctions)
-    setUserList([users])
+    setUserList(users)
     const user = users.find(
       (user) => user.username === username && user.password === password
     );
