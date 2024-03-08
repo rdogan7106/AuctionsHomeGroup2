@@ -150,12 +150,21 @@ function AuctionDetails({ auctionsList }) {
                 <strong>Beskrivning:</strong> {auction.itemDetails.description}
               </p>
               <p className="mb-2">
+<<<<<<< HEAD
                 <strong>Starttid:</strong> {auction.startTime}
               </p>
               <p className="mb-2">
                 <strong>Sluttid:</strong> {auction.endTime}
               </p>
               {Timer(auction.endTime)}
+=======
+                <strong>Starttid:</strong> {auction.startDate}
+              </p>
+              <p className="mb-2">
+                <strong>Sluttid:</strong> {auction.endDate}
+              </p>
+              {Timer(auction)}
+>>>>>>> d31bc7d530dbe92942f70a10c72b65db9a85270e
             </div>
           </div>
         </div>
