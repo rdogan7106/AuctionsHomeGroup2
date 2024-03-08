@@ -39,7 +39,7 @@ function Dashboard() {
         case "Charts":
         return <Charts   setActiveComponent={setActiveComponent}  />
       default:
-        return <h1>Hi! Something went wrong!</h1>;
+        return <h1>Hi! Welcome to Dashboard!</h1>;
     }
   };
 
