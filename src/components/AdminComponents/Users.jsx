@@ -12,13 +12,13 @@ import SystemUpdateAltIcon from '@mui/icons-material/SystemUpdateAlt';
 import DeleteIcon from '@mui/icons-material/Delete';
 import GroupAddIcon from '@mui/icons-material/GroupAdd';
 const columns = [
-  { id: "id", label: "id", minWidth: 80 },
-  { id: "personalNumber", label: "personalNumber", minWidth: 100 },
-  { id: "firstname", label: "firstname", minWidth: 100 },
-  { id: "lastname", label: "lastname", minWidth: 100 },
-  { id: "email", label: "email", minWidth: 100 },
-  { id: "phone", label: "phone", minWidth: 100 },
-  { id: "password", label: "password", minWidth: 100 },
+  { id: "id", label: "id", maxWidth: 80 },
+  { id: "personalNumber", label: "personalNumber", maxWidth: 100 },
+  { id: "firstname", label: "firstname", maxWidth: 120 },
+  { id: "lastname", label: "lastname", maxWidth: 120 },
+  { id: "email", label: "email", maxWidth: 120 },
+  { id: "phone", label: "phone", maxWidth: 120 },
+  { id: "password", label: "password", maxWidth: 120 },
  
 ];
 function Users({setActiveComponent,setUpdateUser}) {
@@ -78,7 +78,7 @@ function Users({setActiveComponent,setUpdateUser}) {
                 <TableCell
                   key={column.id}
                   align={column.align}
-                  style={{ minWidth: column.minWidth }}
+                  style={{ maxWidth: column.maxWidth }}
                 >
                   {column.label}
                 </TableCell>
@@ -93,7 +93,7 @@ function Users({setActiveComponent,setUpdateUser}) {
                   {columns.map(column => {
                     const value = user[column.id];
                     return (
-                      <TableCell key={column.id} align={column.align}>
+                      <TableCell key={column.id} align={column.align}  style={{ maxWidth: column.maxWidth }}>
                         {value}
                       </TableCell>
                     );
