@@ -37,6 +37,13 @@ function Sidenav({ setActiveComponent }) {
                 Users
               </button>
             </li>
+            <li>
+              <button
+                className="btn  w-100"
+                onClick={() => setActiveComponent("Charts")}              >
+                General View
+              </button>
+            </li>
           </>
         ) : (
           <>

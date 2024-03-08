@@ -10,6 +10,7 @@ import Userupdateform from "../components/AdminComponents/Userupdateform.jsx";
 import AddAuctionItem from "../components/UsersComponents/AddAuctionItem.jsx";
 import UpdateAuctionItem from "../components/AdminComponents/UpdateAuctionItem.jsx";
 import Userpurchases from "../components/UsersComponents/Userpurcaheses.jsx";
+import Charts from "../components/AdminComponents/Charts.jsx";
 
 
 function Dashboard() {
@@ -35,6 +36,8 @@ function Dashboard() {
         return <UpdateAuctionItem   setActiveComponent={setActiveComponent} updateAuction = {updateAuction} />;
       case "Userpurchases":
         return <Userpurchases   setActiveComponent={setActiveComponent}  />
+        case "Charts":
+        return <Charts   setActiveComponent={setActiveComponent}  />
       default:
         return <h1>Hi! Something went wrong!</h1>;
     }
