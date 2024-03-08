@@ -122,184 +122,47 @@
       "lastname": "MASDASD"
     },
     {
-      "id": "20f53429-093b-4317-be14-464b9f31b8d3",
-      "username": "u5",
-      "password": "uu",
+      "id": "8d7cda9a-137e-4197-91b6-4e46fb65db7c",
+      "username": "JoeMasoud",
+      "password": "ASDASDASD",
       "type": "user",
-      "email": "jkhjh@jhkn.com",
-      "phone": "21223",
-      "personalNumber": "12122",
-      "firstname": "uu",
-      "lastname": "uu"
+      "email": "letsfindout@hotmail.com",
+      "phone": "1323232332323298",
+      "personalNumber": "231231231313",
+      "firstname": "okokokokok",
+      "lastname": "sssssssssslslss"
     }
-
   ],
   "auctions": [
     {
-      "id": "1",
-      "sellerId": "u2",
-      "itemDetails": {
-        "title": "sadasas",
-        "description": "19. yüzyıldan kalma nadir bir vazo. asdasdasas",
-        "price": 100,
-        "image": "https://cdn.pixabay.com/photo/2020/04/29/16/10/vase-5109481_1280.jpg"
-      },
-      "startDate": "2024-03-10",
-      "endDate": "2024-03-16",
-      "bids": [
-        {
-          "bidderId": 3,
-          "bidder": "u3",
-          "amount": 150,
-          "bidTime": "2023-03-01T10:00:00Z"
-        },
-        {
-          "bidderId": 4,
-          "bidder": "u4",
-          "amount": 200,
-          "bidTime": "2023-03-01T11:00:00Z"
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "sellerId": "u3",
-      "itemDetails": {
-        "name": "Eski Kitap Koleksiyonu",
-        "description": "Çeşitli tarihlerden 20 adet nadir kitap.",
-        "image": "https://cdn.pixabay.com/photo/2020/04/29/16/10/vase-5109481_1280.jpg",
-        "price": 100
-      },
-      "bids": [
-        {
-          "bidderId": 4,
-          "bidder": "u4",
-          "amount": 300,
-          "bidTime": "2023-03-02T12:30:00Z"
-        },
-        {
-          "bidderId": 2,
-          "bidder": "u2",
-          "amount": 350,
-          "bidTime": "2023-03-02T13:45:00Z"
-        }
-      ],
-      "startTime": "2023-03-02T12:00:00Z",
-      "endTime": "2023-03-06T12:00:00Z",
-      "status": "finished"
-    },
-    {
-      "id": "3",
-      "sellerId": "u2",
-      "itemDetails": {
-        "name": "Antika Vazo",
-        "description": "19. yüzyıldan kalma nadir bir vazo.",
-        "image": "https://cdn.pixabay.com/photo/2020/04/29/16/10/vase-5109481_1280.jpg",
-        "price": 100
-      },
-      "bids": [
-        {
-          "bidderId": 3,
-          "bidder": "u3",
-          "amount": 150,
-          "bidTime": "2023-03-01T10:00:00Z"
-        },
-        {
-          "bidderId": 4,
-          "bidder": "u4",
-          "amount": 200,
-          "bidTime": "2023-03-01T11:00:00Z"
-        }
-      ],
-      "startTime": "2023-03-01T09:00:00Z",
-      "endTime": "2023-03-05T09:00:00Z",
-      "status": "finished"
-    },
-    {
-      "id": "4",
-      "sellerId": "u3",
-      "itemDetails": {
-        "name": "Eski Kitap Koleksiyonu",
-        "description": "Çeşitli tarihlerden 20 adet nadir kitap.",
-        "image": "https://cdn.pixabay.com/photo/2020/04/29/16/10/vase-5109481_1280.jpg",
-        "price": 100
-      },
-      "bids": [
-        {
-          "bidderId": 4,
-          "bidder": "u4",
-          "amount": 300,
-          "bidTime": "2023-03-02T12:30:00Z"
-        },
-        {
-          "bidderId": 4,
-          "bidder": "u4",
-          "amount": 350,
-          "bidTime": "2023-03-02T13:45:00Z"
-        }
-      ],
-      "startTime": "2023-03-02T12:00:00Z",
-      "endTime": "2023-03-06T12:00:00Z",
-      "status": "finished"
-    },
-    {
-      "id": "3f5708d0-cf7f-4d0f-bac6-70e948073596",
-      "sellerId": 4,
-      "sellerName": "u4",
-      "itemDetails": {
-        "title": "book is book",
-        "description": "old book",
-        "price": "1000",
-        "image": "https://cdn.pixabay.com/photo/2020/03/05/12/48/spring-4904395_640.jpg"
-      },
-      "startDate": "2024-02-07",
-      "endDate": "2024-02-29",
-      "bids": []
-    },
-    {
-      "sellerId": 3,
+      "sellerId": "3",
       "sellerName": "u3",
       "itemDetails": {
-        "title": "New Item",
-        "description": "from 1800",
-        "image": "https://cdn.pixabay.com/photo/2020/03/05/12/48/spring-4904395_640.jpg",
-        "price": "2000"
+        "title": "Fifa 2020",
+        "description": "New Item 4",
+        "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUVFBgVFRUYGBgaGxsdGhsbGyAeJBwgIBsgIBobHR0jIi0kIB0pIBgdJTclKS4wNDQ0ICM5PzkyPi4yNDABCwsLEA8QHRISHTIpJCk2MjIyNTIyNTIyMjIyMDQyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIAKgBLAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAADAQIEBQYABwj/xABJEAACAQIEAwUEBwUDCwQDAAABAhEAAwQSITEFQVEGEyJhcTKBkbEHQlKSocHRFCNy4fAzYtIVJCVTVIKTorLC40Oz0/EXc3T/xAAZAQADAQEBAAAAAAAAAAAAAAAAAQIDBAX/xAAsEQACAgEDBAAFAwUAAAAAAAAAAQIRAxIhMQQTQVEiMnGBoTNSYRQjQpHw/9oADAMBAAIRAxEAPwD0heLxmz23GVwhK+L2iuXQa/XHKu4Zj7TJ3ZZZV3TK2+jHKCp19mN68hw30h4hcwuIjhoMgEHOqKEbf7SKT74q7wHbvDv3ouoyZ7qXFEZxA7sMv8RCHlzqqQj0LFdn8HdnNZtnfVRlPnqsa1mOL9gsKQSjuh9Qw/ET+NFw3G8G5m3iEAW5IC3MujJEhSQPac8uRqBj+NgARikPiuLqyHmSp0I5L+NPQxnnPEcEtt2W3cZ8rMp8BUyNDpMRMjntUU4Vx9U+8Vub3FsuRBbz7TlMatBLARl+sJJM60TD4stcKNbjyMtI5nRY59etTqXcUfHs3WJabfJgUIOhWKelnL4kZkbqpI+VWHG8Jbt4ggMUMA7+7Y+lbLsVfwOIw3+d/s3eK7KSclskQMp8OX4+VXpWpr0c7sy2G7S4y2ADfF1RstwZo95mB6VNw/bW8oH7rUfWRpHOJBPUj7vnNbm72HwF0ZrZYA7FLgYe7NmqmxP0ZqWZbWIZfCphkmZLaGGH2elGk",
+        "price": "10"
       },
       "bids": [],
-      "startDate": "2024-03-04",
-      "endDate": "2024-03-06",
+      "startDate": "2024-03-07T22:05",
+      "endDate": "2024-03-23T22:06",
       "status": "in progress",
-      "id": "827a60ac-5d9c-4b40-8e8e-37983104ab2c"
+      "id": "fb375fe1-2130-46c5-8ccd-d2c4065e2480"
     },
     {
-      "sellerId": 3,
+      "sellerId": "3",
       "sellerName": "u3",
       "itemDetails": {
-        "title": "New Item 2",
-        "description": "New Item 2",
-        "image": "https://cdn.pixabay.com/photo/2018/04/05/14/09/sunflowers-3292932_1280.jpg",
-        "price": "2112"
+        "title": "1",
+        "description": "asd",
+        "image": "asdsad",
+        "price": "1"
       },
       "bids": [],
-      "startDate": "2024-03-04",
-      "endDate": "2024-03-30",
-      "status": "in progress",
-      "id": "d2cca1f3-2cc8-4be1-ae1d-f1a563ab8f79"
-    },
-    {
-      "sellerId": "4",
-      "sellerName": "u4",
-      "itemDetails": {
-        "title": "new item9",
-        "description": "as",
-        "image": "https://cdn.pixabay.com/photo/2018/04/05/14/09/sunflowers-3292932_1280.jpg",
-        "price": "0"
-      },
-      "bids": [],
-      "startDate": "2024-03-06",
-      "endDate": "2024-03-22",
-      "status": "in progress",
-      "id": "2398a2e6-ff22-4bf2-9ab1-a291c1710ad1"
+      "startDate": "2024-03-07T22:34",
+      "endDate": "2024-03-07T23:16",
+      "status": "finished",
+      "id": "fe295d9d-ec22-4d02-b21e-7f1942148805"
     }
   ]
 }

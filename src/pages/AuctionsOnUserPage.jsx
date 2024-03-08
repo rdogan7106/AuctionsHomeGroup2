@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // AuctionsOnUserPage.jsx
 import React, { useEffect, useState } from "react";
 import { useAuth } from "../context/Context.jsx";
