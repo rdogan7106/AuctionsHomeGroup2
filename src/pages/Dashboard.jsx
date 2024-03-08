@@ -13,7 +13,7 @@ import Userpurchases from "../components/UsersComponents/Userpurcaheses.jsx";
 
 
 function Dashboard() {
-  const { user, logout } = useAuth();
+  const { user, logout,  auctionsList, setAuctionsList} = useAuth();
   const [activeComponent, setActiveComponent] = useState(null);
   const [updateUser, setUpdateUser] = useState(null)
   const [updateAuction, setUpdateAuction] = useState(null)
@@ -30,7 +30,7 @@ function Dashboard() {
       case "Userupdateform":
         return <Userupdateform  updateUser = {updateUser} setActiveComponent={setActiveComponent}/>;
       case "AddAuctionItem":
-        return <AddAuctionItem   setActiveComponent={setActiveComponent}/>;
+        return <AddAuctionItem   setActiveComponent={setActiveComponent}  auctionsList={auctionsList} setAuctionsList = {setAuctionsList}/>;
       case "UpdateAuctionItem":
         return <UpdateAuctionItem   setActiveComponent={setActiveComponent} updateAuction = {updateAuction} />;
       case "Userpurchases":

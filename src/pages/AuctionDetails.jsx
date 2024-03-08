@@ -99,7 +99,10 @@ function AuctionDetails({ auctionsList }) {
 
   const handleBidSubmit = () => {
     const latestBid = bidHistory[bidHistory.length - 1];
-
+    if (latestBid && latestBid.username === user.username) {
+      alert("You cannot place consecutive bids.");
+      return;
+    }
     if (auction.sellerId === user.username) {
       alert("You cannot bid on your own items");
       return;
@@ -147,12 +150,12 @@ function AuctionDetails({ auctionsList }) {
                 <strong>Beskrivning:</strong> {auction.itemDetails.description}
               </p>
               <p className="mb-2">
-                <strong>Starttid:</strong> {auction.startTime}
+                <strong>Starttid:</strong> {auction.startDate}
               </p>
               <p className="mb-2">
-                <strong>Sluttid:</strong> {auction.endTime}
+                <strong>Sluttid:</strong> {auction.endDate}
               </p>
-              {Timer(auction.endTime)}
+              {Timer(auction)}
             </div>
           </div>
         </div>

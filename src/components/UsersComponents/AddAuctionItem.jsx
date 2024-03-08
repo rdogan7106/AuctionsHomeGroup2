@@ -4,7 +4,7 @@ import { useState, useContext } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { useAuth } from "../../context/Context.jsx";
 function AddAuctionItem({ setActiveComponent, updateAuction }) {
-  const { user, logout } = useAuth();
+  const { user,  auctionsList, setAuctionsList } = useAuth();
   const [formData, setFormData] = useState({
     sellerId: user?.id || "",
     sellerName: user?.username || "",
@@ -39,10 +39,11 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const newAuctionItem = { ...formData, id: uuidv4() };
-    const now = new Date();
+    const newAuctionItem = { ...formData, id: uuidv4() };    
     const start = new Date(newAuctionItem.startDate);
     const end = new Date(newAuctionItem.endDate);
+    const now = new Date();
+
     if (start < now) {
       alert("Start time cannot be earlier than today");
     } else if (end <= start) {
@@ -58,6 +59,7 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
         body: JSON.stringify(newAuctionItem),
       });
       setActiveComponent("Useritems");
+      setAuctionsList([...auctionsList,newAuctionItem])
     }
   };
 
@@ -103,7 +105,7 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
               Start Date
             </label>
             <input
-              type="date"
+              type="datetime-local"
               className="form-control"
               id="startDate"
               name="startDate"
@@ -118,7 +120,7 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
               End Date
             </label>
             <input
-              type="date"
+              type="datetime-local"
               className="form-control"
               id="endDate"
               name="endDate"
