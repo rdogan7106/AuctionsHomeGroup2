@@ -163,6 +163,51 @@
       "endDate": "2024-03-07T23:16",
       "status": "finished",
       "id": "fe295d9d-ec22-4d02-b21e-7f1942148805"
+    },
+    {
+      "id": "3b47c93e-48b8-4027-a68a-d2fbd9bf3184",
+      "sellerId": "4",
+      "sellerName": "u4",
+      "itemDetails": {
+        "title": "test",
+        "description": "spel",
+        "image": "t",
+        "price": "20"
+      },
+      "bids": [],
+      "startDate": "2024-03-12T12:48",
+      "endDate": "2024-03-22T12:48",
+      "status": "in progress"
+    },
+    {
+      "id": "fa1ba460-e9f9-4e0c-aabd-909bc19675ec",
+      "sellerId": "4",
+      "sellerName": "u4",
+      "itemDetails": {
+        "title": "spel",
+        "description": "game",
+        "image": "ga,e",
+        "price": "40"
+      },
+      "bids": [],
+      "startDate": "2024-03-22T14:36",
+      "endDate": "2024-03-29T14:36",
+      "status": "in progress"
+    },
+    {
+      "id": "274431f8-fa1b-4a32-831b-420bd43829dc",
+      "sellerId": "5",
+      "sellerName": "u5",
+      "itemDetails": {
+        "title": "Need For Speed",
+        "description": "spel",
+        "image": "spel",
+        "price": "10"
+      },
+      "bids": [],
+      "startDate": "2024-03-09T15:13",
+      "endDate": "2024-03-10T15:13",
+      "status": "in progress"
     }
   ]
 }
