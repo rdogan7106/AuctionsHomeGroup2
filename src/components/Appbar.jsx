@@ -5,6 +5,7 @@ function Appbar() {
   const { user, logout } = useAuth();
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary px-5 ">
+    <div className="bg"></div>
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
           Auction Home

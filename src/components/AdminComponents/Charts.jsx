@@ -30,6 +30,7 @@ function Charts() {
 
   return (
     <div className="container ">
+    
       <div className="row">
         <ChartBox totalOffers= {totalOffers} users = {users} finishedAuctions = {finishedAuctions}  inProgressAuctions = {inProgressAuctions}/>
         <StatisticsChart />

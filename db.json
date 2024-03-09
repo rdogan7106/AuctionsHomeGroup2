@@ -131,6 +131,17 @@
       "personalNumber": "231231231313",
       "firstname": "okokokokok",
       "lastname": "sssssssssslslss"
+    },
+    {
+      "id": "72209e8f-945e-4045-a0b1-b9f374d784ae",
+      "username": "Olofson",
+      "password": "ASDASDASD",
+      "type": "user",
+      "email": "aksdad@hotmail.com",
+      "phone": "34324234234",
+      "personalNumber": "55555555555551",
+      "firstname": "asdad",
+      "lastname": "asmdlöasd"
     }
   ],
   "auctions": [
@@ -173,23 +184,26 @@
         "image": "https://cdn.pixabay.com/photo/2020/03/05/12/48/spring-4904395_640.jpg",
         "price": "1000"
       },
-      "bids": [{
-        "bidderId": 3,
-        "bidder": "u3",
-        "amount": 150,
-        "bidTime": "2023-03-01T10:00:00Z"
-      }, {
-        "bidderId": 3,
-        "bidder": "u3",
-        "amount": 170,
-        "bidTime": "2023-03-01T10:00:00Z"
-      },
-      {
-        "bidderId": 5,
-        "bidder": "u5",
-        "amount": 200,
-        "bidTime": "2023-03-01T11:00:00Z"
-      }],
+      "bids": [
+        {
+          "bidderId": 3,
+          "bidder": "u3",
+          "amount": 150,
+          "bidTime": "2023-03-01T10:00:00Z"
+        },
+        {
+          "bidderId": 3,
+          "bidder": "u3",
+          "amount": 170,
+          "bidTime": "2023-03-01T10:00:00Z"
+        },
+        {
+          "bidderId": 5,
+          "bidder": "u5",
+          "amount": 200,
+          "bidTime": "2023-03-01T11:00:00Z"
+        }
+      ],
       "startDate": "2024-03-08T00:38",
       "endDate": "2024-03-31T00:38",
       "status": "in progress",
@@ -237,6 +251,66 @@
       "endDate": "2024-03-30T00:44",
       "status": "in progress",
       "id": "2f6f1113-c2a8-4565-8f82-fca2d4b692dc"
+    },
+    {
+      "id": "b4d35b45-256f-48dd-be25-126ede678ce3",
+      "sellerId": "8d7cda9a-137e-4197-91b6-4e46fb65db7c",
+      "sellerName": "JoeMasoud",
+      "itemDetails": {
+        "title": "Dont Know",
+        "description": "Da shiet",
+        "image": "asdasd",
+        "price": "11111"
+      },
+      "bids": [],
+      "startDate": "2024-03-09T22:00",
+      "endDate": "2024-03-21T11:11",
+      "status": "in progress"
+    },
+    {
+      "id": "b009a7cb-1c97-48b2-a210-3fd6b80580d7",
+      "sellerId": "8d7cda9a-137e-4197-91b6-4e46fb65db7c",
+      "sellerName": "JoeMasoud",
+      "itemDetails": {
+        "title": "gggggggggggggg",
+        "description": "rrrrrrrrrrrrr",
+        "image": "rrrrrrrrrrrrrrrrrrrrrr",
+        "price": "11111"
+      },
+      "bids": [],
+      "startDate": "2024-03-09T11:11",
+      "endDate": "2024-03-29T11:11",
+      "status": "in progress"
+    },
+    {
+      "id": "ce55650a-7c17-49ef-b3e3-ecd34ee513f3",
+      "sellerId": "72209e8f-945e-4045-a0b1-b9f374d784ae",
+      "sellerName": "Olofson",
+      "itemDetails": {
+        "title": "xxxxxxxxxx",
+        "description": "xxxxxxxxxxxxxxxxx",
+        "image": "xxx",
+        "price": "1000"
+      },
+      "bids": [],
+      "startDate": "2024-03-09T11:11",
+      "endDate": "2024-03-14T11:11",
+      "status": "in progress"
+    },
+    {
+      "id": "326dc573-5704-4169-84f8-9a4624354d07",
+      "sellerId": "72209e8f-945e-4045-a0b1-b9f374d784ae",
+      "sellerName": "Olofson",
+      "itemDetails": {
+        "title": "llllllllllllllll",
+        "description": "llllllllllllllllll",
+        "image": "lllllllllllllllllllll",
+        "price": "lllllllllllllll"
+      },
+      "bids": [],
+      "startDate": "2024-03-09T11:11",
+      "endDate": "2024-03-29T11:11",
+      "status": "in progress"
     }
   ]
 }

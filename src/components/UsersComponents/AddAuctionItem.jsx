@@ -65,6 +65,7 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
 
   return (
     <div className="container mt-5">
+    <div className="bg"></div>
       <h2>Register Form</h2>
       <form onSubmit={handleSubmit}>
         <div className="d-flex flex-wrap justify-content-between ">

@@ -42,6 +42,7 @@ function CurrentAuctions() {
 
   return (
     <div className="container">
+    <div className="bg"></div>
       {auctionsList.length > 0 ? (
         <div className="d-flex flex-wrap">
           {auctionsList

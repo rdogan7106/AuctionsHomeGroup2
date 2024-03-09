@@ -45,7 +45,9 @@ function Dashboard() {
 
   return (
     <div className="d-flex">
+    <div className="bg"></div>
       <Sidenav setActiveComponent={setActiveComponent} />
+      <div className="bg"></div>
       <div className="d-flex p-3">{renderContent()}</div>
     </div>
   );
