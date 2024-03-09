@@ -142,6 +142,17 @@
       "personalNumber": "55555555555551",
       "firstname": "asdad",
       "lastname": "asmdlöasd"
+    },
+    {
+      "id": "727aa53c-9028-4dae-a965-29c4105c9397",
+      "username": "Godzilla",
+      "password": "ASDASDASD",
+      "type": "user",
+      "email": "asdsadas@hotmail.com",
+      "phone": "788888888888888",
+      "personalNumber": "666666666666",
+      "firstname": "asdasd",
+      "lastname": "asdasd"
     }
   ],
   "auctions": [
