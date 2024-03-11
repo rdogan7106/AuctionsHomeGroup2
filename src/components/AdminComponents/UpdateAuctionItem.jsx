@@ -59,6 +59,7 @@ function UpdateAuctionItem({ updateAuction, setActiveComponent }) {
   };
   return (
     <div className="container mt-5">
+    <div className="bg"></div>
       <h2>Update Auction Form</h2>
       <form onSubmit={handleSubmit}>
         <div className="d-flex flex-wrap justify-content-between ">

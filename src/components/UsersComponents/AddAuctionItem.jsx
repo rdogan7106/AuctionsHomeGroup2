@@ -44,7 +44,7 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
     const end = new Date(newAuctionItem.endDate);
     const now = new Date();
 
-    if (start < now) {
+    if (start.getDay() < now.getDay()) {
       alert("Start time cannot be earlier than today");
     } else if (end <= start) {
       alert("End Time cannot be earlier than Start Time ");
@@ -65,6 +65,7 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
 
   return (
     <div className="container mt-5">
+    <div className="bg"></div>
       <h2>Register Form</h2>
       <form onSubmit={handleSubmit}>
         <div className="d-flex flex-wrap justify-content-between ">

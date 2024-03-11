@@ -1,47 +1,50 @@
+import React, { useState, useEffect } from "react";
 import Typography from "@mui/material/Typography";
-import { useState, useEffect } from "react";
-//import { useAuth } from "../context/Context.jsx";
-function Timer(auction) {
-  //const { auctionsList, setAuctionsList } = useAuth();
 
-  const calculateTimeLeft = async () => {
-    let difference = null;
-    let timeLeft = {};
+function Timer({ auction }) { // Props olarak auction objesini al
 
-    if (
-      new Date(auction.endDate) - new Date() > 0 &&
-      new Date(auction.startDate) - new Date() < 0
-    ) {
-      difference = new Date(auction.endDate) - new Date();
-      timeLeft = {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
-      };
-
-    } else if (new Date(auction.startDate) - new Date() >= 0) {
-      difference = new Date() - new Date(auction.startDate);
-      timeLeft = {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
-      };
-    }
-    return timeLeft;
-  };
-
- 
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const calculateTimeLeft = () => {
+      const now = new Date();
+      const endDate = new Date(auction.endDate);
+      const startDate = new Date(auction.startDate);
+      let timeLeft = {};
+
+      if (endDate - now > 0 && startDate - now < 0) {
+        const difference = endDate - now;
+        timeLeft = {
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60),
+        };
+      } else if (startDate - now >= 0) {
+        const difference = startDate - now;
+        timeLeft = {
+          days: -Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: -Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: -Math.floor((difference / 1000 / 60) % 60),
+          seconds: -Math.floor((difference / 1000) % 60),
+        };
+      }
+      return timeLeft;
+    };
+
+    // Zamanı her saniye yeniden hesapla
+    const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    return () => clearTimeout(timer);
-  }, [timeLeft]);
+    // Component unmount olduğunda timer'ı temizle
+    return () => clearInterval(timer);
+  }, [auction]);
 
   return (
     <Typography
@@ -49,10 +52,11 @@ function Timer(auction) {
       color="text.secondary"
       style={{ paddingLeft: "16px", paddingBottom: "8px" }}
     >
-      {timeLeft.days > 0
-        ? `${timeLeft.days} days ${timeLeft.hours} hours ${timeLeft.minutes} minutes ${timeLeft.seconds} second left `
-        : `Will start ${timeLeft.days} days ${timeLeft.hours} hours ${timeLeft.minutes} minutes ${timeLeft.seconds} second `}
+      {timeLeft.days >= 0
+        ? `Time left: ${Math.abs(timeLeft.days)} days ${Math.abs(timeLeft.hours)} hours ${Math.abs(timeLeft.minutes)} minutes ${Math.abs(timeLeft.seconds)} seconds`
+        : `Will start in: ${Math.abs(timeLeft.days)} days ${Math.abs(timeLeft.hours)} hours ${Math.abs(timeLeft.minutes)} minutes ${Math.abs(timeLeft.seconds)} seconds`}
     </Typography>
   );
 }
+
 export default Timer;

@@ -125,6 +125,7 @@ function AuctionDetails({ auctionsList }) {
   };
   return (
     <div className="container mt-4">
+    <div className="bg"></div>
       <div className="row">
         <div className="col-12 col-lg-6 mb-3">
           <div className="border border-dark p-3" id="item-details">
