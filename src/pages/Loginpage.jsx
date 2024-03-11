@@ -40,7 +40,7 @@ function Loginpage() {
             />
             <label htmlFor="floatingInput">Username:</label>
           </div>
-          <div className="form-floating">
+          <div className="form-floating mt-3">
             <input
               type="password"
               className="form-control"
@@ -52,25 +52,12 @@ function Loginpage() {
             <label htmlFor="floatingPassword">Password</label>
           </div>
 
-          <div className="checkbox mb-3">
-            <div className="form-check form-switch">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                value="1"
-                name="remember_me"
-                id="rememberMeSwitch"
-              />
-              <label className="form-check-label" htmlFor="rememberMeSwitch">
-                Remember me
-              </label>
-            </div>
-          </div>
+         
           <button className="w-100 btn btn-lg" type="submit">
             Login
           </button>
         </form>
-        <p className="copyright">&copy; 2021</p>
+        <p className="copyright">&copy; 2024 Group 2</p>
       </div>
     </>
   );
