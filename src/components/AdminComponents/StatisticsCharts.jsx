@@ -76,7 +76,7 @@ function StatisticsChart() {
 
   return (
     <div className="container mt-5">
-    
+
       <div className="row">
         <div className="col-md-4 d-flex justify-content-around">
           <Pie data={data} />

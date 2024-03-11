@@ -322,6 +322,21 @@
       "startDate": "2024-03-09T11:11",
       "endDate": "2024-03-29T11:11",
       "status": "in progress"
+    },
+    {
+      "id": "b477a47c-2cca-4e37-b89e-b82df67547c7",
+      "sellerId": "3",
+      "sellerName": "u3",
+      "itemDetails": {
+        "title": "bräda",
+        "description": "bräda",
+        "image": "https://media.hornbach.se/hb/packshot/as.47281144.jpg?dvid=8",
+        "price": "100"
+      },
+      "bids": [],
+      "startDate": "2024-03-11T11:44",
+      "endDate": "2024-03-11T11:45",
+      "status": "in progress"
     }
   ]
 }
