@@ -10,7 +10,13 @@ import AuctionDetails from "../pages/AuctionDetails.jsx";
 import CurrentAuctions from "../pages/CurrentAuctions.jsx";
 import { useAuth } from "../context/Context.jsx";
 import Userregisterform from './UsersComponents/UserRegistrationUsers.jsx';
+<<<<<<< HEAD
 import UserItems from "./UsersComponents/Useritems.jsx"; 
+=======
+import '../a.styles/all_other_pages.css'
+import '../a.styles/loginpage_style.css'
+import '../a.styles/UserRegistrationstyle.css'
+>>>>>>> a8fefba54e42ea08cd272124ba58eb88fc747a27
 
 function Router() {
   const [user, setUser] = useState(null);

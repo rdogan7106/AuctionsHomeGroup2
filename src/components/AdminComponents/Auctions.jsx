@@ -67,6 +67,7 @@ function Auctions({ setActiveComponent, setUpdateAuction }) {
 
   return (
     <Paper sx={{ width: "100%", overflow: "hidden" }}>
+    <div className="bg"></div>
       <TableContainer sx={{ maxHeight: 440 }}>
         <Table stickyHeader aria-label="sticky table">
           <TableHead>

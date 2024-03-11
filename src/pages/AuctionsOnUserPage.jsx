@@ -24,6 +24,7 @@ function AuctionsOnUserPage() {
 
   return (
     <div className="d-flex flex-wrap justify-content-center p-5">
+    <div className="bg"></div>
       {newAuctionsList?.map((auction) => (
         <div key={auction.id} className="card m-2" style={{ width: "18rem" }}>
           <img src={auction.itemDetails.image} className="card-img-top" alt="Auction Item" />

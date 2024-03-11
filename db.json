@@ -131,6 +131,28 @@
       "personalNumber": "231231231313",
       "firstname": "okokokokok",
       "lastname": "sssssssssslslss"
+    },
+    {
+      "id": "72209e8f-945e-4045-a0b1-b9f374d784ae",
+      "username": "Olofson",
+      "password": "ASDASDASD",
+      "type": "user",
+      "email": "aksdad@hotmail.com",
+      "phone": "34324234234",
+      "personalNumber": "55555555555551",
+      "firstname": "asdad",
+      "lastname": "asmdlöasd"
+    },
+    {
+      "id": "727aa53c-9028-4dae-a965-29c4105c9397",
+      "username": "Godzilla",
+      "password": "ASDASDASD",
+      "type": "user",
+      "email": "asdsadas@hotmail.com",
+      "phone": "788888888888888",
+      "personalNumber": "666666666666",
+      "firstname": "asdasd",
+      "lastname": "asdasd"
     }
   ],
   "auctions": [
@@ -159,12 +181,13 @@
         "price": "1"
       },
       "bids": [],
-      "startDate": "2024-03-07T22:34",
-      "endDate": "2024-03-07T23:16",
+      "startDate": "2024-03-07",
+      "endDate": "2024-03-12",
       "status": "finished",
       "id": "fe295d9d-ec22-4d02-b21e-7f1942148805"
     },
     {
+<<<<<<< HEAD
       "id": "3b47c93e-48b8-4027-a68a-d2fbd9bf3184",
       "sellerId": "4",
       "sellerName": "u4",
@@ -207,6 +230,142 @@
       "bids": [],
       "startDate": "2024-03-09T15:13",
       "endDate": "2024-03-10T15:13",
+=======
+      "sellerId": "4",
+      "sellerName": "u4",
+      "itemDetails": {
+        "title": "New Fifa Game",
+        "description": "Brand New",
+        "image": "https://cdn.pixabay.com/photo/2020/03/05/12/48/spring-4904395_640.jpg",
+        "price": "1000"
+      },
+      "bids": [
+        {
+          "bidderId": 3,
+          "bidder": "u3",
+          "amount": 150,
+          "bidTime": "2023-03-01T10:00:00Z"
+        },
+        {
+          "bidderId": 3,
+          "bidder": "u3",
+          "amount": 170,
+          "bidTime": "2023-03-01T10:00:00Z"
+        },
+        {
+          "bidderId": 5,
+          "bidder": "u5",
+          "amount": 200,
+          "bidTime": "2023-03-01T11:00:00Z"
+        }
+      ],
+      "startDate": "2024-03-08T00:38",
+      "endDate": "2024-03-31T00:38",
+      "status": "in progress",
+      "id": "15d5d483-6523-4fce-8345-8b77c30554ce"
+    },
+    {
+      "sellerId": "3",
+      "sellerName": "u3",
+      "itemDetails": {
+        "title": "Age Of",
+        "description": "old game",
+        "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUVFBgVFRUYGBgaGxsdGhsbGyAeJBwgIBsgIBobHR0jIi0kIB0pIBgdJTclKS4wNDQ0ICM5PzkyPi4yNDABCwsLEA8QHRISHTIpJCk2MjIyNTIyNTIyMjIyMDQyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIAKgBLAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAADAQIEBQYABwj/xABJEAACAQIEAwUEBwUDCwQDAAABAhEAAwQSITEFQVEGEyJhcTKBkbEHQlKSocHRFCNy4fAzYtIVJCVTVIKTorLC40Oz0/EXc3T/xAAZAQADAQEBAAAAAAAAAAAAAAAAAQIDBAX/xAAsEQACAgEDBAAFAwUAAAAAAAAAAQIRAxIhMQQTQVEiMnGBoTNSYRQjQpHw/9oADAMBAAIRAxEAPwD0heLxmz23GVwhK+L2iuXQa/XHKu4Zj7TJ3ZZZV3TK2+jHKCp19mN68hw30h4hcwuIjhoMgEHOqKEbf7SKT74q7wHbvDv3ouoyZ7qXFEZxA7sMv8RCHlzqqQj0LFdn8HdnNZtnfVRlPnqsa1mOL9gsKQSjuh9Qw/ET+NFw3G8G5m3iEAW5IC3MujJEhSQPac8uRqBj+NgARikPiuLqyHmSp0I5L+NPQxnnPEcEtt2W3cZ8rMp8BUyNDpMRMjntUU4Vx9U+8Vub3FsuRBbz7TlMatBLARl+sJJM60TD4stcKNbjyMtI5nRY59etTqXcUfHs3WJabfJgUIOhWKelnL4kZkbqpI+VWHG8Jbt4ggMUMA7+7Y+lbLsVfwOIw3+d/s3eK7KSclskQMp8OX4+VXpWpr0c7sy2G7S4y2ADfF1RstwZo95mB6VNw/bW8oH7rUfWRpHOJBPUj7vnNbm72HwF0ZrZYA7FLgYe7NmqmxP0ZqWZbWIZfCphkmZLaGGH2elGk",
+        "price": "1000"
+      },
+      "bids": [
+        {
+          "bidderId": 3,
+          "bidder": "u3",
+          "amount": 300,
+          "bidTime": "2023-03-02T12:30:00Z"
+        },
+        {
+          "bidderId": 5,
+          "bidder": "u5",
+          "amount": 350,
+          "bidTime": "2023-03-02T13:45:00Z"
+        }
+      ],
+      "startDate": "2024-03-15T00:43",
+      "endDate": "2024-03-23T00:43",
+      "status": "in progress",
+      "id": "2e468ce7-a843-4a5e-ae80-f4468f034ea0"
+    },
+    {
+      "sellerId": "3",
+      "sellerName": "u3",
+      "itemDetails": {
+        "title": "A",
+        "description": "Brand New",
+        "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUVFBgVFRUYGBgaGxsdGhsbGyAeJBwgIBsgIBobHR0jIi0kIB0pIBgdJTclKS4wNDQ0ICM5PzkyPi4yNDABCwsLEA8QHRISHTIpJCk2MjIyNTIyNTIyMjIyMDQyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIAKgBLAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAADAQIEBQYABwj/xABJEAACAQIEAwUEBwUDCwQDAAABAhEAAwQSITEFQVEGEyJhcTKBkbEHQlKSocHRFCNy4fAzYtIVJCVTVIKTorLC40Oz0/EXc3T/xAAZAQADAQEBAAAAAAAAAAAAAAAAAQIDBAX/xAAsEQACAgEDBAAFAwUAAAAAAAAAAQIRAxIhMQQTQVEiMnGBoTNSYRQjQpHw/9oADAMBAAIRAxEAPwD0heLxmz23GVwhK+L2iuXQa/XHKu4Zj7TJ3ZZZV3TK2+jHKCp19mN68hw30h4hcwuIjhoMgEHOqKEbf7SKT74q7wHbvDv3ouoyZ7qXFEZxA7sMv8RCHlzqqQj0LFdn8HdnNZtnfVRlPnqsa1mOL9gsKQSjuh9Qw/ET+NFw3G8G5m3iEAW5IC3MujJEhSQPac8uRqBj+NgARikPiuLqyHmSp0I5L+NPQxnnPEcEtt2W3cZ8rMp8BUyNDpMRMjntUU4Vx9U+8Vub3FsuRBbz7TlMatBLARl+sJJM60TD4stcKNbjyMtI5nRY59etTqXcUfHs3WJabfJgUIOhWKelnL4kZkbqpI+VWHG8Jbt4ggMUMA7+7Y+lbLsVfwOIw3+d/s3eK7KSclskQMp8OX4+VXpWpr0c7sy2G7S4y2ADfF1RstwZo95mB6VNw/bW8oH7rUfWRpHOJBPUj7vnNbm72HwF0ZrZYA7FLgYe7NmqmxP0ZqWZbWIZfCphkmZLaGGH2elGk",
+        "price": "1000"
+      },
+      "bids": [],
+      "startDate": "2024-03-08T00:44",
+      "endDate": "2024-03-30T00:44",
+      "status": "in progress",
+      "id": "2f6f1113-c2a8-4565-8f82-fca2d4b692dc"
+    },
+    {
+      "id": "b4d35b45-256f-48dd-be25-126ede678ce3",
+      "sellerId": "8d7cda9a-137e-4197-91b6-4e46fb65db7c",
+      "sellerName": "JoeMasoud",
+      "itemDetails": {
+        "title": "Dont Know",
+        "description": "Da shiet",
+        "image": "asdasd",
+        "price": "11111"
+      },
+      "bids": [],
+      "startDate": "2024-03-09T22:00",
+      "endDate": "2024-03-21T11:11",
+      "status": "in progress"
+    },
+    {
+      "id": "b009a7cb-1c97-48b2-a210-3fd6b80580d7",
+      "sellerId": "8d7cda9a-137e-4197-91b6-4e46fb65db7c",
+      "sellerName": "JoeMasoud",
+      "itemDetails": {
+        "title": "gggggggggggggg",
+        "description": "rrrrrrrrrrrrr",
+        "image": "rrrrrrrrrrrrrrrrrrrrrr",
+        "price": "11111"
+      },
+      "bids": [],
+      "startDate": "2024-03-09T11:11",
+      "endDate": "2024-03-29T11:11",
+      "status": "in progress"
+    },
+    {
+      "id": "ce55650a-7c17-49ef-b3e3-ecd34ee513f3",
+      "sellerId": "72209e8f-945e-4045-a0b1-b9f374d784ae",
+      "sellerName": "Olofson",
+      "itemDetails": {
+        "title": "xxxxxxxxxx",
+        "description": "xxxxxxxxxxxxxxxxx",
+        "image": "xxx",
+        "price": "1000"
+      },
+      "bids": [],
+      "startDate": "2024-03-09T11:11",
+      "endDate": "2024-03-14T11:11",
+      "status": "in progress"
+    },
+    {
+      "id": "326dc573-5704-4169-84f8-9a4624354d07",
+      "sellerId": "72209e8f-945e-4045-a0b1-b9f374d784ae",
+      "sellerName": "Olofson",
+      "itemDetails": {
+        "title": "llllllllllllllll",
+        "description": "llllllllllllllllll",
+        "image": "lllllllllllllllllllll",
+        "price": "lllllllllllllll"
+      },
+      "bids": [],
+      "startDate": "2024-03-09T11:11",
+      "endDate": "2024-03-29T11:11",
+>>>>>>> a8fefba54e42ea08cd272124ba58eb88fc747a27
       "status": "in progress"
     }
   ]
