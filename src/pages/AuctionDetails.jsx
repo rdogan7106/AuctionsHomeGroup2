@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import { useAuth } from "../context/Context.jsx";
 import Timer from "../components/Timer.jsx"
 
-function AuctionDetails({ auctionsList }) {
+function AuctionDetails({ auctionsList,filteredAuction }) {
   const { user } = useAuth();
   const { auctionId } = useParams();
   const auction = auctionsList.find(
@@ -156,7 +156,10 @@ function AuctionDetails({ auctionsList }) {
               <p className="mb-2">
                 <strong>Sluttid:</strong> {auction.endDate}
               </p>
-              {Timer(auction)}
+              <div className="bg-light text-danger m-0 p-2">                
+              <Timer auction={auction} />
+              </div>
+
             </div>
           </div>
         </div>
