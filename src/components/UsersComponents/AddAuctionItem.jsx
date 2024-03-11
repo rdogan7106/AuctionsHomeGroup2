@@ -4,7 +4,7 @@ import { useState, useContext } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { useAuth } from "../../context/Context.jsx";
 function AddAuctionItem({ setActiveComponent, updateAuction }) {
-  const { user,  auctionsList, setAuctionsList } = useAuth();
+  const { user, auctionsList, setAuctionsList } = useAuth();
   const [formData, setFormData] = useState({
     sellerId: user?.id || "",
     sellerName: user?.username || "",
@@ -39,7 +39,7 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const newAuctionItem = { ...formData, id: uuidv4() };    
+    const newAuctionItem = { ...formData, id: uuidv4() };
     const start = new Date(newAuctionItem.startDate);
     const end = new Date(newAuctionItem.endDate);
     const now = new Date();
@@ -59,13 +59,13 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
         body: JSON.stringify(newAuctionItem),
       });
       setActiveComponent("Useritems");
-      setAuctionsList([...auctionsList,newAuctionItem])
+      setAuctionsList([...auctionsList, newAuctionItem])
     }
   };
 
   return (
     <div className="container mt-5">
-    <div className="bg"></div>
+      <div className="bg"></div>
       <h2>Register Form</h2>
       <form onSubmit={handleSubmit}>
         <div className="d-flex flex-wrap justify-content-between ">
@@ -89,7 +89,7 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
               Price
             </label>
             <input
-              type="text"
+              type="number"
               className="form-control"
               id="price"
               name="price"

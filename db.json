@@ -336,6 +336,36 @@
       "bids": [],
       "startDate": "2024-03-11T11:44",
       "endDate": "2024-03-11T11:45",
+      "status": "finished"
+    },
+    {
+      "id": "8ff32086-7e37-4f7e-bfac-6eda3cf8ceeb",
+      "sellerId": "3",
+      "sellerName": "u3",
+      "itemDetails": {
+        "title": "bräda",
+        "description": "bräda",
+        "image": "https://media.hornbach.se/hb/packshot/as.47281144.jpg?dvid=8",
+        "price": "102"
+      },
+      "bids": [],
+      "startDate": "2024-03-11T11:53",
+      "endDate": "2024-03-11T11:54",
+      "status": "finished"
+    },
+    {
+      "id": "a22cf2ce-e22b-4f6e-9453-a939bde3ea85",
+      "sellerId": "3",
+      "sellerName": "u3",
+      "itemDetails": {
+        "title": "bräda",
+        "description": "bräda",
+        "image": "https://media.hornbach.se/hb/packshot/as.47281144.jpg?dvid=8",
+        "price": "102"
+      },
+      "bids": [],
+      "startDate": "2024-03-11T11:59",
+      "endDate": "2024-03-12T12:00",
       "status": "in progress"
     }
   ]

@@ -26,8 +26,9 @@ function Userpurchases() {
                             <p className="card-text">
                                 {auction.itemDetails.description}
                                 <br />
-                                Sold for: {localStorage.getItem(`currentPrice_${auction.id}`) || auction.itemDetails.price}
+                                Sold for: {parseFloat(localStorage.getItem(`currentPrice_${auction.id}`)) + parseFloat(auction.itemDetails.price)}
                             </p>
+
                         </div>
                     </div>
                 ))}
