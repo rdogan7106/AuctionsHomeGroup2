@@ -31,7 +31,7 @@ function Loginpage() {
           <div className="form-floating">
             <input
               type="text"
-              className="form-control"
+              className="form-control rounded"
               id="floatingInput"
               value={username}
               onChange={(e) => setusername(e.target.value)}
@@ -43,7 +43,7 @@ function Loginpage() {
           <div className="form-floating mt-3">
             <input
               type="password"
-              className="form-control"
+              className="form-control rounded"
               id="floatingPassword"
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Password"

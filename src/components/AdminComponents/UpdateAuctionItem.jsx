@@ -83,11 +83,11 @@ function UpdateAuctionItem({ updateAuction, setActiveComponent }) {
               Price
             </label>
             <input
-              type="text"
+              type="number"
               className="form-control"
               id="price"
               name="price"
-              value={formData.itemDetails.price}
+              value={Number(formData.itemDetails.price)}
               onChange={handleChange}
               required
             />

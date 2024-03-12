@@ -20,24 +20,24 @@ function CurrentAuctions() {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ ...auction, status: "finished" }), 
+          body: JSON.stringify({ ...auction, status: "finished" }),
         });
         return { ...auction, status: "finished" }
       }
-      return  auction;
+      return auction;
     });
-  
+
     const updatedAuctions = await Promise.all(promises);
-    const filteredAuctions = updatedAuctions.filter(auction => auction.status !== "finished");  
+    const filteredAuctions = updatedAuctions.filter(auction => auction.status !== "finished");
     setAuctionsList(filteredAuctions);
   };
-  
+
   useEffect(() => {
     const timer = setTimeout(() => {
       updateAuctionStatus();
-    }, 1000);  
+    }, 1000);
     return () => clearTimeout(timer);
-    
+
   }, [auctionsList]);
 
   return (
