@@ -1,9 +1,8 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useState,useEffect } from "react";
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
+
+
 import { Paper, Typography, Link } from '@mui/material';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
@@ -40,7 +39,7 @@ function HomePage() {
 
   
   return (
-   <h1>Home Page</h1>
+    <h1>Auction of exclusive TV games</h1>
   );
 }
 export default HomePage;
