@@ -411,6 +411,21 @@
       "startDate": "2024-03-11T11:59",
       "endDate": "2024-03-12T12:00",
       "status": "in progress"
+    },
+    {
+      "id": "029baad4-2088-4016-acff-6266c136899d",
+      "sellerId": "5",
+      "sellerName": "u5",
+      "itemDetails": {
+        "title": "bräda5",
+        "description": "bräda5",
+        "image": "https://media.hornbach.se/hb/packshot/as.47281144.jpg?dvid=8",
+        "price": "100"
+      },
+      "bids": [],
+      "startDate": "2024-03-12T12:38",
+      "endDate": "2024-03-12T12:39",
+      "status": "finished"
     }
   ]
 }
