@@ -225,34 +225,94 @@
       "status": "in progress"
     },
     {
-      "id": "da17ff6b-9243-4886-a837-20c6cb4513a7",
-      "sellerId": "5",
-      "sellerName": "u5",
+      "sellerId": "3",
+      "sellerName": "u3",
       "itemDetails": {
-        "title": "game3",
-        "description": "game3",
-        "image": "t",
-        "price": "40"
+        "title": "game 11",
+        "description": "old game",
+        "image": "https://www.operationsports.com/wp-content/uploads/2023/09/efootball-2024-latest-mobile-menu-v0-t1i8bb900fmb1.jpg?w=1536",
+        "price": "10"
       },
       "bids": [],
-      "startDate": "2024-03-21T10:48",
-      "endDate": "2024-03-28T10:48",
-      "status": "in progress"
+      "startDate": "2024-03-12T10:46",
+      "endDate": "2024-03-12T10:49",
+      "status": "finished",
+      "id": "121556d2-ef5c-49e0-b88e-aa39c1a9a814"
     },
     {
-      "id": "40608788-8f5d-49fe-9b53-f60dd2e5f1ce",
+      "sellerId": "4",
+      "sellerName": "u4",
+      "itemDetails": {
+        "title": "game 12",
+        "description": "Brand New",
+        "image": "https://cdn.pixabay.com/photo/2020/03/05/12/48/spring-4904395_640.jpg",
+        "price": "12"
+      },
+      "bids": [],
+      "startDate": "2024-03-12T10:50",
+      "endDate": "2024-03-21T10:50",
+      "status": "in progress",
+      "id": "c84d1758-1d6a-4cee-bab1-5872f31a0cd5"
+    },
+    {
+      "sellerId": "4",
+      "sellerName": "u4",
+      "itemDetails": {
+        "title": "game 13",
+        "description": "Brand New",
+        "image": "https://cdn.pixabay.com/photo/2020/03/05/12/48/spring-4904395_640.jpg",
+        "price": "13"
+      },
+      "bids": [],
+      "startDate": "2024-03-12T10:56",
+      "endDate": "2024-03-12T10:58",
+      "status": "finished",
+      "id": "e793b1c0-6beb-4e84-83f4-f1183261c81e"
+    },
+    {
       "sellerId": "5",
       "sellerName": "u5",
       "itemDetails": {
-        "title": "games",
-        "description": "spel",
-        "image": "t",
-        "price": "40"
+        "title": "game 14",
+        "description": "Brand New",
+        "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUVFBgVFRUYGBgaGxsdGhsbGyAeJBwgIBsgIBobHR0jIi0kIB0pIBgdJTclKS4wNDQ0ICM5PzkyPi4yNDABCwsLEA8QHRISHTIpJCk2MjIyNTIyNTIyMjIyMDQyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIAKgBLAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAADAQIEBQYABwj/xABJEAACAQIEAwUEBwUDCwQDAAABAhEAAwQSITEFQVEGEyJhcTKBkbEHQlKSocHRFCNy4fAzYtIVJCVTVIKTorLC40Oz0/EXc3T/xAAZAQADAQEBAAAAAAAAAAAAAAAAAQIDBAX/xAAsEQACAgEDBAAFAwUAAAAAAAAAAQIRAxIhMQQTQVEiMnGBoTNSYRQjQpHw/9oADAMBAAIRAxEAPwD0heLxmz23GVwhK+L2iuXQa/XHKu4Zj7TJ3ZZZV3TK2+jHKCp19mN68hw30h4hcwuIjhoMgEHOqKEbf7SKT74q7wHbvDv3ouoyZ7qXFEZxA7sMv8RCHlzqqQj0LFdn8HdnNZtnfVRlPnqsa1mOL9gsKQSjuh9Qw/ET+NFw3G8G5m3iEAW5IC3MujJEhSQPac8uRqBj+NgARikPiuLqyHmSp0I5L+NPQxnnPEcEtt2W3cZ8rMp8BUyNDpMRMjntUU4Vx9U+8Vub3FsuRBbz7TlMatBLARl+sJJM60TD4stcKNbjyMtI5nRY59etTqXcUfHs3WJabfJgUIOhWKelnL4kZkbqpI+VWHG8Jbt4ggMUMA7+7Y+lbLsVfwOIw3+d/s3eK7KSclskQMp8OX4+VXpWpr0c7sy2G7S4y2ADfF1RstwZo95mB6VNw/bW8oH7rUfWRpHOJBPUj7vnNbm72HwF0ZrZYA7FLgYe7NmqmxP0ZqWZbWIZfCphkmZLaGGH2elGk",
+        "price": "5"
       },
       "bids": [],
-      "startDate": "2024-03-14T10:49",
-      "endDate": "2024-03-19T10:49",
-      "status": "in progress"
+      "startDate": "2024-03-12T11:07",
+      "endDate": "2024-03-12T11:09",
+      "status": "finished",
+      "id": "8f3d4281-8d9d-4536-97a4-9ebbcab43717"
+    },
+    {
+      "sellerId": "5",
+      "sellerName": "u5",
+      "itemDetails": {
+        "title": "game 15",
+        "description": "old game",
+        "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUVFBgVFRUYGBgaGxsdGhsbGyAeJBwgIBsgIBobHR0jIi0kIB0pIBgdJTclKS4wNDQ0ICM5PzkyPi4yNDABCwsLEA8QHRISHTIpJCk2MjIyNTIyNTIyMjIyMDQyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIAKgBLAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAADAQIEBQYABwj/xABJEAACAQIEAwUEBwUDCwQDAAABAhEAAwQSITEFQVEGEyJhcTKBkbEHQlKSocHRFCNy4fAzYtIVJCVTVIKTorLC40Oz0/EXc3T/xAAZAQADAQEBAAAAAAAAAAAAAAAAAQIDBAX/xAAsEQACAgEDBAAFAwUAAAAAAAAAAQIRAxIhMQQTQVEiMnGBoTNSYRQjQpHw/9oADAMBAAIRAxEAPwD0heLxmz23GVwhK+L2iuXQa/XHKu4Zj7TJ3ZZZV3TK2+jHKCp19mN68hw30h4hcwuIjhoMgEHOqKEbf7SKT74q7wHbvDv3ouoyZ7qXFEZxA7sMv8RCHlzqqQj0LFdn8HdnNZtnfVRlPnqsa1mOL9gsKQSjuh9Qw/ET+NFw3G8G5m3iEAW5IC3MujJEhSQPac8uRqBj+NgARikPiuLqyHmSp0I5L+NPQxnnPEcEtt2W3cZ8rMp8BUyNDpMRMjntUU4Vx9U+8Vub3FsuRBbz7TlMatBLARl+sJJM60TD4stcKNbjyMtI5nRY59etTqXcUfHs3WJabfJgUIOhWKelnL4kZkbqpI+VWHG8Jbt4ggMUMA7+7Y+lbLsVfwOIw3+d/s3eK7KSclskQMp8OX4+VXpWpr0c7sy2G7S4y2ADfF1RstwZo95mB6VNw/bW8oH7rUfWRpHOJBPUj7vnNbm72HwF0ZrZYA7FLgYe7NmqmxP0ZqWZbWIZfCphkmZLaGGH2elGk",
+        "price": "15"
+      },
+      "bids": [],
+      "startDate": "2024-03-12T11:11",
+      "endDate": "2024-03-12T11:13",
+      "status": "finished",
+      "id": "26d203bc-6343-43d9-945d-70af6feef67f"
+    },
+    {
+      "sellerId": "4",
+      "sellerName": "u4",
+      "itemDetails": {
+        "title": "game 17",
+        "description": "old game",
+        "image": "https://www.operationsports.com/wp-content/uploads/2023/09/efootball-2024-latest-mobile-menu-v0-t1i8bb900fmb1.jpg?w=1536",
+        "price": "17"
+      },
+      "bids": [],
+      "startDate": "2024-03-12T11:26",
+      "endDate": "2024-03-12T11:28",
+      "status": "finished",
+      "id": "ff201214-9d47-4e5e-8c82-440725ba9047"
     }
   ]
 }
