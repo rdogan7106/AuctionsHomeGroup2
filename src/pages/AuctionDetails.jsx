@@ -3,15 +3,16 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useAuth } from "../context/Context.jsx";
-import Timer from "../components/Timer.jsx"
+import Timer from "../components/Timer.jsx";
 
-function AuctionDetails({ auctionsList }) {
+function AuctionDetails({ auctionsList, filteredAuction }) {
   const { user } = useAuth();
   const { auctionId } = useParams();
   const auction = auctionsList.find(
     (auction) => auction.id.toString() === auctionId
   );
 
+  console.log(new Date())
   const [bidAmount, setBidAmount] = useState(0);
   const [currentPrice, setCurrentPrice] = useState(() => {
     const storedPrice = localStorage.getItem(`currentPrice_${auctionId}`);
@@ -109,7 +110,7 @@ function AuctionDetails({ auctionsList }) {
       return;
     }
 
-    const newPrice = currentPrice + bidAmount;
+    const newPrice = Number(currentPrice) + Number(bidAmount);
     setCurrentPrice(newPrice);
     const currentTime = new Date().toLocaleString();
     setBidHistory([
@@ -125,8 +126,7 @@ function AuctionDetails({ auctionsList }) {
   };
   return (
     <div className="container mt-4">
-    <div className="bg"></div>
-      <div className="row">
+      <div className="row text-light">
         <div className="col-12 col-lg-6 mb-3">
           <div className="border border-dark p-3" id="item-details">
             <img
@@ -135,7 +135,7 @@ function AuctionDetails({ auctionsList }) {
               alt="Auktionsobjekt"
             />
             <div id="info">
-              <p className="mb-2">
+              <p className="mb-2 ">
                 <strong>ID:</strong> {auction.id}
               </p>
               <p className="mb-2">
@@ -153,7 +153,9 @@ function AuctionDetails({ auctionsList }) {
               <p className="mb-2">
                 <strong>Sluttid:</strong> {auction.endDate}
               </p>
-              {Timer(auction)}
+              <div className="bg-light text-danger m-0 p-2">
+                <Timer auction={auction} />
+              </div>
             </div>
           </div>
         </div>
@@ -194,54 +196,65 @@ function AuctionDetails({ auctionsList }) {
             )}
           </div>
           <div className="d-flex flex-column justify-content-start align-items-start ml-5">
-            <div id="offer" className="mb-4 col-md-12">
-              <h4>Bid amount</h4>
-              <div className="row">
-                <div className="col-md-12">
-                  <input
-                    type="number"
-                    className="form-control col"
-                    placeholder="Enter custom bid amount"
-                    value={bidAmount}
-                    onChange={(e) => setBidAmount(Number(e.target.value))}
-                  />
+            {new Date(auction.startDate) < new Date() ? (
+              <>
+                <div id="offer" className="mb-4 col-md-12">
+                  <h4>Bid amount</h4>
+                  <div className="row">
+                    <div className="col-md-12">
+                      <input
+                        type="number"
+                        className="form-control col"
+                        placeholder="Enter custom bid amount"
+                        value={bidAmount}
+                        onChange={(e) => setBidAmount(Number(e.target.value))}
+                      />
+                    </div>
+                  </div>
+                  <div className="mt-2">
+                    <div
+                      className="mb-2 d-flex align-items-center justify-content-center"
+                      style={{ height: "100%" }}
+                    >
+                      <button
+                        type="button"
+                        className="btn btn-dark btn-block d-flex align-items-center justify-content-center py-3"
+                        style={{
+                          width: "100%",
+                          fontSize: "1.2rem",
+                          fontWeight: "bold",
+                          lineHeight: "normal",
+                        }}
+                        onClick={handleBidSubmit}
+                      >
+                        Submit Bid
+                      </button>
+                    </div>
+                    <div className="col-md-12">
+                      <button
+                        type="button"
+                        className="btn btn-danger btn-block"
+                        style={{ width: "100%" }}
+                        onClick={resetPrice}
+                      >
+                        Reset to Original Price
+                      </button>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="mt-2">
-                <div
-                  className="mb-2 d-flex align-items-center justify-content-center"
-                  style={{ height: "100%" }}
-                >
-                  <button
-                    type="button"
-                    className="btn btn-dark btn-block d-flex align-items-center justify-content-center py-3"
-                    style={{
-                      width: "100%",
-                      fontSize: "1.2rem",
-                      fontWeight: "bold",
-                      lineHeight: "normal",
-                    }}
-                    onClick={handleBidSubmit}
-                  >
-                    Submit Bid
-                  </button>
-                </div>
-                <div className="col-md-12">
-                  <button
-                    type="button"
-                    className="btn btn-danger btn-block"
-                    style={{ width: "100%" }}
-                    onClick={resetPrice}
-                  >
-                    Reset to Original Price
-                  </button>
-                </div>
-              </div>
-            </div>
+              </>
+            ) : (
+              <>
+                <h2 className="text-light">
+                  The auction for this item has not started yet. Please follow
+                  the start date.
+                </h2>
+              </>
+            )}
 
-            <div className="mt-4">
-              <h4>Bid history</h4>
-              <table className="table">
+            <div className="mt-4 w-100 ">
+              <h4 className="text-light">Bid history</h4>
+              <table className="table w-100 table-striped table-hover">
                 <thead>
                   <tr>
                     <th scope="col">Bid price</th>

@@ -29,7 +29,7 @@ function Charts() {
   }, [auctionsList, userList]);
 
   return (
-    <div className="container ">
+    <div className="container bg-light m-0">
     
       <div className="row">
         <ChartBox totalOffers= {totalOffers} users = {users} finishedAuctions = {finishedAuctions}  inProgressAuctions = {inProgressAuctions}/>

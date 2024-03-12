@@ -93,7 +93,7 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
               className="form-control"
               id="price"
               name="price"
-              value={formData.itemDetails.price}
+              value={Number(formData.itemDetails.price)}
               onChange={handleChange}
               required
             />

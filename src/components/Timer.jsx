@@ -1,8 +1,9 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import React, { useState, useEffect } from "react";
 import Typography from "@mui/material/Typography";
 
-function Timer({ auction }) { // Props olarak auction objesini al
-
+function Timer({ auction }) { 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -37,12 +38,10 @@ function Timer({ auction }) { // Props olarak auction objesini al
       return timeLeft;
     };
 
-    // Zamanı her saniye yeniden hesapla
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    // Component unmount olduğunda timer'ı temizle
     return () => clearInterval(timer);
   }, [auction]);
 

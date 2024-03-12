@@ -51,7 +51,7 @@ function StatisticsChart() {
       },
       title: {
         display: true,
-        text: "Chart.js Bar Chart",
+        text: "User Reports",
       },
     },
   };
@@ -68,7 +68,7 @@ function StatisticsChart() {
     datasets: [
       {
         label: "User Count",
-        data: [biddersCount, nonBiddersCount], // Düzeltme: Veriyi bir dizi olarak sağla
+        data: [biddersCount, nonBiddersCount], 
         backgroundColor: ["rgba(255, 99, 132, 0.5)", "rgba(53, 162, 235, 0.5)"],
       },
     ],

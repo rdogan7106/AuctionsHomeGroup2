@@ -5,9 +5,29 @@ import { useAuth } from "../context/Context.jsx";
 import { Link } from "react-router-dom";
 
 function AuctionsOnUserPage() {
-  const { auctionsList, user } = useAuth();
+  const { auctionsList, user,setAuctionsList } = useAuth();
   const [bidCounts, setBidCounts] = useState({});
 
+  
+  const updateAuctionStatus = async () => {
+    const promises = auctionsList.map(async (auction) => {
+      if (new Date(auction.endDate) < new Date() && auction.status !== "finished") {
+        const response = await fetch(`http://localhost:3000/auctions/${auction.id}`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ ...auction, status: "finished" }),
+        });
+        return { ...auction, status: "finished" }
+      }
+      return auction;
+    });
+
+    const updatedAuctions = await Promise.all(promises);
+    const filteredAuctions = updatedAuctions.filter(auction => auction.status !== "finished");
+    setAuctionsList(filteredAuctions);
+  };
 
   useEffect(() => {
     const counts = {};
@@ -16,6 +36,11 @@ function AuctionsOnUserPage() {
       counts[auction.id] = bidHistory.length;
     });
     setBidCounts(counts);
+    const timer = setTimeout(() => {
+      updateAuctionStatus();
+    }, 1000);
+    return () => clearTimeout(timer);
+
   }, [auctionsList]);
 
   const newAuctionsList = auctionsList?.filter(
