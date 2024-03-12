@@ -5,9 +5,9 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
-import { useAuth } from "../context/Context.jsx";
+import { useAuth } from "./src/context/Context.jsx";
 import { Link } from "react-router-dom";
-import Timer from "../components/Timer.jsx";
+import Timer from "./src/components/Timer.jsx";
 
 function CurrentAuctions() {
   const { auctionsList, setAuctionsList } = useAuth();
