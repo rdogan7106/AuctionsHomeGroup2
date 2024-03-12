@@ -7,7 +7,7 @@ import Loginpage from "../pages/Loginpage.jsx";
 import Dashboard from "../pages/Dashboard.jsx";
 import AuctionsOnUserPage from "../pages/AuctionsOnUserPage.jsx";
 import AuctionDetails from "../pages/AuctionDetails.jsx";
-import CurrentAuctions from "../pages/CurrentAuctions.jsx";
+import CurrentAuctions from "../../CurrentAuctions.jsx";
 import { useAuth } from "../context/Context.jsx";
 import Userregisterform from './UsersComponents/UserRegistrationUsers.jsx';
 import '../a.styles/all_other_pages.css'
