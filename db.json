@@ -223,6 +223,36 @@
       "startDate": "2024-03-22T13:23",
       "endDate": "2024-03-31T13:23",
       "status": "in progress"
+    },
+    {
+      "id": "da17ff6b-9243-4886-a837-20c6cb4513a7",
+      "sellerId": "5",
+      "sellerName": "u5",
+      "itemDetails": {
+        "title": "game3",
+        "description": "game3",
+        "image": "t",
+        "price": "40"
+      },
+      "bids": [],
+      "startDate": "2024-03-21T10:48",
+      "endDate": "2024-03-28T10:48",
+      "status": "in progress"
+    },
+    {
+      "id": "40608788-8f5d-49fe-9b53-f60dd2e5f1ce",
+      "sellerId": "5",
+      "sellerName": "u5",
+      "itemDetails": {
+        "title": "games",
+        "description": "spel",
+        "image": "t",
+        "price": "40"
+      },
+      "bids": [],
+      "startDate": "2024-03-14T10:49",
+      "endDate": "2024-03-19T10:49",
+      "status": "in progress"
     }
   ]
 }
