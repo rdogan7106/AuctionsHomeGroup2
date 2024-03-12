@@ -10,6 +10,7 @@ import AuctionDetails from "../pages/AuctionDetails.jsx";
 import CurrentAuctions from "../../CurrentAuctions.jsx";
 import { useAuth } from "../context/Context.jsx";
 import Userregisterform from './UsersComponents/UserRegistrationUsers.jsx';
+import UserItems from "./UsersComponents/Useritems.jsx"; 
 import '../a.styles/all_other_pages.css'
 import '../a.styles/loginpage_style.css'
 import '../a.styles/UserRegistrationstyle.css'
