@@ -395,8 +395,23 @@
       "bids": [],
       "startDate": "2024-03-12T11:11",
       "endDate": "2024-03-12T11:13",
-      "status": "in progress",
+      "status": "finished",
       "id": "26d203bc-6343-43d9-945d-70af6feef67f"
+    },
+    {
+      "sellerId": "4",
+      "sellerName": "u4",
+      "itemDetails": {
+        "title": "game 17",
+        "description": "old game",
+        "image": "https://www.operationsports.com/wp-content/uploads/2023/09/efootball-2024-latest-mobile-menu-v0-t1i8bb900fmb1.jpg?w=1536",
+        "price": "17"
+      },
+      "bids": [],
+      "startDate": "2024-03-12T11:26",
+      "endDate": "2024-03-12T11:28",
+      "status": "finished",
+      "id": "ff201214-9d47-4e5e-8c82-440725ba9047"
     }
   ]
 }
