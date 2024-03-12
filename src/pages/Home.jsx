@@ -3,7 +3,7 @@ import React, { useState, } from "react";
 import { Typography, Container, Grid, Card, CardActionArea, CardMedia, CardContent, Box } from '@mui/material';
 
 function HomePage() {
-  const [comingAuctions, setComingAuctions] = useState([
+  const [comingAuctions] = useState([
     {
       id: 1,
       itemDetails: {
