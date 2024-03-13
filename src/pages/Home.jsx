@@ -1,146 +1,102 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
-import React, { useState,useEffect } from "react";
+
+import React, { useState, } from "react";
+import { Typography, Container, Grid, Card, CardActionArea, CardMedia, CardContent, Box } from '@mui/material';
 
 function HomePage() {
-  const [comingAuctions, setComingAuctions] = useState(null);
-  useEffect(() => {
-    const fetchAuctions = async () => {
-      try {
-        const response = await fetch("http://localhost:3000/auctions");
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        const data2 = data.filter((auction)=> new Date(auction.startDate) > new Date() )
-        setComingAuctions(data2);
-      } catch (error) {
-        console.error("Fetching auctions failed:", error);
+  const [comingAuctions] = useState([
+    {
+      id: 1,
+      itemDetails: {
+        title: "Vintage Super Mario Bros.",
+        image: "https://www.kappahl.com/globalassets/media-e-commerce/1-startsidor/18-header/barn/licenser/super-mario-mobil.jpg?preset=EditorialBlock",
+        startPrice: "10 USD"
       }
-    };
+    },
+    {
+      id: 2,
+      itemDetails: {
+        title: "Need for Speed 2",
+        image: "https://i.ytimg.com/vi/vHNdRC0ehmQ/maxresdefault.jpg",
+        startPrice: "10 USD"
+      }
+    },
+    {
+      id: 3,
+      itemDetails: {
+        title: "FIFA Football 2004",
+        image: "https://upload.wikimedia.org/wikipedia/en/e/e3/FIFA_Football_2004_cover.jpg",
+        startPrice: "10 USD"
+      }
+    },
+    {
+      id: 4,
+      itemDetails: {
+        title: "Tekken 6",
+        image: "https://upload.wikimedia.org/wikipedia/en/2/21/Tekken_6_Box_Art.jpg",
+        startPrice: "10 USD"
+      }
+    },
+    {
+      id: 5,
+      itemDetails: {
+        title: "Call of Duty: World at War",
+        image: "https://upload.wikimedia.org/wikipedia/en/6/69/WAW_Cover_Art.jpg",
+        startPrice: "10 USD"
+      }
+    },
+    {
+      id: 6,
+      itemDetails: {
+        title: "Pro evolution soccer",
+        image: "https://www.retrospelbutiken.se/store/bild.php?produkt=22891&size=600",
+        startPrice: "10 USD"
+      }
+    },
+  ]);
 
-    fetchAuctions();
-  }, []);
-
-  if (comingAuctions === null) {
-    return <div>Loading...</div>;
-  }
+  
   return (
-    <>
-      <div className="bg"></div>
-      <div className="container">
-        <div id="carouselExampleCaptions" className="carousel slide">
-          <div className="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="0"
-              className="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"
-            ></button>
-          </div>
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img
-                src="https://cdn.pixabay.com/photo/2020/12/06/15/52/realtor-5809182_1280.png"
-                className="d-block w-100"
-                alt="..."
-              />
-              <div className="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>
-                  Some representative placeholder content for the first slide.
-                </p>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <img
-                src="https://cdn.pixabay.com/photo/2021/11/30/15/33/realtor-6835635_1280.png"
-                className="d-block w-100"
-                alt="..."
-              />
-              <div className="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>
-                  Some representative placeholder content for the second slide.
-                </p>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <img
-                src="https://cdn.pixabay.com/photo/2021/07/20/12/35/auction-6480582_1280.jpg"
-                className="d-block w-100"
-                alt="..."
-              />
-              <div className="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>
-                  Some representative placeholder content for the third slide.
-                </p>
-              </div>
-            </div>
-          </div>
-          <button
-            className="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev"
-          >
-            <span
-              className="carousel-control-prev-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button
-            className="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next"
-          >
-            <span
-              className="carousel-control-next-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-      <div className="container">
-        <h2 className="text-light text-center">Coming </h2>
-        <div className="row row-cols-1 row-cols-md-3 g-4">
-          {comingAuctions.map((auction) => (
-            <div className="col" key={auction.id}>
-              <div className="card h-100">
-                <img
-                  src={auction.itemDetails.image}
-                  className="card-img-top"
+    <Container>
+      <Typography variant="h4" component="h1" gutterBottom>
+        Auction of exclusive video games
+      </Typography>
+      <Typography variant="h6" component="h2" gutterBottom>
+        Upcoming video games
+      </Typography>
+      <Grid container spacing={4}>
+        {comingAuctions.map((auction, index) => (
+          <Grid item key={index} xs={12} sm={6} md={4}>
+            <Card>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  height="140"
+                  image={auction.itemDetails.image}
                   alt={auction.itemDetails.title}
+                  style={{ objectFit: 'contain', width: '100%', height: '140px' }}
                 />
-                <div className="card-body">
-                  <h5 className="card-title">{auction.itemDetails.title}</h5>
-                  <p className="card-text">{auction.itemDetails.description}</p>
-                </div>
-                
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </>
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    {auction.itemDetails.title}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    Starting Price: {auction.itemDetails.startPrice}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+      <Box mt={8} py={4} bgcolor="text.secondary" color="background.paper" textAlign="center">
+        <Typography variant="body1">GameBidz Auction House</Typography>
+        <Typography variant="body2">123 Gaming Street, Gamerville, GX 12345</Typography>
+        <Typography variant="body2">Contact Us: (123) 456-7890 | info@gamebidz.com</Typography>
+        <Typography variant="body2">&copy; {new Date().getFullYear()} GameBidz Auctions. All rights reserved.</Typography>
+      </Box>
+    </Container>
   );
 }
+
 export default HomePage;
+
