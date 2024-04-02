@@ -12,7 +12,7 @@ function AuctionsOnUserPage() {
   const updateAuctionStatus = async () => {
     const promises = auctionsList.map(async (auction) => {
       if (new Date(auction.endDate) < new Date() && auction.status !== "finished") {
-        const response = await fetch(`http://localhost:3000/auctions/${auction.id}`, {
+        const response = await fetch(`/api/auctions/${auction.id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",

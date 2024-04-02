@@ -11,8 +11,10 @@ import TableRow from "@mui/material/TableRow";
 import SystemUpdateAltIcon from '@mui/icons-material/SystemUpdateAlt';
 import DeleteIcon from '@mui/icons-material/Delete';
 import GroupAddIcon from '@mui/icons-material/GroupAdd';
+import { useAuth } from "../../context/Context.jsx";
+
 const columns = [
-  { id: "id", label: "id", maxWidth: 80 },
+  { id: "userID", label: "userID", maxWidth: 80 },
   { id: "personalNumber", label: "personalNumber", maxWidth: 100 },
   { id: "firstname", label: "firstname", maxWidth: 120 },
   { id: "lastname", label: "lastname", maxWidth: 120 },
@@ -22,25 +24,14 @@ const columns = [
  
 ];
 function Users({setActiveComponent,setUpdateUser}) {
+  const {  userList,setUserList } = useAuth();
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
-  const [userList, setUserList] = React.useState([]);
-
+  const filteredUsers = userList.filter(user => user.type === "user");
   const handleUpdate = (user)=> {
     setActiveComponent("Userupdateform")
     setUpdateUser(user)
   }
-  React.useEffect(() => {
-    const fetchUsers = async () => {
-      const response = await fetch("http://localhost:3000/users");
-      const data = await response.json();
-      const filteredUsers = data.filter(user => user.type === "user");
-      setUserList(filteredUsers);
-    };
-
-    fetchUsers();
-  }, []);
-
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
@@ -49,14 +40,15 @@ function Users({setActiveComponent,setUpdateUser}) {
     setRowsPerPage(+event.target.value);
     setPage(0);
   };
-  const deleteUser = async (userId)=>{
-    const response = await fetch(`http://localhost:3000/users/${userId}`, {
+
+  const deleteUser = async (user)=>{
+    const response = await fetch(`/api/users/${user.userID}`, {
       method: "DELETE",
     });
     if (!response.ok) {
       throw new Error('Something went wrong with the deletion');
     }
-    setUserList((prevUsers) => prevUsers.filter((user) => user.id !== userId));
+    setUserList((prevUsers) => prevUsers.filter((user) => user.id !== user.userID));
 
   }
 
@@ -88,7 +80,7 @@ function Users({setActiveComponent,setUpdateUser}) {
             </TableRow>
           </TableHead>
           <TableBody>
-            {userList.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((user) => {
+            {filteredUsers.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((user) => {
               return (
                 <TableRow hover role="checkbox" tabIndex={-1} key={user.id}>
                   {columns.map(column => {
@@ -101,7 +93,7 @@ function Users({setActiveComponent,setUpdateUser}) {
                     
                   })}
                   <TableCell onClick={()=>handleUpdate(user)}><SystemUpdateAltIcon/></TableCell>
-                  <TableCell onClick={()=> deleteUser(user.id)}><DeleteIcon/></TableCell>
+                  <TableCell onClick={()=> deleteUser(user)}><DeleteIcon/></TableCell>
                 </TableRow>
               );
             })}
@@ -111,7 +103,7 @@ function Users({setActiveComponent,setUpdateUser}) {
       <TablePagination
         rowsPerPageOptions={[10, 25, 100]}
         component="div"
-        count={userList.length}
+        count={filteredUsers.length}
         rowsPerPage={rowsPerPage}
         page={page}
         onPageChange={handleChangePage}

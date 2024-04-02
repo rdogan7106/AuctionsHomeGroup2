@@ -40,7 +40,7 @@ function UpdateAuctionItem({ updateAuction, setActiveComponent }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await fetch(
-      `http://localhost:3000/auctions/${updateAuction.id}`,
+      `/api/auctions/${updateAuction.id}`,
       {
         method: "PUT",
         headers: {

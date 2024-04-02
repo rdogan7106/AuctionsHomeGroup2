@@ -13,10 +13,10 @@ export const AuthProvider = ({ children }) => {
   const [auctionsList, setAuctionsList] = useState(null)
 
   const login = async (username, password) => {
-    const response = await fetch("http://localhost:3000/users");
+    const response = await fetch("/api/users");
     const users = await response.json();
-    const auctionResponse = await fetch("http://localhost:3000/auctions");
-    const auctions = await auctionResponse.json();
+    const auctionResponse = await fetch("/api/auctions");
+    const auctions = await auctionResponse.json();  
     setAuctionsList(auctions)
     setUserList(users)
     const user = users.find(
@@ -39,6 +39,16 @@ export const AuthProvider = ({ children }) => {
     };
     fetchAuctions();
   }, []);
+
+   React.useEffect(() => {
+    const fetchUsers = async () => {
+      const response = await fetch("/api/users");
+      const data = await response.json();
+      setUserList(data);
+    };
+    fetchUsers();
+  }, [userList]);
+  
 
   const logout = () => {
     setUser(null);

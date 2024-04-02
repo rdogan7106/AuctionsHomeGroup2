@@ -51,7 +51,7 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
     } else if (Number(newAuctionItem.itemDetails.price) < 1) {
       alert("Please enter a price ");
     } else {
-      const response = await fetch("http://localhost:3000/auctions", {
+      const response = await fetch("/api/auctions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

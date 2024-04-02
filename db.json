@@ -131,6 +131,39 @@
       "personalNumber": "231231231313",
       "firstname": "okokokokok",
       "lastname": "sssssssssslslss"
+    },
+    {
+      "username": "u6",
+      "password": "u6",
+      "type": "user",
+      "email": "rdogan7106@gmail.com",
+      "phone": "0764410990",
+      "personalNumber": "1234565",
+      "firstname": "user6",
+      "lastname": "user6",
+      "id": "e8862655-a781-41ac-9a9b-2f595f5ffc1d"
+    },
+    {
+      "username": "u10",
+      "password": "u10",
+      "type": "user",
+      "email": "asd@asd.com",
+      "phone": "0764110990",
+      "personalNumber": "123213",
+      "firstname": "u10",
+      "lastname": "DOGAN",
+      "id": "20b6cfad-451a-4cc6-b700-b54d284a7bcf"
+    },
+    {
+      "username": "u11",
+      "password": "abc123",
+      "type": "user",
+      "email": "asdsa@gmail.com",
+      "phone": "0764410990",
+      "personalNumber": "23234",
+      "firstname": "u11",
+      "lastname": "u11",
+      "id": "25e3aac0-d144-4828-a9bc-fbd71a14b7d4"
     }
   ],
   "auctions": [
