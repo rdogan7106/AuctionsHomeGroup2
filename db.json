@@ -311,7 +311,8 @@
       "bids": [],
       "startDate": "2024-03-11T11:59",
       "endDate": "2024-03-12T12:00",
-      "status": "in progress"
+      "status": "finished",
+      "id": "9cfb"
     },
     {
       "id": "029baad4-2088-4016-acff-6266c136899d",
@@ -326,6 +327,36 @@
       "bids": [],
       "startDate": "2024-03-12T12:38",
       "endDate": "2024-03-12T12:39",
+      "status": "finished"
+    },
+    {
+      "id": "f8adcc40-b75e-41c5-82ea-e660cfd9182c",
+      "sellerId": "3",
+      "sellerName": "u3",
+      "itemDetails": {
+        "title": "test",
+        "description": "test",
+        "image": "https://media.hornbach.se/hb/packshot/as.47281144.jpg?dvid=8",
+        "price": "100"
+      },
+      "bids": [],
+      "startDate": "2024-03-14T09:53",
+      "endDate": "2024-03-14T09:54",
+      "status": "finished"
+    },
+    {
+      "id": "c4ed2608-2d8c-4511-872a-37c19de87122",
+      "sellerId": "3",
+      "sellerName": "u3",
+      "itemDetails": {
+        "title": "test12",
+        "description": "test12",
+        "image": "https://media.hornbach.se/hb/packshot/as.47281144.jpg?dvid=8",
+        "price": "111"
+      },
+      "bids": [],
+      "startDate": "2024-03-14T09:58",
+      "endDate": "2024-03-14T09:59",
       "status": "finished"
     }
   ]
