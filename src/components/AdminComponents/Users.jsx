@@ -42,7 +42,7 @@ function Users({setActiveComponent,setUpdateUser}) {
   };
 
   const deleteUser = async (user)=>{
-    const response = await fetch(`http://localhost:5020/users/${user.userID}`, {
+    const response = await fetch(`/api/users/${user.userID}`, {
       method: "DELETE",
     });
     if (!response.ok) {

@@ -20,7 +20,7 @@ function Userupdateform({ updateUser, setActiveComponent }) {
   
     try {
       const response = await fetch(
-        `http://localhost:5020/users/${updateUser.userID}`,
+        `/api/users/${updateUser.userID}`,
         {
           method: "PUT",
           headers: {
