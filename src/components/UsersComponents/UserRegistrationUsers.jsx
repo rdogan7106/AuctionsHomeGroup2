@@ -58,7 +58,7 @@ const captchaVerify = (value) => {
     );
     if (!alreadyExists&& reCaptchaVerification) {
       const newUser = { ...formData, id: uuidv4() };
-      const response = await fetch("http://localhost:3000/users", {
+      const response = await fetch("/api/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
