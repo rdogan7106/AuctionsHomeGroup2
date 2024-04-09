@@ -15,7 +15,7 @@ function CurrentAuctions() {
   const updateAuctionStatus = async () => {
     const promises = auctionsList.map(async (auction) => {
       if (new Date(auction.endDate) < new Date() && auction.status !== "finished") {
-        const response = await fetch(`http://localhost:3000/auctions/${auction.id}`, {
+        const response = await fetch(`/api/auctions/${auction.id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -42,7 +42,7 @@ function CurrentAuctions() {
 
   return (
     <div className="container">
-    <div className="bg"></div>
+      <div className="bg"></div>
       {auctionsList.length > 0 ? (
         <div className="d-flex flex-wrap">
           {auctionsList
