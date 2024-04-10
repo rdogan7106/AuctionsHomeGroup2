@@ -11,11 +11,13 @@ import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 import SystemUpdateAltIcon from '@mui/icons-material/SystemUpdateAlt';
 import DeleteIcon from '@mui/icons-material/Delete';
+import { useAuth } from '../../context/Context.jsx';
+
 
 function Auctions({ setActiveComponent, setUpdateAuction }) {
   const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
-  const [auctionsList, setAuctionsList] = React.useState([]);
+  const [rowsPerPage, setRowsPerPage] = React.useState(10); 
+  const { auctionsList,setAuctionsList } = useAuth();
   const columns = [
     { id: "id", label: "id", minWidth: 80 },
     { id: "seller", label: "seller", minWidth: 80 },
@@ -30,7 +32,7 @@ function Auctions({ setActiveComponent, setUpdateAuction }) {
     { id: "delete", label: "delete", minWidth: 50 },
   ]
 
-  React.useEffect(() => {
+/*     React.useEffect(() => {
     const fetchAuctions = async () => {
       const response = await fetch("/api/auctions");
       const data = await response.json();
@@ -38,8 +40,8 @@ function Auctions({ setActiveComponent, setUpdateAuction }) {
     };
 
     fetchAuctions();
-  }, []);
-
+  }, [auctionsList]); */  
+ 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
@@ -97,7 +99,7 @@ function Auctions({ setActiveComponent, setUpdateAuction }) {
                   <TableCell>{auction.bids[auction.bids.length - 1]?.amount || 'No bids'}</TableCell>
                   <TableCell>{auction.status}</TableCell>
                   <TableCell onClick={() => handleAuctionUpdate(auction)}><SystemUpdateAltIcon /></TableCell>
-                  <TableCell onClick={() => deleteAuction(auction.id)}><DeleteIcon /></TableCell>
+                  <TableCell onClick={() => deleteAuction(auction.itemID)}><DeleteIcon /></TableCell>
                 </TableRow>
               );
             })}

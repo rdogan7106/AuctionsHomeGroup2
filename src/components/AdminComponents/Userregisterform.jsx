@@ -49,7 +49,7 @@ function Userregisterform({ setActiveComponent }) {
 
     setUserList((prevUsers) => [...prevUsers, { ...formData }]);
     setFormData({
-      id: "",
+      userID: "",
       username: "",
       password: "",
       type: "user",

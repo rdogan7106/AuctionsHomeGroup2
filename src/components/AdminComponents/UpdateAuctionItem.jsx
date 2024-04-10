@@ -6,7 +6,6 @@ function UpdateAuctionItem({ updateAuction, setActiveComponent }) {
   const { auctionsList, setAuctionsList } = useAuth();
 
   const [formData, setFormData] = useState({
-    id: updateAuction?.id,
     sellerId: updateAuction?.sellerId,
     sellerName: updateAuction?.sellerName,
     itemDetails: {
@@ -40,7 +39,7 @@ function UpdateAuctionItem({ updateAuction, setActiveComponent }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await fetch(
-      `/api/auctions/${updateAuction.id}`,
+      `/api/auctions/${updateAuction.itemID}`,
       {
         method: "PUT",
         headers: {
@@ -49,10 +48,10 @@ function UpdateAuctionItem({ updateAuction, setActiveComponent }) {
         body: JSON.stringify(formData),
       }
     );
-    const updatedAuction = await response.json();
+    const updatedAuction = response.json();
     setAuctionsList(
       auctionsList.map((auction) =>
-        auction.id === updatedAuction.id ? updatedAuction : auction
+        auction.itemID === updatedAuction.itemID ? updatedAuction : auction
       )
     );
     setActiveComponent("Auctions");
@@ -114,7 +113,7 @@ function UpdateAuctionItem({ updateAuction, setActiveComponent }) {
               Start Date
             </label>
             <input
-              type="date"
+              type="datetime-local"
               className="form-control"
               id="startDate"
               name="startDate"
@@ -129,7 +128,7 @@ function UpdateAuctionItem({ updateAuction, setActiveComponent }) {
               End Date
             </label>
             <input
-              type="date"
+              type="datetime-local"
               className="form-control"
               id="endDate"
               name="endDate"
