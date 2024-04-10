@@ -6,7 +6,7 @@ import { useAuth } from "../../context/Context.jsx";
 function AddAuctionItem({ setActiveComponent, updateAuction }) {
   const { user, auctionsList, setAuctionsList } = useAuth();
   const [formData, setFormData] = useState({
-    sellerId: user?.id || "",
+    sellerId: user?.userID || "",
     sellerName: user?.username || "",
     itemDetails: {
       title: "",
@@ -39,7 +39,7 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const newAuctionItem = { ...formData, id: uuidv4() };
+    const newAuctionItem = { ...formData };
     const start = new Date(newAuctionItem.startDate);
     const end = new Date(newAuctionItem.endDate);
     const now = new Date();

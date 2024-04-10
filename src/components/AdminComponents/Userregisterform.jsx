@@ -33,7 +33,7 @@ function Userregisterform({ setActiveComponent }) {
         user.email === formData.email
     );
     if (!alreadyExists) {
-      const newUser = { ...formData, id: uuidv4() };
+      const newUser = { ...formData };
       const response = await fetch("/api/users", {
         method: "POST",
         headers: {
@@ -47,9 +47,9 @@ function Userregisterform({ setActiveComponent }) {
       return;
     }
 
-    setUserList((prevUsers) => [...prevUsers, { ...formData, id: uuidv4() }]);
+    setUserList((prevUsers) => [...prevUsers, { ...formData }]);
     setFormData({
-      id: "",
+      userID: "",
       username: "",
       password: "",
       type: "user",
