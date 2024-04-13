@@ -28,16 +28,17 @@ function Userregisterform() {
         setUserList(data);
       } catch (error) {
         console.error('Fetch error:', error);
-      }}
-  
+      }
+    }
+
 
     fetchData()
-},[]);
+  }, []);
 
-const captchaVerify = (value) => {
-  // Set the state to true when reCAPTCHA is successfully verified
-  setReCaptchaVerification(true);
-};
+  const captchaVerify = (value) => {
+    
+    setReCaptchaVerification(true);
+  };
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevFormData) => ({
@@ -47,7 +48,7 @@ const captchaVerify = (value) => {
   };
 
   const handleSubmit = async (e) => {
-   
+
 
     e.preventDefault();
     const alreadyExists = userList.some(
@@ -56,26 +57,28 @@ const captchaVerify = (value) => {
         user.email === formData.email ||
         user.username === formData.username
     );
-    if (!alreadyExists&& reCaptchaVerification) {
-      const newUser = { ...formData, id: uuidv4() };
+    if (!alreadyExists && reCaptchaVerification) {
+      const newUser = { ...formData };
       const response = await fetch("/api/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(newUser),
-        
+
       });
       alert("User Registered.");
-    } else if(!reCaptchaVerification) {
-      alert("Submit reCaptcha Correctly !");}
-      else {alert("A user with the same personal number or email already exists");
-      
+    } else if (!reCaptchaVerification) {
+      alert("Submit reCaptcha Correctly !");
+    }
+    else {
+      alert("A user with the same personal number or email already exists");
+
     }
 
-    setUserList((prevUsers) => [...prevUsers, { ...formData, id: uuidv4() }]);
+    setUserList((prevUsers) => [...prevUsers, { ...formData }]);
     setFormData({
-      id: "",
+      userID: "",
       username: "",
       password: "",
       type: "user",
@@ -88,9 +91,9 @@ const captchaVerify = (value) => {
   }
 
   return (
-    
+
     <div className="container mt-5 ">
-    <div className="bg"></div>
+      <div className="bg"></div>
       <h2>Register Form</h2>
       <form onSubmit={handleSubmit}>
         <div className="d-flex flex-wrap justify-content-between ">
@@ -143,7 +146,7 @@ const captchaVerify = (value) => {
 
         <div className="d-flex flex-wrap justify-content-between ">
 
-          
+
         </div>
         <div className="mb-3">
           <label htmlFor="personalNumber" className="form-label">
@@ -201,7 +204,7 @@ const captchaVerify = (value) => {
             required
           />
         </div>
-        <ReCAPTCHA sitekey="6Ld9WY8pAAAAAGvkUF1f9MAbB5vMJ0KV3g1S7_C0" onChange={captchaVerify}/>
+        <ReCAPTCHA sitekey="6Ld9WY8pAAAAAGvkUF1f9MAbB5vMJ0KV3g1S7_C0" onChange={captchaVerify} />
         <button type="submit" className="btn btn-primary">
           Register
         </button>

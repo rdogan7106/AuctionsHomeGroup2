@@ -12,16 +12,13 @@ function AuctionDetails({ auctionsList, filteredAuction }) {
     (auction) => auction.id.toString() === auctionId
   );
 
-  console.log(new Date())
+
   const [bidAmount, setBidAmount] = useState(0);
   const [currentPrice, setCurrentPrice] = useState(() => {
     const storedPrice = localStorage.getItem(`currentPrice_${auctionId}`);
     return storedPrice ? JSON.parse(storedPrice) : auction.itemDetails.price;
   });
-  const [bidHistory, setBidHistory] = useState(() => {
-    const storedHistory = localStorage.getItem(`bidHistory_${auctionId}`);
-    return storedHistory ? JSON.parse(storedHistory) : [];
-  });
+  const [bidHistory, setBidHistory] = useState([]);
 
   const [lan, setLan] = useState("");
   const [postalCode, setPostalCode] = useState("");
@@ -87,6 +84,23 @@ function AuctionDetails({ auctionsList, filteredAuction }) {
   };
 
   useEffect(() => {
+    const fetchBidHistory = async () => {
+      try {
+        const response = await fetch(`/api/auctions/${auctionId}/bidHistory`);
+        const data = await response.json();
+        console.log("Bid history data:", data);
+        console.log("auctionId: ", auctionId)
+        setBidHistory(data);
+      } catch (error) {
+        console.error("Error fetching bid history:", error);
+      }
+    };
+
+    fetchBidHistory();
+  }, [auctionId]);
+
+
+  useEffect(() => {
     localStorage.setItem(`bidHistory_${auctionId}`, JSON.stringify(bidHistory));
   }, [auctionId, bidHistory]);
 
@@ -95,8 +109,7 @@ function AuctionDetails({ auctionsList, filteredAuction }) {
       `currentPrice_${auctionId}`,
       JSON.stringify(currentPrice)
     );
-    localStorage.setItem(`bidHistory_${auctionId}`, JSON.stringify(bidHistory));
-  }, [auctionId, currentPrice, bidHistory]);
+  }, [auctionId, currentPrice]);
 
   const handleBidSubmit = () => {
     const latestBid = bidHistory[bidHistory.length - 1];
@@ -263,16 +276,13 @@ function AuctionDetails({ auctionsList, filteredAuction }) {
                   </tr>
                 </thead>
                 <tbody>
-                  {bidHistory
-                    .slice()
-                    .reverse()
-                    .map((bid, index) => (
-                      <tr key={index}>
-                        <td>{bid.price}</td>
-                        <td>{bid.username}</td>
-                        <td>{bid.time}</td>
-                      </tr>
-                    ))}
+                  {bidHistory.map((bid, index) => (
+                    <tr key={index}>
+                      <td>{bid.bidPrice}</td>
+                      <td>{bid.bidderName}</td>
+                      <td>{bid.bidTime}</td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>

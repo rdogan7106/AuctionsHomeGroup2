@@ -1,14 +1,13 @@
 /* eslint-disable no-unused-vars */
-// AuctionsOnUserPage.jsx
 import React, { useEffect, useState } from "react";
 import { useAuth } from "../context/Context.jsx";
 import { Link } from "react-router-dom";
 
 function AuctionsOnUserPage() {
-  const { auctionsList, user,setAuctionsList } = useAuth();
+  const { auctionsList, user, setAuctionsList } = useAuth();
   const [bidCounts, setBidCounts] = useState({});
 
-  
+
   const updateAuctionStatus = async () => {
     const promises = auctionsList.map(async (auction) => {
       if (new Date(auction.endDate) < new Date() && auction.status !== "finished") {
@@ -49,7 +48,7 @@ function AuctionsOnUserPage() {
 
   return (
     <div className="d-flex flex-wrap justify-content-center p-5">
-    <div className="bg"></div>
+      <div className="bg"></div>
       {newAuctionsList?.map((auction) => (
         <div key={auction.id} className="card m-2" style={{ width: "18rem" }}>
           <img src={auction.itemDetails.image} className="card-img-top" alt="Auction Item" />
