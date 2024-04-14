@@ -36,7 +36,7 @@ function Userregisterform() {
   }, []);
 
   const captchaVerify = (value) => {
-    
+    // Set the state to true when reCAPTCHA is successfully verified
     setReCaptchaVerification(true);
   };
   const handleChange = (e) => {
@@ -58,7 +58,7 @@ function Userregisterform() {
         user.username === formData.username
     );
     if (!alreadyExists && reCaptchaVerification) {
-      const newUser = { ...formData };
+      const newUser = { ...formData, id: uuidv4() };
       const response = await fetch("/api/users", {
         method: "POST",
         headers: {
@@ -76,9 +76,9 @@ function Userregisterform() {
 
     }
 
-    setUserList((prevUsers) => [...prevUsers, { ...formData }]);
+    setUserList((prevUsers) => [...prevUsers, { ...formData, id: uuidv4() }]);
     setFormData({
-      userID: "",
+      id: "",
       username: "",
       password: "",
       type: "user",
