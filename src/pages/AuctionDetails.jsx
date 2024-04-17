@@ -12,16 +12,12 @@ function AuctionDetails({ auctionsList, filteredAuction }) {
     (auction) => auction.id.toString() === auctionId
   );
 
-  console.log(new Date())
   const [bidAmount, setBidAmount] = useState(0);
   const [currentPrice, setCurrentPrice] = useState(() => {
     const storedPrice = localStorage.getItem(`currentPrice_${auctionId}`);
     return storedPrice ? JSON.parse(storedPrice) : auction.itemDetails.price;
   });
-  const [bidHistory, setBidHistory] = useState(() => {
-    const storedHistory = localStorage.getItem(`bidHistory_${auctionId}`);
-    return storedHistory ? JSON.parse(storedHistory) : [];
-  });
+  const [bidHistory, setBidHistory] = useState([]);
 
   const [lan, setLan] = useState("");
   const [postalCode, setPostalCode] = useState("");
@@ -86,6 +82,22 @@ function AuctionDetails({ auctionsList, filteredAuction }) {
     setShowDeliveryOptions(true);
   };
 
+  const fetchBidHistory = async () => {
+    try {
+      const response = await fetch(`/api/auctions/${auctionId}/bidHistory`);
+      const data = await response.json();
+      console.log("Bid history data:", data);
+      console.log("auctionId: ", auctionId)
+      setBidHistory(data);
+    } catch (error) {
+      console.error("Error fetching bid history:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchBidHistory();
+  }, [auctionId]);
+
   useEffect(() => {
     localStorage.setItem(`bidHistory_${auctionId}`, JSON.stringify(bidHistory));
   }, [auctionId, bidHistory]);
@@ -95,35 +107,57 @@ function AuctionDetails({ auctionsList, filteredAuction }) {
       `currentPrice_${auctionId}`,
       JSON.stringify(currentPrice)
     );
-    localStorage.setItem(`bidHistory_${auctionId}`, JSON.stringify(bidHistory));
-  }, [auctionId, currentPrice, bidHistory]);
+  }, [auctionId, currentPrice]);
 
-  const handleBidSubmit = () => {
-    const latestBid = bidHistory[bidHistory.length - 1];
-
-    if (auction.sellerId === user.username) {
-      alert("You cannot bid on your own items");
+  const handleBidSubmit = async () => {
+    if (bidAmount <= 0) {
+      alert("You need to enter a bid amount above zero");
       return;
     }
-    if (currentPrice + bidAmount == currentPrice) {
-      alert("You need to enter a value above zero");
+    if (auction.sellerId === user.userID) {
+      alert("You cannot bid on your own items")
       return;
     }
 
-    const newPrice = Number(currentPrice) + Number(bidAmount);
-    setCurrentPrice(newPrice);
-    const currentTime = new Date().toLocaleString();
-    setBidHistory([
-      ...bidHistory,
-      { price: newPrice, username: user.username, time: currentTime },
-    ]);
-    setBidAmount(0);
+
+    const newBidPrice = currentPrice + bidAmount;
+
+    const newBid = {
+      bidderID: user.userID,
+      itemID: auction.id,
+      bidPrice: newBidPrice,
+      bidTime: new Date().toISOString(),
+      sellerID: auction.sellerId,
+      bidderName: user.username
+    };
+
+    try {
+      const response = await fetch(`/api/bids`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newBid)
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit bid");
+      }
+
+      setBidAmount(0);
+
+      setCurrentPrice(newBidPrice);
+      fetchBidHistory();
+    } catch (error) {
+      console.error("Error submitting bid:", error.message);
+      alert("Failed to submit bid. Please try again later.");
+    }
   };
 
-  const resetPrice = () => {
-    setCurrentPrice(auction.itemDetails.price);
-    setBidHistory([]);
-  };
+
+
+
+
   return (
     <div className="container mt-4">
       <div className="row text-light">
@@ -230,16 +264,7 @@ function AuctionDetails({ auctionsList, filteredAuction }) {
                         Submit Bid
                       </button>
                     </div>
-                    <div className="col-md-12">
-                      <button
-                        type="button"
-                        className="btn btn-danger btn-block"
-                        style={{ width: "100%" }}
-                        onClick={resetPrice}
-                      >
-                        Reset to Original Price
-                      </button>
-                    </div>
+
                   </div>
                 </div>
               </>
@@ -263,16 +288,13 @@ function AuctionDetails({ auctionsList, filteredAuction }) {
                   </tr>
                 </thead>
                 <tbody>
-                  {bidHistory
-                    .slice()
-                    .reverse()
-                    .map((bid, index) => (
-                      <tr key={index}>
-                        <td>{bid.price}</td>
-                        <td>{bid.username}</td>
-                        <td>{bid.time}</td>
-                      </tr>
-                    ))}
+                  {bidHistory.map((bid, index) => (
+                    <tr key={index}>
+                      <td>{bid.bidPrice}</td>
+                      <td>{bid.bidderName}</td>
+                      <td>{bid.bidTime}</td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
@@ -282,4 +304,5 @@ function AuctionDetails({ auctionsList, filteredAuction }) {
     </div>
   );
 }
+
 export default AuctionDetails;
