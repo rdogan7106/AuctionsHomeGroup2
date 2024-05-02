@@ -39,7 +39,7 @@ export const AuthProvider = ({ children }) => {
       setAuctionsList(data);
     };
     fetchAuctions();
-  }, [auctionsList]);
+  }, []);
 
   React.useEffect(() => {
     const fetchUsers = async () => {
