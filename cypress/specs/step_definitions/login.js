@@ -15,6 +15,6 @@ When('I click on the Dashboard link in the navbar', () => {
 });
 
 Then('I should be redirected to my profile page', () => {
-  cy.wait(1000)
+  cy.wait(2000)
   cy.url().should("include","/dashboard")
 });

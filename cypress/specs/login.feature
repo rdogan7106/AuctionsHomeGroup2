@@ -1,4 +1,4 @@
-gitFeature: Login
+Feature: Login
 
   As a user/admin, I want to be able to log in to the website so that I can access my dashboard.
 
