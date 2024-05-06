@@ -63,7 +63,7 @@ function Userregisterform({ setActiveComponent }) {
 
   return (
     <div className="container mt-5 ">
-    <div className="bg"></div>
+      <div className="bg"></div>
       <h2>Register Form</h2>
       <form onSubmit={handleSubmit}>
         <div className="d-flex flex-wrap justify-content-between ">
@@ -116,7 +116,7 @@ function Userregisterform({ setActiveComponent }) {
 
         <div className="d-flex flex-wrap justify-content-between ">
 
-          
+
         </div>
         <div className="mb-3">
           <label htmlFor="personalNumber" className="form-label">

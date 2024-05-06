@@ -89,7 +89,7 @@ function AddAuctionItem({ setActiveComponent, updateAuction }) {
               Price
             </label>
             <input
-              type="number"
+              type="text"
               className="form-control"
               id="price"
               name="price"
