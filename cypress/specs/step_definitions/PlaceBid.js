@@ -26,7 +26,18 @@ When('I enter 1 in the Bid amount field', (bidAmount) => {
 });
 
 
-Then('I click the Submit Bid-button to complete the bid', (buttonText) => {
+When('I click the Submit Bid-button to complete the bid', (buttonText) => {
   cy.wait(2000)
   cy.contains('Submit Bid').click();
 });
+
+Then('I should receive a confirmation message indicating that my bid was successful', () => {
+  cy.request(`/api/auctions/3/bidHistory`).then((response) => {
+    expect(response.status).to.eq(200);
+    const bidHistory = response.body;
+    const latestBid = bidHistory[0];
+    expect(latestBid.bidPrice).to.eq(21);
+    expect(latestBid.bidderID).to.eq('e3dd6ba2-e2f2-4f42-8859-d63fb346b264');
+  });
+});
+
