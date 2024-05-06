@@ -47,7 +47,7 @@ When('I fill the phone field', () => {
 });
 
 When('I fill the password field', () => {
-  cy.get("#password").type("testpass")
+  cy.get("#password").type("testpass") 
 });
 
 Then('I click on the register button to complete the registration', () => {

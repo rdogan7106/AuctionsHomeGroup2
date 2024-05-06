@@ -6,7 +6,7 @@ Feature: Register New User
     Given I am logged in with username and password before registration
     When I have accessed on the Dashboard link in the navbar
     And I click on the User link in the side menu
-    And I click on the add icon in the User table
+    And I click on the add icon in the User table 
     And I fill the username field
     And I fill the firstname field
     And I fill the lastname field

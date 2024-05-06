@@ -43,4 +43,4 @@ When('I fill the username, firstname, lastname,personalNumber, email, phone, pas
 
 Then('I click on the update button to complete the update', () => {
   cy.get("#root > div > div:nth-child(4) > div > form > button").click()
-});
+}); 

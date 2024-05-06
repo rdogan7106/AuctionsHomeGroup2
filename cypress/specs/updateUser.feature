@@ -5,4 +5,4 @@ Feature: Update a User
         Given I am logged in with username and password before the update process
         When I  access the user update from
         And I fill the username, firstname, lastname,personalNumber, email, phone, password fields
-        Then I click on the update button to complete the update
+        Then I click on the update button to complete the update 
