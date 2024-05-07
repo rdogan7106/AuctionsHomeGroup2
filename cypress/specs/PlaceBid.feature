@@ -1,7 +1,7 @@
 Feature: Place a bid
 
   Background: 
-    Given I am logged in with username and passwordd
+    Given I am logged in with username.... and passwordd....
 
   Scenario: Placing a succesful bid after logging in
 

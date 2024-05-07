@@ -2,7 +2,7 @@ Feature: Register New User
 
   As an admin, I want to be able to register a new user.
   Background:
-    Given I am logged in with username and password
+    Given I am logged in with username..... and password.....
 
   Scenario: Registering a new user by dashboard page after successful login
     When I have accessed on the Dashboard link in the navbar

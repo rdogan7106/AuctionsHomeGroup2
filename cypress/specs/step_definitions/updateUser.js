@@ -1,7 +1,7 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-Given('I am logged in with username and password', () => {
-  cy.login("r","r")
+Given('I am logged in with username andpassword', () => {
+  cy.login("vs4","vs4")
 });
 
 When('I  access the user update from', () => {
