@@ -13,4 +13,4 @@ Feature: AddItems
     And I fill the end date field
     And I fill the description field
     And I fill the image field
-    Then I click on the register button to complete the registration
+    Then I click on the register button to complete theregistration

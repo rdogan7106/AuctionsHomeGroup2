@@ -25,12 +25,12 @@ When('I fill the price field', () => {
 
 When('I fill the start date field', () => {
   cy.wait(1000)
-  cy.get("#startDate").type("05/14/2024 03:33 PM")
+  cy.get("#startDate").type("2024-05-14T03:33")
 });
 
 When('I fill the end date field', () => {
   cy.wait(1000)
-  cy.get("#endDate").type("08/14/2024 03:33 PM")
+  cy.get("#endDate").type("2024-05-16T03:33")
 });
 
 When('I fill the description field', () => {
@@ -43,7 +43,7 @@ When('I fill the image field', () => {
   cy.get("#image").type("test")
 });
 
-Then('I click on the register button to complete the registration', () => {
+Then('I click on the register button to complete theregistration', () => {
   cy.wait(1000)
   cy.get("#root > div > div:nth-child(4) > div > form > button").click()
 });
