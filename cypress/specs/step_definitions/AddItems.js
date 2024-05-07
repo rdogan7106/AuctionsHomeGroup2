@@ -1,17 +1,17 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-Given('I am logged in with username and password', () => {
+Given('I am logged in with username and passswordd', () => {
   cy.login("vs4", "vs4")
 });
 
-When('I have accessed on the Dashboard link in the navbar', () => {
+When('I have accessed on theDashboard link in the navbar', () => {
   cy.wait(1000)
   cy.get("#navbarSupportedContent > ul > li:nth-child(3) > a").click()
 });
 
 When('I click on the Add Auctions Items in the side menu', () => {
   cy.wait(1000)
-  cy.get("#root > div > div.d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary > ul > li:nth-child(3)").click()
+  cy.get("#root > div > div.d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary > ul > li:nth-child(3) > button").click()
 });
 
 When('I fill the title field', () => {

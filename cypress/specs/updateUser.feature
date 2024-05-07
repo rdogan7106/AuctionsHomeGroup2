@@ -2,7 +2,7 @@ Feature: Update a User
     As an admin, I want to be able to update a user's information.
 
     Background:
-        Given I am logged in with username and password
+        Given I am logged in withusername andpassword
 
     Scenario: Updating a user by dashboard page after successful login       
         When I  access the user update from
