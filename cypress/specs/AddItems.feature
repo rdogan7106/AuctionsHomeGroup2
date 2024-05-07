@@ -1,10 +1,8 @@
 Feature: AddItems
   As an user, I want to be able to add items.
 
-  Background:
-    Given I am logged in with username and passswordd
-
   Scenario: Register new items
+    Given I am logged in with my username and my passsword before adding an item 
     When I have accessed on theDashboard link in the navbar
     And I click on the Add Auctions Items in the side menu
     And I fill the title field
