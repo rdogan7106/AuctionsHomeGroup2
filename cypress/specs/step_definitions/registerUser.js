@@ -1,9 +1,9 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-Given('I am logged in with username and password ' , () => {
+Given('I have logged in as an admin with username and password before registration', () => {
   cy.login("r","r")
- 
 });
+
 
 When('I have accessed on the Dashboard link in the navbar', () => {
   cy.wait(1000)
