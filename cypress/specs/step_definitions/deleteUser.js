@@ -1,7 +1,9 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
+
 Given('I am logged in with username and password  before deletatiton', () => {
   cy.login("r","r")
+
 });
 
 When('I click on the User link in the side menu while in my Dashboard Panel', () => {
