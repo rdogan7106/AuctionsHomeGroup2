@@ -1,12 +1,7 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 Given('I am logged in with username and passwordd', () => {
-  cy.wait(2000)
-  cy.visit("/");
-  cy.get("#navbarSupportedContent > ul > li:nth-child(3) > a").click();
-  cy.get("#floatingInput").type("andre3");
-  cy.get("#floatingPassword").type("andre3");
-  cy.get("#root > div.form-signin > form > button").click();
+  cy.login("andre3", "andre3")
 });
 
 
