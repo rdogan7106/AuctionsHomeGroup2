@@ -1,12 +1,7 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-Given('I am logged in with username and password before the update process', () => {
-  cy.visit("/");
-  cy.get("#navbarSupportedContent > ul > li:nth-child(3) > a").click();
-  cy.get("#floatingInput").type("r")
-  cy.get("#floatingPassword").type("r")
-  cy.get("#root > div.form-signin > form > button").click()
-  cy.wait(1000)
+Given('I have logged in with my username and my password before update a user', () => {
+  cy.login("r","r")
 });
 
 When('I  access the user update from', () => {
@@ -43,4 +38,4 @@ When('I fill the username, firstname, lastname,personalNumber, email, phone, pas
 
 Then('I click on the update button to complete the update', () => {
   cy.get("#root > div > div:nth-child(4) > div > form > button").click()
-});
+}); 

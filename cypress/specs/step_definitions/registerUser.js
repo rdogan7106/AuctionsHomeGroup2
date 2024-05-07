@@ -1,13 +1,9 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-Given('I am logged in with username and password before registration' , () => {
-  cy.visit("/");
-  cy.get("#navbarSupportedContent > ul > li:nth-child(3) > a").click();
-  cy.get("#floatingInput").type("r")
-  cy.get("#floatingPassword").type("r")
-  cy.get("#root > div.form-signin > form > button").click()
- 
+Given('I have logged in as an admin with username and password before registration', () => {
+  cy.login("r","r")
 });
+
 
 When('I have accessed on the Dashboard link in the navbar', () => {
   cy.wait(1000)
@@ -47,7 +43,7 @@ When('I fill the phone field', () => {
 });
 
 When('I fill the password field', () => {
-  cy.get("#password").type("testpass")
+  cy.get("#password").type("testpass") 
 });
 
 Then('I click on the register button to complete the registration', () => {
