@@ -1,6 +1,6 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-Given('I am logged in with username and password before the deletion process', () => {
+Given('I am logged in with username and password', () => {
   cy.login("r","r")
 });
 
