@@ -8,4 +8,3 @@ Feature: Place a bid
     And I enter 1 in the Bid amount field
     And I click the Submit Bid-button to complete the bid
     Then I should receive a confirmation message indicating that my bid was successful
-
