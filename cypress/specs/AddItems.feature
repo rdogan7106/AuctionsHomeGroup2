@@ -1,6 +1,6 @@
 Feature: AddItems
   As an user, I want to be able to add items.
-  
+
   Scenario: Register new items
     Given I am logged in with my username and my passsword before adding a new Item
     When I have accessed on theDashboard link in the navbar
