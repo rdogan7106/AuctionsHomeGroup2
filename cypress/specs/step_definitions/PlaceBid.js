@@ -1,7 +1,7 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 Given('I am logged in with username.... and passwordd....', () => {
-  cy.login("andre3", "andre3")
+  cy.login("andre7", "andre7")
 });
 
 When('I am redirected to the dashboard and I click on the Auctions-button', () => {
@@ -10,7 +10,7 @@ When('I am redirected to the dashboard and I click on the Auctions-button', () =
 });
 
 When('I click the View Details-button of the desired auction item', () => {
-  cy.get('.card.m-2').eq(0).find('button').contains('View Details').click();
+  cy.get('.card.m-2').eq(2).find('button').contains('View Details').click();
 });
 
 When('I enter 1 in the Bid amount field', () => {

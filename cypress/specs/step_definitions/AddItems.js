@@ -1,7 +1,7 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 Given('I am logged in with username and passswordd', () => {
-  cy.login("andre", "andre")
+  cy.login("andre3", "andre3")
 });
 
 When('I have accessed on theDashboard link in the navbar', () => {
@@ -24,9 +24,11 @@ When('I fill the price field', () => {
 });
 
 When('I fill the start date field', () => {
-  cy.wait(1000)
-  cy.get("#startDate").type("2024-05-14T03:33")
+  cy.wait(1000);
+  const currentDate = new Date().toISOString().slice(0, 16);
+  cy.get("#startDate").type(currentDate);
 });
+
 
 When('I fill the end date field', () => {
   cy.wait(1000)
