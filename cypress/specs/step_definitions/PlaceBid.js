@@ -2,7 +2,7 @@ import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 
 Given('I am logged in with username and password to place a bid', () => {
-  cy.login("f", "12345")
+  cy.login("vs4", "vs4")
 });
 
 When('I am redirected to the dashboard and I click on the Auctions-button', () => {

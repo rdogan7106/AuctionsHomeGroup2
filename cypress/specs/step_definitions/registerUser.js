@@ -2,7 +2,7 @@ import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 
 Given('I have logged in as an admin with username and password before registration', () => {
-  cy.login("r","r")
+  cy.login("vs4","vs4")
 });
 
 
