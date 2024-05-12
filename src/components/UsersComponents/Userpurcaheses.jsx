@@ -1,24 +1,44 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useAuth } from '../../context/Context';
 
 function Userpurchases() {
     const { user, auctionsList } = useAuth();
+    const [bidHistory, setBidHistory] = useState([]);
 
+    useEffect(() => {
+        const fetchBidHistory = async () => {
+            try {
+                const promises = auctionsList.map(async (auction) => {
+                    const response = await fetch(`/api/auctions/${auction.id}/bidHistory`);
+                    const data = await response.json();
+                    return { auctionId: auction.id, bidHistory: data };
+                });
+                const bidHistories = await Promise.all(promises);
+                const mergedBidHistory = bidHistories.reduce((acc, { auctionId, bidHistory }) => {
+                    acc[auctionId] = bidHistory;
+                    return acc;
+                }, {});
+                setBidHistory(mergedBidHistory);
+            } catch (error) {
+                console.error("Error fetching bid history:", error);
+            }
+        };
 
-    const filteredAuctions = auctionsList.filter(auction => {
-        const bidHistory = JSON.parse(localStorage.getItem(`bidHistory_${auction.id}`)) || [];
-        const latestBid = bidHistory[bidHistory.length - 1];
+        fetchBidHistory();
+    }, [auctionsList]);
+
+    const expiredAuctions = auctionsList.filter(auction => {
         const now = new Date();
-        const sold = auction.status === "finished" || new Date(auction.endDate) < now;
-        return latestBid && latestBid.username === user.username && sold;
+        const hasBidByCurrentUser = bidHistory[auction.id]?.some(bid => bid.bidderID === user.userID);
+        const sold = auction.status === "finished" || (new Date(auction.endDate) < now && hasBidByCurrentUser);
+        return sold;
     });
-
 
     return (
         <div>
             <h1>User Purchases</h1>
             <div className="d-flex flex-wrap justify-content-center p-5">
-                {filteredAuctions.map(auction => (
+                {expiredAuctions.map(auction => (
                     <div key={auction.id} className="card m-2" style={{ width: "18rem" }}>
                         <img src={auction.itemDetails.image} className="card-img-top" alt="Auction Item" />
                         <div className="card-body">

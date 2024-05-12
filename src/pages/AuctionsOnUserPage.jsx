@@ -43,7 +43,7 @@ function AuctionsOnUserPage() {
   }, [auctionsList]);
 
   const newAuctionsList = auctionsList?.filter(
-    (auction) => auction.sellerId !== user.id
+    (auction) => auction.sellerId !== user.userID
   );
 
   return (
