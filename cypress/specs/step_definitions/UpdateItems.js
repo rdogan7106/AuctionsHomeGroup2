@@ -16,7 +16,7 @@ When('I click on the Auctions in the side menu', () => {
 
 When('I click on the update ikon to complete the update', () => {
   cy.wait(1000)
-  cy.get("#root > div > div:nth-child(4) > div > div.MuiTableContainer-root.css-41abqd-MuiTableContainer-root > table > tbody > tr:nth-child(1) > td:nth-child(10) > svg").click()
+  cy.get("#root > div > div:nth-child(4) > div > div.MuiTableContainer-root.css-41abqd-MuiTableContainer-root > table > tbody > tr:nth-child(1) > td:nth-child(10) > svg > path").click()
 });
 
 When('I fill the title, price, description, start date, end date, image', () => {
@@ -35,9 +35,10 @@ When('I fill the title, price, description, start date, end date, image', () => 
     cy.wait(500)
     cy.get("#endDate").clear()
     cy.get("#endDate").type("2024-05-16T03:33")
+    cy.wait(1000)
+    cy.get("#image").clear()
     cy.wait(500)
-    cy.get("#Image").clear()
-    cy.get("#Image").type("test")
+    cy.get("#image").type("test image")
   });
 });
 
