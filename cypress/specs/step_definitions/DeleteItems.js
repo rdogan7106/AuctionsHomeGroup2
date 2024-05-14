@@ -1,7 +1,7 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 Given('I am logged in with my username and my passsword before deleting Items', () => {
-  cy.login("vs", "vs")
+  cy.login("andre", "andre")
 });
 
 When('I have accessed on theDashboardlink in the navbar', () => {
