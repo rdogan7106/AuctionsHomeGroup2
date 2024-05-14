@@ -2,7 +2,7 @@ import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 
 Given('I have logged in as an admin with username and password before registration', () => {
-  cy.login("vs4","vs4")
+  cy.login("andre", "andre")
 });
 
 
@@ -32,7 +32,7 @@ When('I fill the lastname field', () => {
 });
 
 When('I fill the personal number field', () => {
- cy.get("#personalNumber").type(123)
+  cy.get("#personalNumber").type(123)
 });
 
 When('I fill the email field', () => {
@@ -44,7 +44,7 @@ When('I fill the phone field', () => {
 });
 
 When('I fill the password field', () => {
-  cy.get("#password").type("testpass") 
+  cy.get("#password").type("testpass")
 });
 
 Then('I click on the register button to complete the registration', () => {

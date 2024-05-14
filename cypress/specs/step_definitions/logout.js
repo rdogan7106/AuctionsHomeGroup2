@@ -2,8 +2,7 @@ import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 
 Given('I am logged in with username and password before log out', () => {
-  cy.login("r", "r")
-  cy.login("vs4", "vs4")
+  cy.login("andre", "andre")
 });
 
 When('I click on the logout link in the navbar', () => {
