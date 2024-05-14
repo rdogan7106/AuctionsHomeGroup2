@@ -48,7 +48,9 @@ function UpdateAuctionItem({ updateAuction, setActiveComponent }) {
         body: JSON.stringify(formData),
       }
     );
-    const updatedAuction = response.json();
+    const updatedAuction = await response.json();
+
+    ;
     setAuctionsList(
       auctionsList.map((auction) =>
         auction.itemID === updatedAuction.itemID ? updatedAuction : auction
@@ -58,7 +60,7 @@ function UpdateAuctionItem({ updateAuction, setActiveComponent }) {
   };
   return (
     <div className="container mt-5">
-    <div className="bg"></div>
+      <div className="bg"></div>
       <h2>Update Auction Form</h2>
       <form onSubmit={handleSubmit}>
         <div className="d-flex flex-wrap justify-content-between ">
@@ -151,6 +153,7 @@ function UpdateAuctionItem({ updateAuction, setActiveComponent }) {
             value={formData.itemDetails.image}
             onChange={handleChange}
             required
+
           />
         </div>
 

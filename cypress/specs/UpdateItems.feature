@@ -8,3 +8,4 @@ Feature: UpdateItems
     And I click on the update ikon to complete the update
     And I fill the title, price, description, start date, end date, image
     Then Then I click on the register button to update the registration
+
