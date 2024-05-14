@@ -12,7 +12,7 @@ const UserItems = () => {
 
     useEffect(() => {
         if (user && auctionsList) {
-            const filteredItems = auctionsList.filter(auction => auction.sellerId === user.id);
+            const filteredItems = auctionsList.filter(auction => auction.sellerId === user.userID);
             setUserItems(filteredItems);
         }
     }, [user, auctionsList]);
