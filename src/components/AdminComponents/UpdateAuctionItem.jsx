@@ -150,7 +150,7 @@ function UpdateAuctionItem({ updateAuction, setActiveComponent }) {
             name="image"
             value={formData.itemDetails.image}
             onChange={handleChange}
-            required
+            
           />
         </div>
 
