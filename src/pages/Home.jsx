@@ -54,11 +54,11 @@ function HomePage() {
     },
   ]);
 
-  
+
   return (
     <Container>
       <Typography variant="h4" component="h1" gutterBottom>
-        Auction of exclusive video games
+        Auction of exclusive video games - done with github action
       </Typography>
       <Typography variant="h6" component="h2" gutterBottom>
         Upcoming video games
