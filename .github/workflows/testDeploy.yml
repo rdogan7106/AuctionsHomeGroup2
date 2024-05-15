@@ -35,6 +35,11 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
+            source /root/.nvm/nvm.sh
+            nvm use v20.12.2
+            echo "Checking node and npm versions"
+            node -v
+            npm -v
             cd /var/www/AuctionsHomeGroup2
             git pull
             cd /var/www/AuctionsHomeGroup2
