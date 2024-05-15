@@ -1,7 +1,7 @@
-Cypress.Commands.add('login',(username,password)=> {
-    cy.visit("/");
+Cypress.Commands.add('login', (username, password) => {
+    cy.visit("/", { headers: { "Accept-Encoding": "gzip, deflate" } });
     cy.wait(500)
-    cy.get("#navbarSupportedContent > ul > li:nth-child(3) > a").click(); 
+    cy.get("#navbarSupportedContent > ul > li:nth-child(3) > a").click();
     cy.wait(500)
     cy.get("#floatingInput").type(username)
     cy.wait(500)
