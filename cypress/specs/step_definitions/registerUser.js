@@ -16,7 +16,7 @@ When('I click on the User link in the side menu', () => {
 });
 
 When('I click on the add icon in the User table', () => {
-  cy.get("#root > div > div:nth-child(4) > div > div.MuiTableContainer-root.css-41abqd-MuiTableContainer-root > table > thead > tr:nth-child(1) > th:nth-child(2)").click()
+  cy.get("#root > div > div:nth-child(4) > div > div.MuiTableContainer-root.css-1evjoiv > table > thead > tr:nth-child(1) > th:nth-child(2)").click()
 });
 
 When('I fill the username field', () => {

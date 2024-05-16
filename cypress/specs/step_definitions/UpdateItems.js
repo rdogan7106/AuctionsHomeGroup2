@@ -22,7 +22,7 @@ When('I click on the update ikon to complete the update', () => {
 When('I fill the title, price, description, start date, end date', () => {
   When('I fill the username, firstname, lastname,personalNumber, email, phone, password fields', () => {
     cy.get("#title").clear()
-    cy.get("#title").type("update test")
+    cy.get("#title").type("update test2")
     cy.wait(500)
     cy.get("#price").clear()
     cy.get("#price").type("9")
