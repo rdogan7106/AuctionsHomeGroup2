@@ -141,21 +141,6 @@ function UpdateAuctionItem({ updateAuction, setActiveComponent }) {
           </div>
         </div>
 
-        <div className="mb-3">
-          <label htmlFor="image" className="form-label">
-            Image
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="image"
-            name="image"
-            value={formData.itemDetails.image}
-            onChange={handleChange}
-
-          />
-        </div>
-
         <button type="submit" className="btn btn-primary">
           Register
         </button>

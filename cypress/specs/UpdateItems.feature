@@ -6,6 +6,6 @@ Feature: UpdateItems
     When I have accessed on theDashboardlinkin the navbar
     And I click on the Auctions in the side menu
     And I click on the update ikon to complete the update
-    And I fill the title, price, description, start date, end date, image
+    And I fill the title, price, description, start date, end date
     Then Then I click on the register button to update the registration
 
