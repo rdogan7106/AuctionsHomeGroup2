@@ -16,5 +16,5 @@ When('I click on the Auctions in the side menu in order to delete an auction', (
 
 Then('I click on the delete icon to complete the delete', () => {
   cy.wait(1000)
-  cy.get("#root > div > div:nth-child(4) > div > div.MuiTableContainer-root.css-41abqd-MuiTableContainer-root > table > tbody > tr:last-child > td:nth-child(11) > svg > path").click();
+  cy.get("#root > div > div:nth-child(4) > div > div.MuiTableContainer-root.css-1evjoiv > table > tbody > tr:nth-child(1) > td:nth-child(11) > svg > path").click();
 });
